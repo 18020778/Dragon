@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type = "text/css" href="Dragon.css">
+</head>
+<body>
+    <div id="mainBig">
+        <div class="header">
+            <button class="button_back" style="margin-left: 10px;">< Back</button>
+            <div class="border_head">
+                <div class="button_green" style="margin-left: 4px; margin-top: 2px;"></div>
+            </div>
+            <div id = "chooseLanguage" onclick = "appearDialog()">
+                English
+                <div class = "triangle" style = "float: right; margin-right: 15px; margin-top: 8px;"></div>
+            </div>
+            <div id = "languageDialog">
+                <div class = "Language" style="margin-top: 5px;">English</div>
+                <div class = "Language">Hindi</div>
+            </div>
+        </div>
+        <div>
+            <button class="micro"></button>
+            <span class="letter">Put the giraffe beside the palm tree</span>
+            <div  id = "coverletter">beside</div>
+            <div class="tree"></div>
+            <div class="dotted" style="margin-left: 180px;"></div>
+            <div class="dotted" style="margin-left: 580px;"></div>
+            <div id="giraffe" onmousedown = "checkTrue()"></div>
+            <canvas class="straight" width="400" height="200"></canvas>
+        </div>
+    </div>
+    <script src = "Dragon.js"></script>
+</body>
+</html>
