@@ -1,24 +1,39 @@
 body{
     margin: 0;
     
-    background-image: url("https://content.dragonlearn.in/fp/97/fat_player/student/stuff-124d4f39a55f743d41ae005514723d90ae7e61faaf258f2187335151d10556b3.png"), url("https://content.dragonlearn.in/fp/97/fat_player/student/grad-f07e854ce64f9aee2db7bd67146ff0e4800feeed40c8f7116fcb3b6a048deb64.jpg"), url("https://content.dragonlearn.in/fp/97/fat_player/student/color-e875c1aeb80984feaea35e9206d56248ed77eb16feede64477bc68b08df59e29.png");
-    background-repeat: round;
+     background-image: 
+    url("https://content.dragonlearn.in/fp/97/fat_player/student/grad-f07e854ce64f9aee2db7bd67146ff0e4800feeed40c8f7116fcb3b6a048deb64.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#divBackground{
+    position: absolute;
+    z-index: -1;
+    top : 0px;
+    left: 0px;
+    width: 100%;
+    height: 120%;
+    background-image: 
+    url("https://content.dragonlearn.in/fp/97/fat_player/student/stuff-124d4f39a55f743d41ae005514723d90ae7e61faaf258f2187335151d10556b3.png"),
+    url("https://content.dragonlearn.in/fp/97/fat_player/student/cell-9987ae00289f116cf6d1f23d1049820f01c1000c534cc1c39d9060882f80063d.png"),
+    url("https://content.dragonlearn.in/fp/97/fat_player/student/color-e875c1aeb80984feaea35e9206d56248ed77eb16feede64477bc68b08df59e29.png");
 }
 #mainBig {
     background-color: white;
     width: 960px;
     height: 620px;
-    /* position: absolute; */
     margin-left: calc(100% / 2 - 480px);
     margin-top: 15px;
     border-radius: 20px;
-    border-style: outset;
-
-
+    box-shadow: 0 0 10px black;
+    position: absolute;
 }
 .header {
     height: 45px;
     border-bottom: 1px solid #cfcccc;
+}
+#bodyMain {
+    
 }
 .button_back {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -71,7 +86,7 @@ body{
     background-repeat: no-repeat;
     height: 22px;
 }
-.micro {
+#micro_top {
     background-image: url("https://content.dragonlearn.in/fp/97/fat_player/players/player-1/src/speaker/assets/speaker-5ea19d9cdf5f069d106aec8a03b3faca0929b20a13b8b588a58efe79c8f11ae6.png");
     background-position: 0px 0px;
     width: 36px;
@@ -83,32 +98,50 @@ body{
     background-color: transparent;
     cursor: pointer;
 }   
-.micro:hover {
+#micro_top:hover {
     background-position: 0px 108px;
 }
-.letter {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+#micro_bottom {
+    background-image: url("https://content.dragonlearn.in/fp/97/fat_player/players/player-1/src/speaker/assets/speaker-5ea19d9cdf5f069d106aec8a03b3faca0929b20a13b8b588a58efe79c8f11ae6.png");
+    background-position: 0px 0px;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 490px;
+    left: calc(50% - 10px);
+    background-size: cover;
+    border: none;
+    background-color: transparent;
+    display: none;
+    z-index: 2;
+
+}   
+#micro_bottom:hover {
+    background-position: 0px 108px;
+}
+
+#letter {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-top: 18px;
     margin-left: 10px;
     font-size: 39px;
 }
 #coverletter{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 18px;
-    margin-left: 10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 39px;
     position: absolute;
-    top: 57px;
-    left: calc(50% - 31px);
+    top: 62px;
+    left: calc(50% - 11px);
     opacity: 0;
 }
-.tree {
+#tree {
     background-image: url("https://content.dragonlearn.in/135475/1440/49.png");
     margin-left: calc(100% /2 - 100px);
     margin-top: 30px;
     width: 160px;
     height: 320px;
     background-size: cover;
+    filter: blur(5px);
 }
 .dotted {
     background-image: url("https://content.dragonlearn.in/135475/1440/60.png");
@@ -116,15 +149,19 @@ body{
     height: 40px;
     margin-top: -40px;
     background-size: cover;
+    filter: blur(5px);
 }
 #giraffe {
     background-image: url("https://content.dragonlearn.in/135475/1440/48.png");
     width: 160px;
     height: 240px;
     position: absolute;
-    top : 340px;
+    top : 330px;
     left: calc(50% + 280px);
+    z-index: 2;
     background-size: cover;
+    pointer-events: none;
+    filter: blur(5px);
     cursor: url("https://content.dragonlearn.in/fp/97/fat_player/cursors/openhand-080627fa359156339e79f118fa66a6937f09ff679fe87e8afa473b95c8168d35.cur"), auto;
 }
 .triangle {
@@ -137,14 +174,15 @@ body{
 }
 #languageDialog {
     border: 1px solid #cfcccc;
+    box-shadow: 0 0 5px #cfcccc;
     border-radius: 6px;
     width: 150px;
     height: 70px;
-    position: absolute;
-    left: calc(100% - 175px);
-    top: 50px;
+    margin-left: calc(50% + 305px);
+    margin-top: 30px;
     background-color: white;
     display: none;
+
 }
 .Language {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -160,3 +198,73 @@ body{
     background-color: #267fbf;
     color: white;
 }
+#next {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    margin-top: -105px;
+    margin-left: calc(50% - 47px);
+    display: none;
+    color: #64cee3;
+
+}
+#next:hover {
+    color: #2fb8d4;
+}
+.button_next {
+    background-image: url("https://content.dragonlearn.in/135475/1440/45.svg");
+    background-position: 0px 0px;
+    width: 31px;
+    height: 31px;
+    position: absolute;
+    margin-top: -28px;
+    margin-left: 60px;
+    background-size: cover;
+}
+.button_next:hover {
+    background-position: 0px 61.5px;
+}
+#button_start {
+    background-image: url("https://content.dragonlearn.in/135475/1440/37.png");
+    background-position: 0px 0px;
+    width: 95px;
+    height: 112px;
+    background-size: cover;
+    margin-top: -305px;
+    margin-left: calc(50% - 22px);
+    color:white;
+    font-size: 19px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 6;
+    padding-left: 17px;
+    z-index: 3;
+    position: relative;
+}
+#cylinderBig {
+    width: 330px;
+    height: 330px;
+    background: #f7f2f7;
+    border-radius: 165px;
+    margin-top: -220px;
+    margin-left: calc(50% - 150px);
+    filter: blur(1px);
+    opacity: 0.7;
+    z-index: 1;
+    position: relative;
+}
+#cylinderSmall {
+    width: 250px;
+    height: 250px;
+    background:#e80586;
+    border-radius: 125px;
+    margin-top: -290px;
+    margin-left: calc(50% - 109px);
+    filter: drop-shadow(0.01px);
+    opacity: 0.1;
+    z-index: 2;
+    position: relative;
+}
+#start {
+    cursor: pointer;
+    margin-top: -390px;
+}
+    
