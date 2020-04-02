@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,32 +6,52 @@
     <link rel="stylesheet" type="text/css" href="Dragon.css">
 </head>
 <body>
+    <div id = "divBackground"></div>
     <div id="mainBig">
         <div class="header">
             <button class="button_back" style="margin-left: 10px;">< Back</button>
             <div class="border_head">
                 <div class="button_green" style="margin-left: 4px; margin-top: 2px;"></div>
+                <div class="button_green" style="margin-left: 27px; margin-top: -22px;"></div>
             </div>
-            <div id="chooseLanguage" onclick="appearDialog()">
-                English
-                <div class="triangle" style="float: right; margin-right: 15px; margin-top: 8px;"></div>
-            </div>
+            <div id="chooseLanguage" onclick="appearDialog()">English</div>
+            <div class="triangle" style="float: right; margin-right: -84px; margin-top: -12px;"></div>
             <div id="languageDialog">
-                <div class="Language" style="margin-top: 5px;">English</div>
-                <div class="Language">Hindi</div>
+                <div class="Language" style="margin-top: 5px;" onclick="english()">English</div>
+                <div class="Language" onclick="hindi()">Hindi</div>
             </div>
         </div>
-        <div>
-            <button class="micro"></button>
-            <span class="letter">Put the giraffe beside the palm tree</span>
+        <div id="bodyMain">
+            <button id="micro_top" onclick="turnMicroTop()"></button>
+            <span id="letter">Put the giraffe beside the palm tree</span>
             <div id="coverletter">beside</div>
-            <div class="tree"></div>
+            <div id="tree"></div>
             <div class="dotted" style="margin-left: 180px;"></div>
             <div class="dotted" style="margin-left: 580px;"></div>
-            <div id="giraffe" onmousedown="checkTrue()"></div>
+            <div id="giraffe" onmousedown="checkTrue()" onmouseup="checkFalse()"></div>
+            <svg height="300" width="960" style = "position: absolute; top: 320px; left: calc(50% - 480p);">
+                <line  id = "lineA" x1="774" y1="225" x2="800" y2="230" style="stroke:black;stroke-width:3; opacity: 0;" />
+                <line  id = "lineB" x1="784" y1="216" x2="800" y2="230" style="stroke:black;stroke-width:3; opacity: 0;"/>
+            </svg>
             <canvas class="straight" width="400" height="200"></canvas>
+            <div id="micro_bottom" onclick="turnMicroBottom()"></div>
+            <div id="next"> 
+                Next
+                <div class="button_next"></div>
+            </div>
+        </div>
+        <div id="start" onmouseover="onmouseoverStart()" onmouseout="onmouseoutStart()" onclick="start()">
+            <div id="button_start">start</div>
+            <div id="cylinderBig"></div>  
+            <div id="cylinderSmall"></div>    
         </div>
     </div>
+    <audio id="audioTop">
+        <source src="../mp3/1stRequirement.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="audioBottom">
+        <source src="../mp3/beside.mp3" type="audio/mpeg">
+    </audio>
     <script src="Dragon.js"></script>
 </body>
 </html>
