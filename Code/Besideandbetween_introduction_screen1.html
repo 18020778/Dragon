@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="Dragon.css">
+    <link rel="stylesheet" type="text/css" href="Besideandbetween_introduction_screen1.css">
 </head>
 <body>
     <div id = "divBackground"></div>
@@ -36,8 +36,35 @@
             <canvas class="straight" width="400" height="200"></canvas>
             <div id="micro_bottom" onclick="turnMicroBottom()"></div>
             <div id="next"> 
+                <a href="./Besideandbetween_introduction_screen2.html">
+                    <style>
+                        a:link {
+                        color: #64cee3;
+                        background-color: transparent;
+                        text-decoration: none;
+                        }
+                        
+                        a:visited {
+                        color: #64cee3;
+                        background-color: transparent;
+                        text-decoration: none;
+                        }
+                        
+                        a:hover {
+                        color: #2fb8d4;
+                        background-color: transparent;
+                        text-decoration: none;
+                        }
+                        
+                        a:active {
+                        color: none;
+                        background-color: transparent;
+                        text-decoration: underline;
+                        }
+                        </style>
                 Next
                 <div class="button_next"></div>
+                </a>
             </div>
         </div>
         <div id="start" onmouseover="onmouseoverStart()" onmouseout="onmouseoutStart()" onclick="start()">
@@ -52,6 +79,6 @@
     <audio id="audioBottom">
         <source src="../mp3/beside.mp3" type="audio/mpeg">
     </audio>
-    <script src="Dragon.js"></script>
+    <script src="Besideandbetween_introduction_screen1.js"></script>
 </body>
 </html>

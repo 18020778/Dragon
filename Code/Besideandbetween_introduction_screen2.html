@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Besideandbetween_introduction_screen2.css">
+</head>
+<body>
+    <div id = "divBackground"></div>
+    <div id="mainBig">
+        <div class="header">
+            <button class="button_back" style="margin-left: 10px;"> Back</button>
+            <div class="border_head">
+                <div class="button_green" style="margin-left: 4px; margin-top: 2px;"></div>
+                <div class="button_green" style="margin-left: 27px; margin-top: -22px;"></div>
+            </div>                  
+            <div id="chooseLanguage" onclick="appearDialog()">English</div>
+            <div class="triangle" style="float: right; margin-right: -84px; margin-top: -12px;"></div>
+            <div id="languageDialog">
+                <div class="Language" style="margin-top: 5px;" onclick="english()">English</div>
+                <div class="Language" onclick="hindi()">Hindi</div>
+            </div>
+        </div>
+        <div id="bodyMain">
+            <button id="micro_top" onclick="turnMicroTop()"></button>
+            <span id="letter">Put the giraffe between the palms</span>
+            <div id="coverletter">between</div>
+            <div id="dotted"></div>
+            <div class="tree" style="margin-left: 180px;"></div>
+            <div class="tree" style="margin-left: 580px;"></div>
+            <div id="giraffe" onmousedown="checkTrue()" onmouseup="checkFalse()"></div>
+            <canvas class="straight" width="400" height="200"></canvas>
+            <div id="micro_bottom" onclick="turnMicroBottom()"></div>
+            <div id="next" onclick="next()"> 
+                Next
+                <div class="button_next"></div>
+            </div>
+        </div>
+    </div>
+    <audio id="audioTop">
+        <source src="../mp3/letterAudio.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="audioBottom">
+        <source src="../mp3/betweenAudio.mp3" type="audio/mpeg">
+    </audio>
+    <script src="Besideandbetween_introduction_screen2.js"></script>
+</body>
+</html>

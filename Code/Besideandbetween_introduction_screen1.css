@@ -179,9 +179,10 @@ body{
     width: 150px;
     height: 70px;
     margin-left: calc(50% + 305px);
-    margin-top: 30px;
+    margin-top: 10px;
     background-color: white;
     display: none;
+    position: absolute;
 
 }
 .Language {

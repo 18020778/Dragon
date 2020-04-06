@@ -144,9 +144,6 @@ function runLine(){
     secondCheckLine.x1.baseVal.value = bB - XinsB;
     setTimeout(runLine, 8);
 };
-
-
-////////////////
 //đổi ngôn ngữ
 function english() {
     document.getElementById("letter").innerHTML = "Put the giraffe beside the palm tree";
@@ -193,6 +190,7 @@ function onmouseoutStart() {
     small.style.marginLeft = "calc(50% - 109px)";
     start_bt.style.backgroundPosition = "0px 0px";
 }
+
 //Bắt đầu màn chơi với start
 function start() {
     var start = document.getElementById("start");
