@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="Besideandbetween_introduction_screen1.css">
+    <link rel="stylesheet" type="text/css" href="introduction.css">
 </head>
 <body>
     <div id = "divBackground"></div>
@@ -25,9 +25,11 @@
             <button id="micro_top" onclick="turnMicroTop()"></button>
             <span id="letter">Put the giraffe beside the palm tree</span>
             <div id="coverletter">beside</div>
-            <div id="tree"></div>
-            <div class="dotted" style="margin-left: 180px;"></div>
-            <div class="dotted" style="margin-left: 580px;"></div>
+            <div id="base">
+                <div id="tree"></div>
+                <div class="dotted" style="margin-left: 180px;"></div>
+                <div class="dotted" style="margin-left: 580px;"></div>
+            </div>
             <div id="giraffe" onmousedown="checkTrue()" onmouseup="checkFalse()"></div>
             <svg height="300" width="960" style = "position: absolute; top: 320px; left: calc(50% - 480p);">
                 <line  id = "lineA" x1="774" y1="225" x2="800" y2="230" style="stroke:black;stroke-width:3; opacity: 0;" />
@@ -35,36 +37,9 @@
             </svg>
             <canvas class="straight" width="400" height="200"></canvas>
             <div id="micro_bottom" onclick="turnMicroBottom()"></div>
-            <div id="next"> 
-                <a href="./Besideandbetween_introduction_screen2.html">
-                    <style>
-                        a:link {
-                        color: #64cee3;
-                        background-color: transparent;
-                        text-decoration: none;
-                        }
-                        
-                        a:visited {
-                        color: #64cee3;
-                        background-color: transparent;
-                        text-decoration: none;
-                        }
-                        
-                        a:hover {
-                        color: #2fb8d4;
-                        background-color: transparent;
-                        text-decoration: none;
-                        }
-                        
-                        a:active {
-                        color: none;
-                        background-color: transparent;
-                        text-decoration: underline;
-                        }
-                        </style>
+            <div id="next" onclick="nextScreen2()"> 
                 Next
                 <div class="button_next"></div>
-                </a>
             </div>
         </div>
         <div id="start" onmouseover="onmouseoverStart()" onmouseout="onmouseoutStart()" onclick="start()">
@@ -74,11 +49,11 @@
         </div>
     </div>
     <audio id="audioTop">
-        <source src="../mp3/1stRequirement.mp3" type="audio/mpeg">
+        <source src="../mp3/letterAudio_Besideandbetween_introduction_screen1.mp3" type="audio/mpeg">
     </audio>
     <audio id="audioBottom">
         <source src="../mp3/beside.mp3" type="audio/mpeg">
     </audio>
-    <script src="Besideandbetween_introduction_screen1.js"></script>
+    <script src="introduction.js"></script>
 </body>
 </html>

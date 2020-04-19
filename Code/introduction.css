@@ -269,3 +269,33 @@ body{
     margin-top: -390px;
 }
     
+#dotted1 {
+    background-image: url("https://content.dragonlearn.in/135475/1440/60.png");
+    margin-left: calc(100% /2 - 100px);
+    margin-top: 100px;
+    width: 160px;
+    height: 40px;
+    background-size: cover;
+    filter: none;
+}
+.tree1 {
+    background-image: url("https://content.dragonlearn.in/135475/1440/49.png");
+    margin-top: -320px;
+    width: 160px;
+    height: 320px;
+    background-size: cover;
+    filter: none;
+}
+#giraffe1 {
+    background-image: url("https://content.dragonlearn.in/135475/1440/48.png");
+    width: 160px;
+    height: 240px;
+    position: absolute;
+    top : 300px;
+    left: calc(50% + 280px);
+    z-index: 2;
+    background-size: cover;
+    pointer-events: fill;
+    filter: none;
+    cursor: url("https://content.dragonlearn.in/fp/97/fat_player/cursors/openhand-080627fa359156339e79f118fa66a6937f09ff679fe87e8afa473b95c8168d35.cur"), auto;
+}

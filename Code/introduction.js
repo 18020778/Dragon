@@ -1,3 +1,4 @@
+var screen = 1;
 var dialogLanguageAppear = false;
 function appearDialog() {
    var x = document.getElementById("languageDialog");
@@ -12,8 +13,9 @@ function appearDialog() {
 }
 /// Kéo thả , hiện line
 var mainBig = document.getElementById("mainBig");
+var dottedscreen1;
 var giraffe = document.getElementById("giraffe");
-var doubleDotted = document.getElementsByClassName("dotted");
+var double = document.getElementsByClassName("dotted");
 var expressGiraffe = false;
 var isCorrect = false;
 var checkCorrect;
@@ -50,9 +52,9 @@ function checkFalse(){
     giraffe.style.transition = "all 1s";
     var griLeft = giraffe.offsetLeft + 52;
     var griTop = giraffe.offsetTop + giraffe.offsetHeight;
-    var firstDottedLeft = doubleDotted[0].offsetLeft;
-    var secondDottedLeft = doubleDotted[1].offsetLeft;
-    var bothOfDottedTop = doubleDotted[0].offsetTop;
+    var firstDottedLeft = double[0].offsetLeft;
+    var secondDottedLeft = double[1].offsetLeft;
+    var bothOfDottedTop = double[0].offsetTop;
     var micBottom = document.getElementById("micro_bottom");
     var next_butt = document.getElementById("next");
     if(griTop >= bothOfDottedTop -5 && griTop <= bothOfDottedTop + 50){
@@ -105,6 +107,45 @@ function checkFalse(){
     giraffe.style.top = "330px";
     giraffe.style.left = "calc(50% + 280px)";
 }
+function checkFalse1(){
+    expressGiraffe = false;
+    giraffe.style.transition = "all 1s";
+    var griLeft = giraffe.offsetLeft + 52;
+    var griTop = giraffe.offsetTop + giraffe.offsetHeight;
+    var dottedLeft = dottedscreen1.offsetLeft;
+    var dottedTop = dottedscreen1.offsetTop;
+    var micBottom = document.getElementById("micro_bottom");
+    var next_butt = document.getElementById("next");
+    if(griTop >= dottedTop -5 && griTop <= dottedTop + 50){
+        if(griLeft >= dottedLeft && griLeft <= dottedLeft + 120){
+            isCorrect = true;
+            giraffe.style.top = (dottedTop - giraffe.offsetHeight + 25) + "px";
+            giraffe.style.left = (dottedLeft - 5) + "px";
+            var turnOnLetter = document.getElementById("coverletter");
+            turnOnLetter.style.opacity = 1;
+            setTimeout(function(){
+                turnOnLetter.style.left = "calc(50% - 130px)";
+                turnOnLetter.style.top = "473px";
+                turnOnLetter.style.fontSize = "42pt";
+                turnOnLetter.style.transition = "all 2s";
+            }, 1000);
+            setTimeout(function(){
+                micBottom.style.left = "300px";
+                micBottom.style.top = "490px";
+                micBottom.style.display = "block";
+            },3000);
+            setTimeout(function(){
+                next_butt.style.marginTop = "250px";
+                next_butt.style.display = "block";
+                dottedscreen1.style.marginTop = "-180px";
+
+            },7000);
+            return;
+        }
+    }
+    giraffe.style.top = "300px";
+    giraffe.style.left = "calc(50% + 280px)";
+}
 var Xins = 4.94;
 var Yins = 0.95;
 var XinsB = 1.04;
@@ -146,15 +187,35 @@ function runLine(){
 };
 //đổi ngôn ngữ
 function english() {
-    document.getElementById("letter").innerHTML = "Put the giraffe beside the palm tree";
+    switch(screen) {
+        case 1: {
+            document.getElementById("letter").innerHTML = "Put the giraffe beside the palm tree";
+            document.getElementById("coverletter").innerHTML = "beside";
+            break;
+        }
+        case 2: {
+            document.getElementById("letter").innerHTML = "Put the giraffe between the palms";
+            document.getElementById("coverletter").innerHTML = "between";
+            break;
+        }
+    }
     document.getElementById("next").innerHTML = "Next";
-    document.getElementById("coverletter").innerHTML = "beside";
     document.getElementById("chooseLanguage").innerHTML = "English";
 }
 function hindi() {
-    document.getElementById("letter").innerHTML = "जिराफ को ताड़ के पेड़ के पास रख दें";
+    switch(screen) {
+        case 1: {
+            document.getElementById("letter").innerHTML = "जिराफ को ताड़ के पेड़ के पास रख दें";
+            document.getElementById("coverletter").innerHTML = "के बगल में";
+            break;
+        }
+        case 2: {
+            document.getElementById("letter").innerHTML = "जिराफ को ताड़ के पेड़ों के बीच में रख दें";
+            document.getElementById("coverletter").innerHTML = "बीच में";
+            break;
+        }
+    }
     document.getElementById("next").innerHTML = "आगे";
-    document.getElementById("coverletter").innerHTML = "के बगल में";
     document.getElementById("chooseLanguage").innerHTML = "Hindi";
 }
 //thay đổi start khi di chuột vào
@@ -199,9 +260,44 @@ function start() {
     tree.style.filter = "none";
     giraffe.style.filter = "none";
     giraffe.style.pointerEvents = "fill";
-    doubleDotted[0].style.filter = "none";
-    doubleDotted[1].style.filter = "none";
+    double[0].style.filter = "none";
+    double[1].style.filter = "none";
     setTimeout(runLine, 3000);
+}
+function nextScreen2(){
+    var next = document.getElementById("next");
+    var bodyMain = document.getElementById("bodyMain");
+    bodyMain.removeChild(document.getElementById("base"));
+    bodyMain.removeChild(document.getElementById("giraffe"));
+    screen = 2;
+    next.style.display = "none";
+    next.setAttribute("onclick","nextScreen3()");
+    document.getElementById("coverletter").setAttribute("style","font-size: 39px;top: 62px;left: calc(50% - 11px); opacity: 0;");
+    document.getElementById("coverletter").innerHTML = "between";
+    document.getElementById("letter").innerHTML = "Put the giraffe between the palms";
+    document.getElementById("micro_bottom").style.display = "none";
+    document.getElementById("audioTop").setAttribute("src","../mp3/letterAudio_Besideandbetween_introduction_screen2.mp3");
+    document.getElementById("audioBottom").setAttribute("src","../mp3/betweenAudio.mp3");
+    var giraffe1 = document.createElement("div");
+    giraffe1.setAttribute("id","giraffe1");
+    giraffe1.setAttribute("onmousedown","checkTrue()");
+    giraffe1.setAttribute("onmouseup","checkFalse1()");
+    var dotted1 = document.createElement("div");
+    dotted1.setAttribute("id","dotted1");
+    var tree1 = document.createElement("div");
+    tree1.setAttribute("class", "tree1");
+    tree1.setAttribute("style","margin-left: 180px;");
+    var tree2 = document.createElement("div");
+    tree2.setAttribute("class", "tree1");
+    tree2.setAttribute("style","margin-left: 580px;");
+    bodyMain.appendChild(dotted1);
+    bodyMain.appendChild(tree1);
+    bodyMain.appendChild(tree2);
+    bodyMain.appendChild(giraffe1);
+    giraffe = document.getElementById("giraffe1");
+    dottedscreen1 = document.getElementById("dotted1");
+    isCorrect = false;
+    expressGiraffe = false;
 }
 //Bật phát tiếng microTop
 var x = document.getElementById("audioTop");
