@@ -89,6 +89,7 @@
 .game_pos{
     height: 20px;
     text-align:left;
+    font-size: 17px;
 }
 .arrow {
     background-image: url("https://dragonlearn.in/assets/icons/arrow-down-black-076df8add48e7c364f183378310c70d2.svg");

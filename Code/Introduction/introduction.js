@@ -279,8 +279,8 @@ function nextScreen2(){
     document.getElementById("coverletter").innerHTML = "between";
     document.getElementById("letter").innerHTML = "Put the giraffe between the palms";
     document.getElementById("micro_bottom").style.display = "none";
-    document.getElementById("audioTop").setAttribute("src","../mp3/letterAudio_Besideandbetween_introduction_screen2.mp3");
-    document.getElementById("audioBottom").setAttribute("src","../mp3/betweenAudio.mp3");
+    document.getElementById("audioTop").setAttribute("src","../mp3/Introduction/giraffe_between_palms.mp3");
+    document.getElementById("audioBottom").setAttribute("src","../mp3/Introduction/between.mp3");
     var giraffe1 = document.createElement("div");
     giraffe1.setAttribute("id","giraffe1");
     giraffe1.setAttribute("onmousedown","checkTrue()");
