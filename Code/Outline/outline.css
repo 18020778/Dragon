@@ -1,0 +1,187 @@
+﻿body {
+    margin: 0;
+    color: #ffffff;
+}
+.header {
+    height: 140px;
+}
+.banner{
+    height: 97px;
+    background-image: url("https://dragonlearn.in/assets/banners/quarantine-f8bba46b976fb25b4dc308238831e151.svg");
+    width: 100%;
+    background-position: -100px center;
+ }
+.headBar{
+    height:45px;
+    width: 100%;
+    background-color: #eeeeee;
+}
+.logo {
+    font-family: 'Tahoma','Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 45px;
+    margin-left: 255px;
+    padding-top: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.headBar_choose {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 45px;
+    color:#727979;
+    font-weight: bold;
+}
+#taskBar{
+    width: 250px;
+    height: 550px;
+}
+.button_back{
+    height:55px;
+    width:200px;
+    margin-left:245px;
+}
+.back_image {
+    background-image: url("https://dragonlearn.in/assets/icons/back-left-2e5af9506641aa303262fbfbbd87b22f.svg");
+    background-repeat:no-repeat;
+    background-position:center center;
+    height: 24px;
+    width: 24px;
+    border-radius: 12px;
+    background-color: #ff6170;
+    margin-top: 45px;
+}
+.back_text{
+    color: #727a78;
+    margin-left:35px;
+    margin-top: -20px;
+    font-size: 15px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:bold;
+
+
+}
+#menu {
+    height: 290px;
+    width: 200px;
+    margin-left: 250px;
+    border-width: initial;
+    border-radius: 5px;
+    padding-left: -1px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+}
+.menu_choose {
+    height: 41px;
+    width: 186px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    padding-left: 15px;
+    padding-top: 17px;
+    font-size: 17px;
+    margin-left: -1px;
+}
+#chooseGame{
+    margin-left: 475px;
+    margin-top:-550px;
+    height: 550px;
+}
+.game_pos{
+    height: 20px;
+    text-align:left;
+}
+.arrow {
+    background-image: url("https://dragonlearn.in/assets/icons/arrow-down-black-076df8add48e7c364f183378310c70d2.svg");
+    background-repeat: no-repeat;
+    background-position:center center ;
+    background-size: contain;
+    transform: rotate(-90deg);
+    display:inline-block;
+    height: 7px;
+    width: 7px;
+   
+}
+.light_pos{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000000;
+    display: inline-block;
+
+}
+.bold_pos {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000000;
+    font-weight:bold;
+    display: inline-block;
+}
+.gameName{
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight:600;
+    font-size: 25px;
+    text-align:center;
+    height:25px;
+    color: black;
+    margin-top: 20px;
+}
+
+.introduction{
+    height: 200px;
+    width: 180px;
+    color: black;
+    margin-top: 30px;
+    margin-left:20px;
+}
+a.non_decor{
+    text-decoration:none;
+    color: #000000;
+}
+a.non_decor:hover{
+    color: #ff6170;
+}
+.introduction .image {
+    background-image: url("https://dragonlearn.in/assets/card_previews/1440-401d50d0ea56c7332d3dc5ee73d3597c.png");
+    background-position: 0px 0px;
+    width: 165px;
+    height: 165px;
+    border: 5px solid #b0d2a8;
+    border-radius: 10px;
+    margin-top: -25px;
+    }
+.introduction .text{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display:block;
+    margin-top: 10px;
+}
+.tick {
+    margin-left: 140px;
+    height: 35px;
+    border: 1px solid #b0d2a8;
+    border-radius: 17.5px;
+    position: relative;
+    background-color: #b0d2a8;
+    background-image: url("https://dragonlearn.in/assets/lessons/card_play_btn-d5f8db63df6534cf9735dfb33051f7bb.svg");
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.placeAnimal {
+    height: 200px;
+    width: 180px;
+    margin-left: 250px;
+    margin-top:-200px;
+    color: black;
+}
+.placeAnimal .image {
+    background-image: url("https://dragonlearn.in/assets/card_previews/1441-b3a76ff57c05750ec52ba22ad6a68c60.png");
+    background-position: 0px 0px;
+    width: 165px;
+    height: 165px;
+    border: 5px solid #b0d2a8;
+    border-radius: 10px;
+    margin-top: -25px;
+}
+.placeAnimal .text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
+    margin-top: 10px;
+}

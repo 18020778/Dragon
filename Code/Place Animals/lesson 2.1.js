@@ -273,7 +273,7 @@ function checkFalse(){
             if(indAn == 2){
                 //xử lý cho con cú;
                 animalMove[indAn].style.top = (bothOfDottedTop - animalMove[indAn].offsetHeight + 40) + "px";
-                animalMove[indAn].style.left = (thirdDottedLeft - 10) +"px";
+                animalMove[indAn].style.left = (thirdDottedLeft) +"px";
                 thirdDotted[2].style.opacity = "0";
                 indAn += 1;
                 photo();
@@ -410,10 +410,10 @@ function nextScreen() {
         micro.style.opacity = "1";
         letterOrange.style.opacity = "1";
         micro.style.left = "180px";
-        audio[0].src = "..\Dragon\Dragon\mp3\Place Animals\Round 2\Grapes_beside_banana.mp3"; 
-        // audio[1].setAttribute("src","");
-        // audio[2].setAttribute("src","");
-        // audio[3].setAttribute("src","");
+        audio[0].src = "../mp3/Place Animals/Round 2/Orange_beside_apple.mp3"; 
+        audio[1].src = "../mp3/Place Animals/Round 2/Grapes_beside_banana.mp3";
+        audio[2].src = "../mp3/Place Animals/Round 2/Pear_beside_banana.mp3";
+        audio[3].src = "../mp3/Place Animals/Round 2/WaMelon_beside_apple.mp3";
         thirdDotted[0].style.left = "50px";
         thirdDotted[1].style.left = "330px";
         thirdDotted[2].style.left = "480px";
@@ -471,11 +471,10 @@ function nextScreen() {
         land.style.opacity = "1";
         micro.style.opacity = "1";
         letterCup.style.opacity = "1";
-        micro.style.left = "50px";
-        audio[0].src = "..\Dragon\Dragon\mp3\Place Animals\Round 2\Grapes_beside_banana.mp3"; 
-        // audio[1].setAttribute("src","");
-        // audio[2].setAttribute("src","");
-        // audio[3].setAttribute("src","");
+        micro.style.left = "165px";
+        audio[0].src = "../mp3/Place Animals/Round 3/cup_beside_cupcake.mp3"; 
+        audio[1].src = "../mp3/Place Animals/Round 3/iceCream_between_cup_n_teapot.mp3";
+        audio[2].src = "../mp3/Place Animals/Round 3/juice_between_teapot_n_dessert.mp3";
         thirdDotted[0].style.left = "190px";
         thirdDotted[1].style.left = "330px";
         thirdDotted[2].style.left = "calc(50% + 130px)";
@@ -507,18 +506,18 @@ function nextScreen() {
         iceCream.setAttribute("onmousedown","checkTrue2()");
         iceCream.setAttribute("onmouseup","checkFalse2()");
         
-        var fruice = document.createElement("div");
-        fruice.setAttribute("id","fruice");
-        fruice.classList.add("moveAnimal");
-        body.appendChild(fruice);
-        fruice.setAttribute("onmousedown","checkTrue2()");
-        fruice.setAttribute("onmouseup","checkFalse2()");
+        var juice = document.createElement("div");
+        juice.setAttribute("id","juice");
+        juice.classList.add("moveAnimal");
+        body.appendChild(juice);
+        juice.setAttribute("onmousedown","checkTrue2()");
+        juice.setAttribute("onmouseup","checkFalse2()");
 
         isCorrect = false;
         expressRaccoon = false;
         cup = document.getElementById("cup");
         iceCream = document.getElementById("iceCream");
-        fruice = document.getElementById("fruice");
+        juice = document.getElementById("juice");
     }
 }
 function checkTrue1(){
@@ -852,7 +851,7 @@ function checkFalse2(){
             // indAn = 0 là con gấu mèo thì mình đã lấy vị trí này r , nên khi kp
             // gấu mèo sẽ ko cần kiểm tra
             animalMove[indAn].style.top = (bothOfDottedTop - animalMove[indAn].offsetHeight + 40) + "px";
-            animalMove[indAn].style.left = (firstDottedLeft - 10) + "px";
+            animalMove[indAn].style.left = (firstDottedLeft) + "px";
             thirdDotted[0].style.opacity = "0";
             indAn += 1;
             dessert.style.opacity = "1";
@@ -882,7 +881,7 @@ function checkFalse2(){
                 dessert.style.opacity = "1";
                 if (indAn == 2) {
                     setTimeout(function() {
-                        changeFruice();
+                        changeJuice();
                     }, 3000);
                 }
                 return;
@@ -973,43 +972,43 @@ function makeDotAppear2(){
 }
 
 var letterIceCream = document.getElementById("letter-iceCream");
-var letterFruice = document.getElementById("letter-fruice");
+var letterJuice = document.getElementById("letter-juice");
 function changeIceCream() {
     letterCup.style.display = "none";
     animalMove[indAn].style.display = "block"; 
     micro.style.display = "none"; 
     setTimeout(function(){
         letterIceCream.style.opacity = "1";
-        letterIceCream.style.fontSize = "42px";
+        letterIceCream.style.fontSize = "38px";
         letterIceCream.style.top = "60px";
-        letterIceCream.style.left = "200px";
+        letterIceCream.style.left = "75px";
         letterIceCream.style.transition = "all 0.4s";
         setTimeout(function() {
             micro.style.display = "block";
-            micro.style.left = "180px";
+            micro.style.left = "30px";
             letterIceCream.style.top = "60px";
-            letterIceCream.style.left = "230px";
+            letterIceCream.style.left = "75px";
             letterIceCream.style.fontSize = "38px";
         }, 500); 
     }, 50);
 }
 
-function changeFruice() {
+function changeJuice() {
     letterIceCream.style.display = "none";
     animalMove[indAn].style.display = "block"; 
     micro.style.display = "none"; 
     setTimeout(function(){
-        letterFruice.style.opacity = "1";
-        letterFruice.style.fontSize = "42px";
-        letterFruice.style.top = "60px";
-        letterFruice.style.left = "200px";
-        letterFruice.style.transition = "all 0.4s";
+        letterJuice.style.opacity = "1";
+        letterJuice.style.fontSize = "38px";
+        letterJuice.style.top = "60px";
+        letterJuice.style.left = "75px";
+        letterJuice.style.transition = "all 0.4s";
         setTimeout(function() {
             micro.style.display = "block";
-            micro.style.left = "180px";
-            letterFruice.style.top = "60px";
-            letterFruice.style.left = "230px";
-            letterFruice.style.fontSize = "38px";
+            micro.style.left = "30px";
+            letterJuice.style.top = "60px";
+            letterJuice.style.left = "75px";
+            letterJuice.style.fontSize = "38px";
         }, 500); 
     }, 50);
 }

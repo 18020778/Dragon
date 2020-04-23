@@ -179,12 +179,17 @@ body{
     background-color: transparent;
     cursor: pointer;
     filter: blur(5px);
-    transition: all 1s;
+    transition: 0s;
 }   
 #micro_top:hover {
     background-position: 0px 108px;
-    transition: none;
+    transition-property: none;
 }
+#micro_top:default{
+    background-position: 0px 0px;
+    transition-property: none;
+}
+
 #letter {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: absolute;
@@ -193,6 +198,7 @@ body{
     font-size: 38px;
     filter: blur(5px);
 }
+
 #letter-wolf {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: absolute;
@@ -249,7 +255,7 @@ body{
 #letter-cup {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: absolute;
-    top: 80px;
+    top: 60px;
     left: 230px;
     font-size: 38px;
     opacity: 0;
@@ -258,19 +264,21 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: absolute;
     top: 80px;
-    left: 300px;
+    left: 75px;
     font-size: 20px;
     opacity:0;
     transition: all 1s;
+    display: inline;
 }
-#letter-fruice {
+#letter-juice {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: absolute;
     top: 80px;
-    left: 300px;
+    left: 75px;
     font-size: 20px;
     opacity: 0;
     transition: all 1s;
+    display: inline;
 }
 .dotted {
     background-image: url("https://content.dragonlearn.in/131454/1441/1218.png");
@@ -406,7 +414,7 @@ body{
     width: 140px;
     height: 180px;
     position: absolute;
-    left: 190px;
+    left: 185px;
     top: 140px;
 }
 #apple {
@@ -415,7 +423,7 @@ body{
     width: 140px;
     height: 180px;
     position: absolute;
-    left: calc(50% + 130px);
+    left: calc(50% + 135px);
     top: 140px;
 }
 #orange {
@@ -482,7 +490,7 @@ body{
     width: 140px;
     height: 180px;
     position: absolute;
-    left: 480px;
+    left: 460px;
     top: 140px;
     z-index: 2;
 }
@@ -503,7 +511,7 @@ body{
     height: 180px;
     position: absolute;
     left: calc(50% - 70px);
-    top:  450px;
+    top:  400px;
     z-index: 2;
     cursor: url("https://content.dragonlearn.in/fp/97/fat_player/cursors/openhand-080627fa359156339e79f118fa66a6937f09ff679fe87e8afa473b95c8168d35.cur"), auto;
 }
@@ -519,7 +527,7 @@ body{
     z-index: 2;
     cursor: url("https://content.dragonlearn.in/fp/97/fat_player/cursors/openhand-080627fa359156339e79f118fa66a6937f09ff679fe87e8afa473b95c8168d35.cur"), auto;
 }
-#fruice {
+#juice {
     background-image: url("https://content.dragonlearn.in/131454/1441/1199.png");
     background-size: cover;
     width: 140px;
