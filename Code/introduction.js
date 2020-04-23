@@ -186,6 +186,7 @@ function runLine(){
     setTimeout(runLine, 8);
 };
 //đổi ngôn ngữ
+var languageBorder = document.getElementById("languageDialog");
 function english() {
     switch(screen) {
         case 1: {
@@ -201,6 +202,7 @@ function english() {
     }
     document.getElementById("next").innerHTML = "Next";
     document.getElementById("chooseLanguage").innerHTML = "English";
+    languageBorder.style.display = "none";
 }
 function hindi() {
     switch(screen) {
@@ -217,6 +219,7 @@ function hindi() {
     }
     document.getElementById("next").innerHTML = "आगे";
     document.getElementById("chooseLanguage").innerHTML = "Hindi";
+    languageBorder.style.display = "none";
 }
 //thay đổi start khi di chuột vào
 function onmouseoverStart() {
