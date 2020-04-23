@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="lesson 2.1.css">
+</head>
+<body >
+    <div id = "divBackground"></div>
+    <div id="mainBig">
+        <div class="header">
+            <button class="button_back" style="margin-left: 10px;">< Back</button>
+            <div class="border_head">
+                <div class="button_green" style="margin-left: 4px; margin-top: 2px;"></div>
+                <div class="button_green" style="margin-left: 27px; margin-top: -22px;"></div>
+                <div class="button_green" style="margin-left: 51px; margin-top: -23px;"></div>
+                <div class="button_green" style="margin-left: 75px; margin-top: -22px;"></div>
+            </div>
+            <div id="chooseLanguage" onclick="appearDialog()" onmouseover="onmouseoverLanguage()" onmouseout="onmouseoutLanguage()">
+                <div id="mainLanguage">English</div>
+                <div id="triangle"></div>
+            </div>
+            <div id="languageDialog" click>
+                <div class="Language" style="margin-top: 5px;" onclick="english()">English</div>
+                <div class="Language" onclick="hindi()">Hindi</div>
+            </div>
+        </div>
+        <div id="bodyMain">
+            <button id="micro_top" onclick="turnMicroTop()"></button>
+            <div id="letter">Put the raccoon <span class ="checkBetween">between</span> the rabbit and the fox. </div>
+            <div id="letter-wolf">Put the wolf <span class ="checkBetween">between</span> the bear and the fox. </div>
+            <div id="letter-owl">Put the owl <span class ="checkBetween">beside</span> the rabbit. </div>
+            <div id="letter-orange">Put the orange <span class ="checkBetween">beside</span> the apple. </div>
+            <div id="letter-grapes">Put the grapes <span class ="checkBetween">beside</span> the banana. </div>
+            <div id="letter-pear">Put the pear <span class ="checkBetween">beside</span> the banana. </div>
+            <div id="letter-watermelon">Put the watermelon <span class ="checkBetween">beside</span> the apple.</div>
+            <div id="letter-cup">Put the cup <span class ="checkBetween">beside</span> the cupcake.</div>
+            <div id="letter-iceCream">Put the ice-cream <span class ="checkBetween">between</span> the cup and the teapot. </div>
+            <div id="letter-fruice">Put the fruice <span class ="checkBetween">between</span> the teapot and the dessert. </div>
+            <div id="land_green"></div>
+            <div id="bear"></div>
+            <div id="fox"></div>
+            <div id="rabbit"></div>
+            <div id="raccoon" class="moveAnimal" onmousedown="checkTrue()" onmouseup="checkFalse()"></div>
+            <div id="wolf" class="moveAnimal" onmousedown="checkTrue()" onmouseup="checkFalse()"></div>
+            <div id="owl" class="moveAnimal"  onmousedown="checkTrue()" onmouseup="checkFalse()"></div>
+            <div class="dotted" style="left: 190px; "></div>
+            <div class="dotted" style="left: 480px; "></div>
+            <div class="dotted" style="left: 750px;"></div>
+            <div id="photo"></div>
+            <div id="photo1"></div>
+            <div id="flash"></div>
+        </div>
+        <div id="start" onmouseover="onmouseoverStart()" onmouseout="onmouseoutStart()" onclick="start()">
+            <div id="button_start">start</div>
+            <div id="cylinderBig"></div>  
+            <div id="cylinderSmall"></div>    
+        </div>
+        <audio class="Audio">
+            <source src="C:\Users\DELL\OneDrive\Documents\WEB\DragonWEB\Lesson 2\mp3\raccoon.mp3" type="audio/mpeg">
+        </audio>
+        <audio class="Audio">
+            <source src="C:\Users\DELL\OneDrive\Documents\WEB\DragonWEB\Lesson 2\mp3\Wo_between_Be_n_Fox.mp3" type="audio/mpeg">
+        </audio>
+        <audio class="Audio">
+            <source src="C:\Users\DELL\OneDrive\Documents\WEB\DragonWEB\Lesson 2\mp3\Owl_beside_rabbit.mp3" type="audio/mpeg">
+        </audio>
+        <audio class="Audio"></audio>
+        <script src="lesson 2.1.js"></script>
+    </body>   
+</html>
