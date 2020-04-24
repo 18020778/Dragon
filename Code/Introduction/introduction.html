@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="introduction.css">
 </head>
-<body>
+<body> 
     <div id = "divBackground"></div>
     <div id="mainBig">
         <div class="header">
@@ -21,17 +21,25 @@
                 <div class="Language" onclick="hindi()">Hindi</div>
             </div>
         </div>
+        <img src="loading.gif" id="gif" style="margin-left: calc(100% /2 - 30px); margin-top: 200px;"/>
+            <script>
+                setTimeout(function(){
+                    document.getElementById("gif").style.display = "none";
+                    document.getElementById("bodyMain").style.display = "block";
+                    document.getElementById("start").style.display = "block";
+                },500);
+            </script>
         <div id="bodyMain">
             <button id="micro_top" onclick="turnMicroTop()"></button>
             <span id="letter">Put the giraffe beside the palm tree</span>
             <div id="coverletter">beside</div>
             <div id="base">
-                <div id="tree"></div>
-                <div class="dotted" style="margin-left: 180px;"></div>
-                <div class="dotted" style="margin-left: 580px;"></div>
+                <div id="treeScreen1"></div>
+                <div class="dottedScreen1" style="margin-left: 180px;"></div>
+                <div class="dottedScreen1" style="margin-left: 580px;"></div>
             </div>
-            <div id="giraffe" onmousedown="checkTrue()" onmouseup="checkFalse()"></div>
-            <svg height="300" width="960" style = "position: absolute; top: 320px; left: calc(50% - 480p);">
+            <div id="giraffeScreen1" onmousedown="checkTrue()" onmouseup="checkFalse()"></div>
+            <svg id = "svg" height="300" width="960" style = "position: absolute; top: 320px; left: calc(50% - 480px);">
                 <line  id = "lineA" x1="774" y1="225" x2="800" y2="230" style="stroke:black;stroke-width:3; opacity: 0;" />
                 <line  id = "lineB" x1="784" y1="216" x2="800" y2="230" style="stroke:black;stroke-width:3; opacity: 0;"/>
             </svg>
