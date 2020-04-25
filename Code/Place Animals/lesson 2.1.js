@@ -1334,6 +1334,12 @@ function changeRabbit() {
             letterRabbit.style.top = "60px";
             letterRabbit.style.left = "100px";
             letterRabbit.style.fontSize = "38px";
+        setTimeout(function() {
+            micro.style.display = "block";
+            micro.style.left = "30px";
+            letterJuice.style.top = "60px";
+            letterJuice.style.left = "75px";
+            letterJuice.style.fontSize = "38px";
         }, 500); 
     }, 50);
 }
