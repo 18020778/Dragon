@@ -33,7 +33,7 @@ body{
     border-bottom: 1px solid #cfcccc;
 }
 #bodyMain {
-    
+    display: none;
 }
 .button_back {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -134,44 +134,6 @@ body{
     left: calc(50% - 11px);
     opacity: 0;
 }
-#tree {
-    background-image: url("https://content.dragonlearn.in/135475/1440/49.png");
-    margin-left: calc(100% /2 - 100px);
-    margin-top: 30px;
-    width: 160px;
-    height: 320px;
-    background-size: cover;
-    filter: blur(5px);
-}
-.dotted {
-    background-image: url("https://content.dragonlearn.in/135475/1440/60.png");
-    width: 160px;
-    height: 40px;
-    margin-top: -40px;
-    background-size: cover;
-    filter: blur(5px);
-}
-#giraffe {
-    background-image: url("https://content.dragonlearn.in/135475/1440/48.png");
-    width: 160px;
-    height: 240px;
-    position: absolute;
-    top : 330px;
-    left: calc(50% + 280px);
-    z-index: 2;
-    background-size: cover;
-    pointer-events: none;
-    filter: blur(5px);
-    cursor: url("https://content.dragonlearn.in/fp/97/fat_player/cursors/openhand-080627fa359156339e79f118fa66a6937f09ff679fe87e8afa473b95c8168d35.cur"), auto;
-}
-.triangle {
-    background-image: url("https://content.dragonlearn.in/135475/1440/43.png");
-    background-position: 130px 0px;
-    background-size: cover;
-    width: 10px;
-    height: 10px;
-    transform: rotate(90deg);
-}
 #languageDialog {
     border: 1px solid #cfcccc;
     box-shadow: 0 0 5px #cfcccc;
@@ -267,9 +229,47 @@ body{
 #start {
     cursor: pointer;
     margin-top: -390px;
+    display: none;
 }
-    
-#dotted1 {
+#treeScreen1 {
+    background-image: url("https://content.dragonlearn.in/135475/1440/49.png");
+    margin-left: calc(100% /2 - 100px);
+    margin-top: 30px;
+    width: 160px;
+    height: 320px;
+    background-size: cover;
+    filter: blur(5px);
+}
+.dottedScreen1 {
+    background-image: url("https://content.dragonlearn.in/135475/1440/60.png");
+    width: 160px;
+    height: 40px;
+    margin-top: -40px;
+    background-size: cover;
+    filter: blur(5px);
+}
+#giraffeScreen1{
+    background-image: url("https://content.dragonlearn.in/135475/1440/48.png");
+    width: 160px;
+    height: 240px;
+    position: absolute;
+    top : 350px;
+    left: calc(50% + 300px);
+    z-index: 2;
+    background-size: cover;
+    pointer-events: none;
+    filter: blur(5px);
+    cursor: url("https://content.dragonlearn.in/fp/97/fat_player/cursors/openhand-080627fa359156339e79f118fa66a6937f09ff679fe87e8afa473b95c8168d35.cur"), auto;
+}
+.triangle {
+    background-image: url("https://content.dragonlearn.in/135475/1440/43.png");
+    background-position: 130px 0px;
+    background-size: cover;
+    width: 10px;
+    height: 10px;
+    transform: rotate(90deg);
+}   
+#dottedScreen2 {
     background-image: url("https://content.dragonlearn.in/135475/1440/60.png");
     margin-left: calc(100% /2 - 100px);
     margin-top: 100px;
@@ -278,7 +278,7 @@ body{
     background-size: cover;
     filter: none;
 }
-.tree1 {
+.treeScreen2 {
     background-image: url("https://content.dragonlearn.in/135475/1440/49.png");
     margin-top: -320px;
     width: 160px;
@@ -286,12 +286,80 @@ body{
     background-size: cover;
     filter: none;
 }
-#giraffe1 {
+#giraffeScreen2 {
     background-image: url("https://content.dragonlearn.in/135475/1440/48.png");
     width: 160px;
     height: 240px;
     position: absolute;
-    top : 300px;
+    top : 350px;
+    left: calc(50% + 280px);
+    z-index: 2;
+    background-size: cover;
+    pointer-events: fill;
+    filter: none;
+    cursor: url("https://content.dragonlearn.in/fp/97/fat_player/cursors/openhand-080627fa359156339e79f118fa66a6937f09ff679fe87e8afa473b95c8168d35.cur"), auto;
+}
+#momScreen3 {
+    background-image: url("https://content.dragonlearn.in/135475/1440/54.svg");
+    margin-left: calc(100% /2 - 100px);
+    margin-top: -160px;
+    width: 160px;
+    height: 320px;
+    background-size: cover;
+    filter: none;
+}
+.dottedScreen3 {
+    background-image: url("https://content.dragonlearn.in/135475/1440/60.png");
+    width: 160px;
+    height: 40px;
+    margin-top: -40px;
+    background-size: cover;
+    filter: none;
+}
+#childScreen3 {
+    background-image: url("https://content.dragonlearn.in/135475/1440/55.svg");
+    width: 120px;
+    height: 200px;
+    position: absolute;
+    top : 350px;
+    left: calc(50% + 300px);
+    z-index: 2;
+    background-size: cover;
+    pointer-events: fill;
+    filter: none;
+    cursor: url("https://content.dragonlearn.in/fp/97/fat_player/cursors/openhand-080627fa359156339e79f118fa66a6937f09ff679fe87e8afa473b95c8168d35.cur"), auto;
+}
+#dottedScreen4 {
+    background-image: url("https://content.dragonlearn.in/135475/1440/60.png");
+    margin-left: calc(100% /2 - 100px);
+    margin-top: -40px;
+    width: 160px;
+    height: 40px;
+    background-size: cover;
+    filter: none;
+}
+#momScreen4 {
+    background-image: url("https://content.dragonlearn.in/135475/1440/54.svg");
+    margin-top: -320px;
+    width: 160px;
+    height: 320px;
+    background-size: cover;
+    filter: none;
+}
+#papaScreen4 {
+    background-image: url("https://content.dragonlearn.in/135475/1440/53.svg");
+    margin-top: -160px;
+    width: 160px;
+    height: 320px;
+    background-size: cover;
+    filter: none;
+}
+#childScreen4 {
+    background-image: url("https://content.dragonlearn.in/135475/1440/55.svg");
+    width: 120px;
+    height: 200px;
+    position: absolute;
+    top : 350px;
     left: calc(50% + 280px);
     z-index: 2;
     background-size: cover;

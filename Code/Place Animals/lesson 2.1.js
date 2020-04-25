@@ -123,7 +123,7 @@ function photo() {
             screen += 1;
             setTimeout(function(){ 
                 whiteScreen();
-            }, 3000)
+            }, 2000)
         },1500)
     },3000)
 }
@@ -273,7 +273,7 @@ function checkFalse(){
             if(indAn == 2){
                 //xử lý cho con cú;
                 animalMove[indAn].style.top = (bothOfDottedTop - animalMove[indAn].offsetHeight + 40) + "px";
-                animalMove[indAn].style.left = (thirdDottedLeft - 10) +"px";
+                animalMove[indAn].style.left = (thirdDottedLeft) +"px";
                 thirdDotted[2].style.opacity = "0";
                 indAn += 1;
                 photo();
@@ -354,7 +354,7 @@ function makeDotAppear(){
 
 
 
-//screen2
+//Delete Screen
 var wolf = document.getElementById("wolf");
 var owl = document.getElementById("owl");
 var letterOrange = document.getElementById("letter-orange");
@@ -398,22 +398,42 @@ function whiteScreen() {
             button_green[2].style.transition = "1s";
         },1000);  
     }
+    if(screen == 4) {
+        body.removeChild(cupcake);
+        body.removeChild(teapot);
+        body.removeChild(dessert);
+        body.removeChild(cup);
+        body.removeChild(iceCream);
+        body.removeChild(fruice);
+        body.removeChild(letterCup);
+        body.removeChild(letterIceCream);
+        body.removeChild(letterFruice);
+
+        setTimeout(function() {
+            button_green[1].style.marginLeft = "398px";
+            button_green[1].style.transition = "1s";
+        },1000);  
+    }
     setTimeout(function() {
         nextScreen();
     },1000)
 }
 
+//
+//
+//Add screen
 var letterCup = document.getElementById("letter-cup");
+var letterBear = document.getElementById("letter-bear");
 function nextScreen() {
     if (screen == 2) {
         land.style.opacity = "1";
         micro.style.opacity = "1";
         letterOrange.style.opacity = "1";
         micro.style.left = "180px";
-        audio[0].src = "..\Dragon\Dragon\mp3\Place Animals\Round 2\Grapes_beside_banana.mp3"; 
-        // audio[1].setAttribute("src","");
-        // audio[2].setAttribute("src","");
-        // audio[3].setAttribute("src","");
+        audio[0].src = "../mp3/Place Animals/Round 2/Orange_beside_apple.mp3"; 
+        audio[1].src = "../mp3/Place Animals/Round 2/Grapes_beside_banana.mp3";
+        audio[2].src = "../mp3/Place Animals/Round 2/Pear_beside_banana.mp3";
+        audio[3].src = "../mp3/Place Animals/Round 2/WaMelon_beside_apple.mp3";
         thirdDotted[0].style.left = "50px";
         thirdDotted[1].style.left = "330px";
         thirdDotted[2].style.left = "480px";
@@ -471,11 +491,10 @@ function nextScreen() {
         land.style.opacity = "1";
         micro.style.opacity = "1";
         letterCup.style.opacity = "1";
-        micro.style.left = "50px";
-        audio[0].src = "..\Dragon\Dragon\mp3\Place Animals\Round 2\Grapes_beside_banana.mp3"; 
-        // audio[1].setAttribute("src","");
-        // audio[2].setAttribute("src","");
-        // audio[3].setAttribute("src","");
+        micro.style.left = "165px";
+        audio[0].src = "../mp3/Place Animals/Round 3/cup_beside_cupcake.mp3"; 
+        audio[1].src = "../mp3/Place Animals/Round 3/iceCream_between_cup_n_teapot.mp3";
+        audio[2].src = "../mp3/Place Animals/Round 3/juice_between_teapot_n_dessert.mp3";
         thirdDotted[0].style.left = "190px";
         thirdDotted[1].style.left = "330px";
         thirdDotted[2].style.left = "calc(50% + 130px)";
@@ -507,20 +526,84 @@ function nextScreen() {
         iceCream.setAttribute("onmousedown","checkTrue2()");
         iceCream.setAttribute("onmouseup","checkFalse2()");
         
-        var fruice = document.createElement("div");
-        fruice.setAttribute("id","fruice");
-        fruice.classList.add("moveAnimal");
-        body.appendChild(fruice);
-        fruice.setAttribute("onmousedown","checkTrue2()");
-        fruice.setAttribute("onmouseup","checkFalse2()");
+        var juice = document.createElement("div");
+        juice.setAttribute("id","juice");
+        juice.classList.add("moveAnimal");
+        body.appendChild(juice);
+        juice.setAttribute("onmousedown","checkTrue2()");
+        juice.setAttribute("onmouseup","checkFalse2()");
 
         isCorrect = false;
         expressRaccoon = false;
         cup = document.getElementById("cup");
         iceCream = document.getElementById("iceCream");
-        fruice = document.getElementById("fruice");
+        juice = document.getElementById("juice");
     }
+    else if (screen == 4) {
+        land.style.opacity = "1";
+        micro.style.opacity = "1";
+        letterBear.style.opacity = "1";
+        micro.style.left = "180px";
+        audio[0].src = "..\Dragon\Dragon\mp3\Place Animals\Round 2\Grapes_beside_banana.mp3"; 
+        // audio[1].setAttribute("src","");
+        // audio[2].setAttribute("src","");
+        // audio[3].setAttribute("src","");
+        thirdDotted[0].style.left = "190px";
+        thirdDotted[1].style.left = "330px";
+        thirdDotted[2].style.left = "480px";
+        thirdDotted[3].style.left = "calc(50% + 130px)";
+        land.style.backgroundImage = 'url("https://content.dragonlearn.in/131454/1441/1131.png")';
+
+        var wolf4 = document.createElement("div");
+        wolf4.setAttribute("id","wolf4");
+        body.appendChild(wolf4);
+
+        var owl4 = document.createElement("div");
+        owl4.setAttribute("id","owl4");
+        body.appendChild(owl4);
+
+        var bear4 = document.createElement("div");
+        bear4.setAttribute("id","bear4");
+        bear4.classList.add("moveAnimal");
+        body.appendChild(bear4);
+        indAn = 0;
+        bear4.setAttribute("onmousedown","checkTrue3()");
+        bear4.setAttribute("onmouseup","checkFalse3()");
+
+        var raccoon4 = document.createElement("div");
+        raccoon4.setAttribute("id","raccoon4");
+        raccoon4.classList.add("moveAnimal");
+        body.appendChild(raccoon4);
+        raccoon4.setAttribute("onmousedown","checkTrue3()");
+        raccoon4.setAttribute("onmouseup","checkFalse3()");
+        
+        var fox4 = document.createElement("div");
+        fox4.setAttribute("id","fox4");
+        fox4.classList.add("moveAnimal");
+        body.appendChild(fox4);
+        fox4.setAttribute("onmousedown","checkTrue3()");
+        fox4.setAttribute("onmouseup","checkFalse3()");
+
+        var  rabbit4 = document.createElement("div");
+        rabbit4.setAttribute("id","rabbit4");
+        rabbit4.classList.add("moveAnimal");
+        body.appendChild(rabbit4);
+        rabbit4.setAttribute("onmousedown","checkTrue3()");
+        rabbit4.setAttribute("onmouseup","checkFalse3()");
+        
+        isCorrect = false;
+        expressRaccoon = false;
+        bear4 = document.getElementById("bear4");
+        raccoon4 = document.getElementById("raccoon4");
+        fox4 = document.getElementById("fox4");
+        rabbit4 = document.getElementById("rabbit4");
+    }
+    
 }
+
+//
+//
+//screen2
 function checkTrue1(){
     expressRaccoon = true;
     animalMove[indAn].style.transition = "none";
@@ -758,9 +841,7 @@ var letterPear = document.getElementById("letter-pear");
 var letterWatermelon = document.getElementById("letter-watermelon");
 function changeGrapes() {
     letterOrange.style.display = "none";
-    alert(indAn);
     animalMove[indAn].style.display = "block";
-    alert(2);
     micro.style.display = "none"; 
     setTimeout(function(){
         letterGrapes.style.opacity = "1";
@@ -852,7 +933,7 @@ function checkFalse2(){
             // indAn = 0 là con gấu mèo thì mình đã lấy vị trí này r , nên khi kp
             // gấu mèo sẽ ko cần kiểm tra
             animalMove[indAn].style.top = (bothOfDottedTop - animalMove[indAn].offsetHeight + 40) + "px";
-            animalMove[indAn].style.left = (firstDottedLeft - 10) + "px";
+            animalMove[indAn].style.left = (firstDottedLeft) + "px";
             thirdDotted[0].style.opacity = "0";
             indAn += 1;
             dessert.style.opacity = "1";
@@ -882,7 +963,7 @@ function checkFalse2(){
                 dessert.style.opacity = "1";
                 if (indAn == 2) {
                     setTimeout(function() {
-                        changeFruice();
+                        changeJuice();
                     }, 3000);
                 }
                 return;
@@ -973,43 +1054,286 @@ function makeDotAppear2(){
 }
 
 var letterIceCream = document.getElementById("letter-iceCream");
-var letterFruice = document.getElementById("letter-fruice");
+var letterJuice = document.getElementById("letter-juice");
 function changeIceCream() {
     letterCup.style.display = "none";
     animalMove[indAn].style.display = "block"; 
     micro.style.display = "none"; 
     setTimeout(function(){
         letterIceCream.style.opacity = "1";
-        letterIceCream.style.fontSize = "42px";
+        letterIceCream.style.fontSize = "38px";
         letterIceCream.style.top = "60px";
-        letterIceCream.style.left = "200px";
+        letterIceCream.style.left = "75px";
         letterIceCream.style.transition = "all 0.4s";
         setTimeout(function() {
             micro.style.display = "block";
-            micro.style.left = "180px";
+            micro.style.left = "30px";
             letterIceCream.style.top = "60px";
-            letterIceCream.style.left = "230px";
+            letterIceCream.style.left = "75px";
             letterIceCream.style.fontSize = "38px";
         }, 500); 
     }, 50);
 }
 
-function changeFruice() {
+function changeJuice() {
     letterIceCream.style.display = "none";
     animalMove[indAn].style.display = "block"; 
     micro.style.display = "none"; 
     setTimeout(function(){
-        letterFruice.style.opacity = "1";
-        letterFruice.style.fontSize = "42px";
-        letterFruice.style.top = "60px";
-        letterFruice.style.left = "200px";
-        letterFruice.style.transition = "all 0.4s";
+        letterJuice.style.opacity = "1";
+        letterJuice.style.fontSize = "38px";
+        letterJuice.style.top = "60px";
+        letterJuice.style.left = "75px";
+        letterJuice.style.transition = "all 0.4s";
+        setTimeout(function() {
+            micro.style.display = "block";
+            micro.style.left = "30px";
+            letterJuice.style.top = "60px";
+            letterJuice.style.left = "75px";
+            letterJuice.style.fontSize = "38px";
+        }, 500); 
+    }, 50);
+}
+
+//
+//
+// screen 4
+function checkTrue3(){
+    expressRaccoon = true;
+    animalMove[indAn].style.transition = "none";
+    // khi nào mình kéo thả mới bắt đầu kiểm tra vị trí hiện vòng cho đỡ lag
+    runMakeAppearDot = setInterval(makeDotAppear3, 3);
+}
+function checkFalse3(){
+    clearInterval(runMakeAppearDot);
+    var racLeft = animalMove[indAn].offsetLeft + 52;
+    var racTop = animalMove[indAn].offsetTop + animalMove[indAn].offsetHeight;
+    var firstDottedLeft = thirdDotted[0].offsetLeft;
+    var secondDottedLeft = thirdDotted[1].offsetLeft;
+    var thirdDottedLeft = thirdDotted[2].offsetLeft;
+    var forthDottedLeft = thirdDotted[3].offsetLeft;
+    var bothOfDottedTop = thirdDotted[0].offsetTop;
+    expressRaccoon = false;
+    animalMove[indAn].style.transition = "all 1s";
+    var timeDelay = 0;
+    var wrongChoice3 = false;
+    // nếu vị trí top của con vật phù hợp với 1 trong 3 vòng thực hiện set đến
+    // left
+    if(racTop >= bothOfDottedTop + 10 && racTop <= bothOfDottedTop + 50){
+        if((racLeft >= forthDottedLeft && racLeft <= forthDottedLeft + 100)){
+            if (indAn != 0) return;
+            // indAn = 0 là con gấu mèo thì mình đã lấy vị trí này r , nên khi kp
+            // gấu mèo sẽ ko cần kiểm tra
+            animalMove[indAn].style.top = (bothOfDottedTop - animalMove[indAn].offsetHeight + 40) + "px";
+            animalMove[indAn].style.left = (forthDottedLeft - 10) + "px";
+            thirdDotted[3].style.opacity = "0";
+            indAn += 1;
+            wolf4.style.opacity = 1;
+            if (indAn == 1) {
+                setTimeout(function() {
+                    changeRaccoon();
+                }, 3000);
+            }
+        }
+        else if ((racLeft >= firstDottedLeft && racLeft <= firstDottedLeft + 100)){ 
+            if(indAn == 0) {
+                wrongChoice3 = true;
+                thirdDotted[0].style.backgroundColor = "red";
+                timeDelay = 1000;
+            }
+            else if(indAn == 1) {
+                animalMove[indAn].style.top = (bothOfDottedTop - animalMove[indAn].offsetHeight + 40) + "px";
+                animalMove[indAn].style.left = (firstDottedLeft - 10) + "px";
+                thirdDotted[0].style.opacity = "0";
+                indAn += 1;
+                bear4.style.opacity = 1;
+                owl4.style.opacity = 1;
+                if (indAn == 2) {
+                    setTimeout(function() {
+                        changeFox();
+                    }, 3000);
+                }
+                return;
+            }
+        }
+        else if(racLeft >= secondDottedLeft && racLeft <= secondDottedLeft + 100){
+            if(indAn == 0 || indAn == 1){
+                wrongChoice3 = true;
+                thirdDotted[1].style.backgroundColor = "red";
+                timeDelay = 1000;
+            }
+            else if (indAn == 2){
+                animalMove[indAn].style.top = (bothOfDottedTop - animalMove[indAn].offsetHeight + 40) + "px";
+                animalMove[indAn].style.left = (secondDottedLeft - 10) + "px";
+                thirdDotted[1].style.opacity = "0";
+                indAn += 1;
+                wolf4.style.opacity = 1;
+                bear4.style.opacity = 1;
+                owl4.style.opacity = 1;
+                if (indAn == 3) {
+                    setTimeout(function() {
+                        changeRabbit();
+                    }, 3000);
+                }
+                return;
+            }
+        }
+        else if(racLeft >= thirdDottedLeft && racLeft <= thirdDottedLeft + 120){
+            if(indAn != 3){
+                wrongChoice3 = true;
+                thirdDotted[2].style.backgroundColor = "red";
+                timeDelay = 1000;
+            }
+            else {
+                animalMove[indAn].style.top = (bothOfDottedTop - animalMove[indAn].offsetHeight + 40) + "px";
+                animalMove[indAn].style.left = (thirdDottedLeft - 10) +"px";
+                thirdDotted[2].style.opacity = "0";
+                indAn += 1;
+                if (indAn == 4) {
+                   photo();
+                }
+                return;
+            }
+        }
+    }
+    if(wrongChoice3){
+        var check = document.getElementsByClassName("checkBetween");
+        if (indAn == 0) {
+            setTimeout(function(){
+                wolf4.style.opacity = 0.5;
+                thirdDotted[0].style.backgroundColor = "unset";
+                thirdDotted[1].style.backgroundColor = "unset";
+                thirdDotted[2].style.backgroundColor = "unset";
+                thirdDotted[0].style.opacity = 0;
+                thirdDotted[1].style.opacity = 0;
+                thirdDotted[2].style.opacity = 0;
+                thirdDotted[3].style.opacity = 0;
+                setTimeout(function(){
+                    check[0].style.background = "#fbd014";
+                }, 1100);
+            },timeDelay)
+        }
+        else if (indAn == 1) {
+            setTimeout(function() {
+                bear4.style.opacity = 0.5;
+                owl4.style.opacity = 0.5;
+                thirdDotted[1].style.backgroundColor = "unset";
+                thirdDotted[2].style.backgroundColor = "unset";
+                thirdDotted[0].style.opacity = 0;
+                thirdDotted[1].style.opacity = 0;
+                thirdDotted[2].style.opacity = 0;
+                thirdDotted[3].style.opacity = 0;
+                setTimeout(function() {
+                    check[1].style.background = "#fbd014";
+                }, 1100);
+            }, timeDelay)
+        }
+        else if (indAn == 2) {
+            setTimeout(function() {
+                wolf4.style.opacity = 0.5;
+                bear4.style.opacity = 0.5;
+                owl4.style.opacity = 0.5;
+                thirdDotted[2].style.backgroundColor = "unset";
+                thirdDotted[0].style.opacity = 0;
+                thirdDotted[1].style.opacity = 0;
+                thirdDotted[2].style.opacity = 0;
+                thirdDotted[3].style.opacity = 0;
+                setTimeout(function() {
+                    check[2].style.background = "#fbd014";
+                }, 1100);
+            }, timeDelay)
+        }
+    }
+    setTimeout(function(){
+        animalMove[indAn].style.top = "400px";
+        animalMove[indAn].style.left = "calc(50% - 70px)";
+    },timeDelay) 
+}
+function makeDotAppear3(){
+    var racLeft = animalMove[indAn].offsetLeft + 52;
+    var racTop = animalMove[indAn].offsetTop + animalMove[indAn].offsetHeight;
+    var firstDottedLeft = thirdDotted[0].offsetLeft;
+    var secondDottedLeft = thirdDotted[1].offsetLeft;
+    var thirdDottedLeft = thirdDotted[2].offsetLeft;
+    var forthDottedLeft = thirdDotted[3].offsetLeft;
+    var bothOfDottedTop = thirdDotted[0].offsetTop;
+    thirdDotted[0].style.opacity = 0;
+    thirdDotted[1].style.opacity = 0;
+    thirdDotted[2].style.opacity = 0;
+    thirdDotted[3].style.opacity = 0;
+    if(racTop >= bothOfDottedTop + 10 && racTop <= bothOfDottedTop + 50){
+        if(racLeft >= forthDottedLeft && racLeft <= forthDottedLeft + 100){
+            if (indAn == 0) thirdDotted[3].style.opacity = 1;
+        }
+        else if(racLeft >= firstDottedLeft && racLeft <= firstDottedLeft + 100){
+            if (indAn == 0 || indAn == 1) thirdDotted[0].style.opacity = 1;
+        }
+        else if(racLeft >= secondDottedLeft && racLeft <= secondDottedLeft + 100){
+            if (indAn != 3) thirdDotted[1].style.opacity = 1;
+        }
+        else if(racLeft >= thirdDottedLeft && racLeft <= thirdDottedLeft + 120){
+            thirdDotted[2].style.opacity = 1;
+        }
+    }
+}
+
+var letterRaccoon = document.getElementById("letter-raccoon-4"); 
+var letterFox = document.getElementById("letter-fox");
+var letterRabbit = document.getElementById("letter-rabbit");
+function changeRaccoon() {
+    letterBear.style.display = "none";
+    animalMove[indAn].style.display = "block";
+    micro.style.display = "none"; 
+    setTimeout(function(){
+        letterRaccoon.style.opacity = "1";
+        letterRaccoon.style.fontSize = "42px";
+        letterRaccoon.style.top = "60px";
+        letterRaccoon.style.left = "200px";
+        letterRaccoon.style.transition = "all 0.4s";
         setTimeout(function() {
             micro.style.display = "block";
             micro.style.left = "180px";
-            letterFruice.style.top = "60px";
-            letterFruice.style.left = "230px";
-            letterFruice.style.fontSize = "38px";
+            letterRaccoon.style.top = "60px";
+            letterRaccoon.style.left = "230px";
+            letterRaccoon.style.fontSize = "38px";
+        }, 500); 
+    }, 50);
+}
+function changeFox() {
+    letterRaccoon.style.display = "none";
+    animalMove[indAn].style.display = "block"; 
+    micro.style.display = "none"; 
+    setTimeout(function(){
+        letterFox.style.opacity = "1";
+        letterFox.style.fontSize = "42px";
+        letterFox.style.top = "60px";
+        letterFox.style.left = "200px";
+        letterFox.style.transition = "all 0.4s";
+        setTimeout(function() {
+            micro.style.display = "block";
+            micro.style.left = "180px";
+            letterFox.style.top = "60px";
+            letterFox.style.left = "230px";
+            letterFox.style.fontSize = "38px";
+        }, 500); 
+    }, 50);
+}
+function changeRabbit() {
+    letterFox.style.display = "none";
+    animalMove[indAn].style.display = "block"; 
+    micro.style.display = "none"; 
+    setTimeout(function(){
+        letterRabbit.style.opacity = "1";
+        letterRabbit.style.fontSize = "42px";
+        letterRabbit.style.top = "60px";
+        letterRabbit.style.left = "50px";
+        letterRabbit.style.transition = "all 0.4s";
+        setTimeout(function() {
+            micro.style.display = "block";
+            micro.style.left = "50px";
+            letterRabbit.style.top = "60px";
+            letterRabbit.style.left = "100px";
+            letterRabbit.style.fontSize = "38px";
         }, 500); 
     }, 50);
 }
