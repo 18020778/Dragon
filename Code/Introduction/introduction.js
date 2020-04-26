@@ -353,7 +353,7 @@ function nextScreen2(){
     document.getElementById("letter").innerHTML = "Put the giraffe between the palms";
     document.getElementById("micro_bottom").style.display = "none";
     document.getElementById("audioTop").setAttribute("src","../mp3/Introduction/giraffe_between_palms.mp3");
-    document.getElementById("audioBottom").setAttribute("src","../mp3/Introdution/between.mp3");
+    document.getElementById("audioBottom").setAttribute("src","../mp3/Introduction/between.mp3");
     var giraffeScreen2 = document.createElement("div");
     giraffeScreen2.setAttribute("id","giraffeScreen2");
     giraffeScreen2.setAttribute("onmousedown","checkTrue()");

@@ -10,7 +10,9 @@
     <div id = "divBackground"></div>
     <div id="mainBig">
         <div class="header">
-            <button class="button_back" style="margin-left: 10px;">< Back</button>
+            <a href="../Outline/Outline.html">
+                <button class="button_back" style="margin-left: 10px;">< Back</button></Back>
+            </a>
             <div class="border_head">
                 <div class="button_green" style="margin-left: 4px; margin-top: 2px;"></div>
                 <div class="button_green" style="margin-left: 27px; margin-top: -22px;"></div>
@@ -26,6 +28,14 @@
                 <div class="Language" onclick="hindi()">Hindi</div>
             </div>
         </div>
+        <img src="loading.gif" id="gif" style="margin-left: calc(100% /2 - 30px); margin-top: 200px;"/>
+            <script>
+                setTimeout(function(){
+                    document.getElementById("gif").style.display = "none";
+                    document.getElementById("bodyMain").style.display = "block";
+                    document.getElementById("start").style.display = "block";
+                },500);
+            </script>
         <div id="bodyMain">
             <button id="micro_top" onclick="turnMicroTop()"></button>
             <div id="letter">Put the raccoon <span class ="checkBetween">between</span> the rabbit and the fox. </div>
@@ -80,5 +90,5 @@
         <script src="lesson2.3.js"></script>
         <script src="lesson2.4.js"></script>
     </div>
-    </body>   
+</body>   
 </html>

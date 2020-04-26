@@ -92,6 +92,7 @@ body{
 }
 #start {
     cursor: pointer;
+    display: none;
 }
 #mainBig {
     background-color: white;
@@ -110,6 +111,7 @@ body{
 }
 #bodyMain {
     pointer-events: none;
+    display: none;
 }
 .button_back {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

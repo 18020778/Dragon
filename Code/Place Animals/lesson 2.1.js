@@ -94,15 +94,17 @@ function hindi() {
 }
 var dialogLanguageAppear = false;
 function appearDialog() {
+   var languageDialog = document.getElementById("languageDialog");
    if(!dialogLanguageAppear){
-       x.style.display = "block";
+        languageDialog.style.display = "block";
        dialogLanguageAppear = true;
    }
-   else {
-       x.style.display = "none";
+   else{
+        languageDialog.style.display = "none";
        dialogLanguageAppear = false;
    }
 }
+
 
 var photoImage = document.getElementById("photo");
 var photoImage1 = document.getElementById("photo1");
