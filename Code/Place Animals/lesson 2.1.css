@@ -5,6 +5,35 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+#next {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    margin-top: 510px;
+    width: 100px;
+    margin-left: calc(50% - 47px);
+    display: none;
+    color: #64cee3;
+}
+
+    #next:hover {
+        color: #2fb8d4;
+    }
+
+.button_next {
+    background-image: url("https://content.dragonlearn.in/135475/1440/45.svg");
+    background-position: 0px 0px;
+    width: 31px;
+    height: 31px;
+    position: absolute;
+    margin-top: -28px;
+    margin-left: 60px;
+    background-size: cover;
+}
+
+    .button_next:hover {
+        background-position: 0px 61.5px;
+    }
 #divBackground{
     position: absolute;
     z-index: -1;
@@ -254,7 +283,7 @@ body{
 #letter-cup {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: absolute;
-    top: 60px;
+    top: 80px;
     left: 230px;
     font-size: 38px;
     opacity: 0;
@@ -263,7 +292,7 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: absolute;
     top: 80px;
-    left: 75px;
+    left: 300px;
     font-size: 20px;
     opacity:0;
     transition: all 1s;
@@ -644,7 +673,6 @@ body{
     left: 750px;
     top:  140px;
 }
-
 
 
 

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="lesson 2.1.css">
+    <link rel="stylesheet" type="text/css" href="Congrat.css">
 </head>
 <body >
     <div id = "divBackground"></div>
@@ -27,7 +28,6 @@
         </div>
         <div id="bodyMain">
             <button id="micro_top" onclick="turnMicroTop()"></button>
-            
             <div id="letter">Put the raccoon <span class ="checkBetween">between</span> the rabbit and the fox. </div>
             <div id="letter-wolf">Put the wolf <span class ="checkBetween">between</span> the bear and the fox. </div>
             <div id="letter-owl">Put the owl <span class ="checkBetween">beside</span> the rabbit. </div>
@@ -37,7 +37,7 @@
             <div id="letter-watermelon">Put the watermelon <span class ="checkBetween">beside</span> the apple.</div>
             <div id="letter-cup">Put the cup <span class ="checkBetween">beside</span> the cupcake.</div>
             <div id="letter-iceCream">Put the ice-cream <span class ="checkBetween">between</span> the cup and the teapot. </div>
-            <div id="letter-fruice">Put the fruice <span class ="checkBetween">between</span> the teapot and the dessert. </div>
+            <div id="letter-juice">Put the juice <span class ="checkBetween">between</span> the teapot and the dessert. </div>
             <div id="letter-bear">Put the bear <span class ="checkBetween">beside</span> the owl.</div>
             <div id="letter-raccoon-4">Put the raccoon <span class ="checkBetween">beside</span> the wolf.</div>
             <div id="letter-fox">Put the fox <span class ="checkBetween">beside</span> the raccoon. </div>
@@ -57,18 +57,28 @@
             <div id="photo1"></div>
             <div id="flash"></div>
         </div>
+        
+            <div id="next" onclick="goCongrat()">
+                Next
+            <div class="button_next"></div>
+            </div>
+        
         <div id="start" onmouseover="onmouseoverStart()" onmouseout="onmouseoutStart()" onclick="start()">
             <div id="button_start">start</div>
             <div id="cylinderBig"></div>  
             <div id="cylinderSmall"></div>    
         </div>
-        <audio class="Audio" src="../mp3/Place Animals/Round 1/Raccoon_between_rabbit_n_fox.mp3" type="audio/mpeg">
-         </audio>
-        <audio class="Audio" src="../mp3/Place Animals/Round 1/Wolf_between_bear_n_fox.mp3" type="audio/mpeg">
+        <audio class="Audio" src="../mp3/Place Animals/Round 1/Raccoon_between_rabbit_n_fox.mp" type="audio/mpeg">
+        </audio>    
+        <audio class="Audio" src="../mp3/Place Animals/Round 1/Wolf_between_bear_n_fox.mp3" type="audio/mpeg" >
         </audio>
-        <audio class="Audio" src="../mp3/Place Animals/Round 1/Owl_beside_rabbit.mp3" type="audio/mpeg">
+        <audio class="Audio" src="../mp3/Place Animals/Round 1/Owl_beside_rabbit.mp3" type="audio/mpeg">       
         </audio>
         <audio class="Audio"></audio>
         <script src="lesson 2.1.js"></script>
+        <script src="lesson2.2.js"></script>
+        <script src="lesson2.3.js"></script>
+        <script src="lesson2.4.js"></script>
+    </div>
     </body>   
 </html>
