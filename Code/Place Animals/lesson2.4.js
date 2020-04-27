@@ -1,10 +1,10 @@
-function checkTrue3(){
+function checkDrag3(){
     expressRaccoon = true;
     animalMove[indAn].style.transition = "none";
     // khi nào mình kéo thả mới bắt đầu kiểm tra vị trí hiện vòng cho đỡ lag
     runMakeAppearDot = setInterval(makeDotAppear3, 3);
 }
-function checkFalse3(){
+function checkDrop3(){
     clearInterval(runMakeAppearDot);
     var racLeft = animalMove[indAn].offsetLeft + 52;
     var racTop = animalMove[indAn].offsetTop + animalMove[indAn].offsetHeight;
@@ -17,13 +17,9 @@ function checkFalse3(){
     animalMove[indAn].style.transition = "all 1s";
     var timeDelay = 0;
     var wrongChoice3 = false;
-    // nếu vị trí top của con vật phù hợp với 1 trong 3 vòng thực hiện set đến
-    // left
     if(racTop >= bothOfDottedTop + 10 && racTop <= bothOfDottedTop + 50){
         if((racLeft >= forthDottedLeft && racLeft <= forthDottedLeft + 100)){
             if (indAn != 0) return;
-            // indAn = 0 là con gấu mèo thì mình đã lấy vị trí này r , nên khi kp
-            // gấu mèo sẽ ko cần kiểm tra
             animalMove[indAn].style.top = (bothOfDottedTop - animalMove[indAn].offsetHeight + 40) + "px";
             animalMove[indAn].style.left = (forthDottedLeft - 10) + "px";
             thirdDotted[3].style.opacity = "0";

@@ -184,7 +184,8 @@ body{
     background-size: cover;
 }
 .button_next:hover {
-    background-position: 0px 61.5px;
+    background-position: 0px 63px;
+    cursor: pointer;
 }
 #button_start {
     background-image: url("https://content.dragonlearn.in/135475/1440/37.png");
@@ -261,14 +262,15 @@ body{
     filter: blur(5px);
     cursor: url("https://content.dragonlearn.in/fp/97/fat_player/cursors/openhand-080627fa359156339e79f118fa66a6937f09ff679fe87e8afa473b95c8168d35.cur"), auto;
 }
-.triangle {
-    background-image: url("https://content.dragonlearn.in/135475/1440/43.png");
-    background-position: 130px 0px;
-    background-size: cover;
-    width: 10px;
-    height: 10px;
-    transform: rotate(90deg);
-}   
+#triangle {
+    width: 0px;
+    height: 0px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid rgb(42, 90, 134);
+    margin-left: calc(100% - 25px);
+    margin-top: -14px;
+ }
 #dottedScreen2 {
     background-image: url("https://content.dragonlearn.in/135475/1440/60.png");
     margin-left: calc(100% /2 - 100px);

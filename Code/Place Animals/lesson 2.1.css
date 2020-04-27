@@ -32,7 +32,8 @@ body{
 }
 
     .button_next:hover {
-        background-position: 0px 61.5px;
+        background-position: 0px 63px;
+        cursor: pointer;
     }
 #divBackground{
     position: absolute;

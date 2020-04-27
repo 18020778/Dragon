@@ -1,5 +1,6 @@
 var screen = 1;
 
+//click start để bắt đầu chơi
 function start() {
     var start = document.getElementById("start");
     var treeScreen1 = document.getElementById("treeScreen1");
@@ -11,6 +12,7 @@ function start() {
     dropObject[1].style.filter = "none";
     setTimeout(runLine, 3000);
 }
+//di chuột lên trên start
 function onmouseoverStart() {
     var big = document.getElementById("cylinderBig");
     var small = document.getElementById("cylinderSmall");
@@ -27,6 +29,7 @@ function onmouseoverStart() {
     small.style.marginLeft = "calc(50% - 114px)";
     start_bt.style.backgroundPosition = "0px 112px";
 }
+//di chuột ra ngoài start
 function onmouseoutStart() {
     var big = document.getElementById("cylinderBig");
     var small = document.getElementById("cylinderSmall");
@@ -44,201 +47,19 @@ function onmouseoutStart() {
     start_bt.style.backgroundPosition = "0px 0px";
 }
 
-
-var mainBig = document.getElementById("mainBig");
-var dragObject = document.getElementById("giraffeScreen1");
-var dropObject = document.getElementsByClassName("dottedScreen1");
-var expressDragObject = false;
-var isCorrect = false;
-mainBig.addEventListener("mousemove", moveshape);
-dragObject.addEventListener("mousemove", moveshape);
-function moveshape(e){
-    e.preventDefault();
-    if(isCorrect || !expressDragObject) return;
-    var leftOfMainbig = mainBig.offsetLeft;
-    var topOfMainbig = mainBig.offsetTop;
-    var limitLeft = leftOfMainbig + dragObject.offsetWidth/2;
-    var limitRight = leftOfMainbig + mainBig.offsetWidth - dragObject.offsetWidth/2;
-    var limitTop = topOfMainbig + 45 +  dragObject.offsetTop/2;
-    var limitBottom = topOfMainbig + mainBig.offsetHeight - dragObject.offsetHeight/2;
-    if(e.pageX >= limitLeft && e.pageX <= limitRight && e.pageY >= limitTop && e.pageY <= limitBottom){
-        dragObject.style.top = ((e.pageY - topOfMainbig) - (dragObject.offsetHeight / 2)) + "px";
-        dragObject.style.left = ((e.pageX - leftOfMainbig) - (dragObject.offsetWidth / 2)) + "px";
-    }
-    else{
-        if(screen == 1 || screen == 3){
-            checkFalse();
-        }
-        else checkFalse1();
-    }
+//đổi màu khi di chuột vào English
+var language = document.getElementById("chooseLanguage");
+var triangle = document.getElementById("triangle");
+function onmouseoverLanguage() {
+    language.style.color = "#4ed0f5";
+    triangle.style.borderTopColor = "#4ed0f5";
 }
-function checkTrue(){
-    expressDragObject = true;
-    dragObject.style.transition = "none";
-    checkLine.style.opacity = 0;
-    secondCheckLine.style.opacity = 0;
-    canIncre = false;
-    canRun = false;
-    clearTimeout(checkTime);
-}
-function checkFalse(){
-    expressDragObject = false;
-    dragObject.style.transition = "all 1s";
-    var griLeft = dragObject.offsetLeft + 52;
-    var griTop = dragObject.offsetTop + dragObject.offsetHeight;
-    var firstDottedLeft = dropObject[0].offsetLeft;
-    var secondDottedLeft = dropObject[1].offsetLeft;
-    var bothOfDottedTop = dropObject[0].offsetTop;
-    var micBottom = document.getElementById("micro_bottom");
-    var next_butt = document.getElementById("next");
-    if(griTop >= bothOfDottedTop -5 && griTop <= bothOfDottedTop + 50){
-        if(griLeft >= secondDottedLeft && griLeft <= secondDottedLeft + 120){
-            isCorrect = true;
-            if(screen == 1){
-                dragObject.style.left = (secondDottedLeft - 5) + "px";
-            }
-            else dragObject.style.left = (secondDottedLeft + 15) + "px";
-            dragObject.style.top = (bothOfDottedTop - dragObject.offsetHeight + 25) + "px";
-            var turnOnLetter = document.getElementById("coverletter");
-            turnOnLetter.style.opacity = 1;
-            setTimeout(function(){
-                turnOnLetter.style.left = "calc(50% + 40px)";
-                turnOnLetter.style.top = "473px";
-                turnOnLetter.style.fontSize = "42pt";
-                turnOnLetter.style.transition = "all 2s";
-            }, 1000);
-            setTimeout(function(){
-                micBottom.style.left = "480px";
-                micBottom.style.display = "block";
-            },3000);
-            setTimeout(function(){
-                next_butt.style.display = "block";
-                if(screen == 3){
-                    document.getElementById("momScreen3").style.marginTop = "-440px";
-                }
-            },7000);
-            return;
-        }
-        else if(griLeft >= firstDottedLeft && griLeft <= firstDottedLeft + 120){
-            isCorrect = true;
-            dragObject.style.top = (bothOfDottedTop - dragObject.offsetHeight + 25) + "px";
-            if(screen == 1){
-                dragObject.style.left = (firstDottedLeft - 5) + "px";
-            }
-            else dragObject.style.left = (firstDottedLeft + 15) + "px";
-            var turnOnLetter = document.getElementById("coverletter");
-            turnOnLetter.style.opacity = 1;
-            setTimeout(function(){
-                turnOnLetter.style.left = "250px";
-                turnOnLetter.style.top = "473px";
-                turnOnLetter.style.fontSize = "42pt";
-                turnOnLetter.style.transition = "all 2s";
-            }, 1000);
-            setTimeout(function(){
-                micBottom.style.left = "200px";
-                micBottom.style.display = "block";
-            },3000);
-            setTimeout(function(){
-                next_butt.style.display = "block";
-                if(screen == 3){
-                    document.getElementById("momScreen3").style.marginTop = "-440px";
-                }
-            },7000);
-            return;
-        }
-    }
-    checkTime = setTimeout(function(){
-        canRun = true;
-    },3000);
-    dragObject.style.top = "350px";
-    dragObject.style.left = "calc(50% + 300px)";
-}
-function checkFalse1(){
-    expressDragObject = false;
-    dragObject.style.transition = "all 1s";
-    var griLeft = dragObject.offsetLeft + 52;
-    var griTop = dragObject.offsetTop + dragObject.offsetHeight;
-    var dottedLeft = dropObject.offsetLeft;
-    var dottedTop = dropObject.offsetTop;
-    var micBottom = document.getElementById("micro_bottom");
-    var next_butt = document.getElementById("next");
-    if(griTop >= dottedTop -5 && griTop <= dottedTop + 50){
-        if(griLeft >= dottedLeft && griLeft <= dottedLeft + 120){
-            isCorrect = true;
-            dragObject.style.top = (dottedTop - dragObject.offsetHeight + 25) + "px";
-            if(screen == 2){
-                dragObject.style.left = (dottedLeft - 5) + "px";
-            }
-            else dragObject.style.left = (dottedLeft + 15) + "px";
-            var turnOnLetter = document.getElementById("coverletter");
-            turnOnLetter.style.opacity = 1;
-            setTimeout(function(){
-                turnOnLetter.style.left = "calc(50% - 130px)";
-                turnOnLetter.style.top = "473px";
-                turnOnLetter.style.fontSize = "42pt";
-                turnOnLetter.style.transition = "all 2s";
-            }, 1000);
-            setTimeout(function(){
-                micBottom.style.left = "300px";
-                micBottom.style.top = "490px";
-                micBottom.style.display = "block";
-            },3000);
-            setTimeout(function(){
-                next_butt.style.marginTop = "250px";
-                next_butt.style.display = "block";
-                if(screen == 2){
-                    dropObject.style.marginTop = "-180px";
-                }
-                else document.getElementById("papaScreen4").style.marginTop = "-445px";
-            },7000);
-            return;
-        }
-    }
-    dragObject.style.top = "350px";
-    dragObject.style.left = "calc(50% + 280px)";
+function onmouseoutLanguage() {
+    language.style.color = "rgb(42, 90, 134)";
+    triangle.style.borderTopColor = "rgb(42, 90, 134)";
 }
 
-
-var Xins = 4.94;
-var Yins = 0.95;
-var XinsB = 1.04;
-var YinsB = 0.91;
-var checkLine = document.getElementById("lineA");
-var secondCheckLine = document.getElementById("lineB");
-var canRun = true;
-var canIncre = false;
-var checkTime;
-function runLine(){
-    if(!canRun){
-        setTimeout(runLine, 8);
-        return; 
-    }
-    if(!canIncre){
-        checkLine.y1.baseVal.value = 225;
-        checkLine.x1.baseVal.value = 774;
-        secondCheckLine.y1.baseVal.value = 216;
-        secondCheckLine.x1.baseVal.value = 784;
-        canIncre = true;
-    }
-    var a = checkLine.y1.baseVal.value;
-    var b = checkLine.x1.baseVal.value;
-    var aB = secondCheckLine.y1.baseVal.value;
-    var bB = secondCheckLine.x1.baseVal.value;
-    if(b < 300){
-        setTimeout(runLine, 1000);
-        canIncre = false;
-        return;
-    }
-    checkLine.style.opacity = 1;
-    checkLine.y1.baseVal.value = a-Yins;
-    checkLine.x1.baseVal.value = b-Xins;
-    secondCheckLine.style.opacity = 1;
-    secondCheckLine.y1.baseVal.value = aB - YinsB;
-    secondCheckLine.x1.baseVal.value = bB - XinsB;
-    setTimeout(runLine, 8);
-};
-
-
+//hiện bảng chọn ngôn ngữ khi click mũi tên
 var dialogLanguageAppear = false;
 function appearDialog() {
    var languageDialog = document.getElementById("languageDialog");
@@ -252,7 +73,7 @@ function appearDialog() {
    }
 }
 
-
+//sửa ngôn ngữ khi chọn
 var languageBoder = document.getElementById("languageDialog");
 function english() {
     switch(screen) {
@@ -309,6 +130,7 @@ function hindi() {
     languageBoder.style.display = "none";
 }
 
+//bật tắt loa trên
 var x = document.getElementById("audioTop");
 var x_play = false;
 function turnMicroTop() {
@@ -324,6 +146,207 @@ function turnMicroTop() {
 }
 
 
+
+var mainBig = document.getElementById("mainBig");
+var dragObject = document.getElementById("giraffeScreen1");
+var dropObject = document.getElementsByClassName("dottedScreen1");
+var expressDragObject = false;
+var isCorrect = false;
+mainBig.addEventListener("mousemove", moveshape);
+dragObject.addEventListener("mousemove", moveshape);
+//di chuyển nhân vật
+function moveshape(e){
+    e.preventDefault();
+    if(isCorrect || !expressDragObject) return;
+    var leftOfMainbig = mainBig.offsetLeft;
+    var topOfMainbig = mainBig.offsetTop;
+    var limitLeft = leftOfMainbig + dragObject.offsetWidth/2;
+    var limitRight = leftOfMainbig + mainBig.offsetWidth - dragObject.offsetWidth/2;
+    var limitTop = topOfMainbig + 45 +  dragObject.offsetTop/2;
+    var limitBottom = topOfMainbig + mainBig.offsetHeight - dragObject.offsetHeight/2;
+    if(e.pageX >= limitLeft && e.pageX <= limitRight && e.pageY >= limitTop && e.pageY <= limitBottom){
+        dragObject.style.top = ((e.pageY - topOfMainbig) - (dragObject.offsetHeight / 2)) + "px";
+        dragObject.style.left = ((e.pageX - leftOfMainbig) - (dragObject.offsetWidth / 2)) + "px";
+    }
+    else{
+        if(screen == 1 || screen == 3){
+            checkDrop();
+        }
+        else checkDrop1();
+    }
+}
+
+// checkDrag là khi đã ấn giữ chuột vào nhân vật hay chưa
+function checkDrag(){
+    expressDragObject = true;
+    dragObject.style.transition = "none";
+    checkLine.style.opacity = 0;
+    secondCheckLine.style.opacity = 0;
+    canIncre = false;
+    canRun = false;
+    clearTimeout(checkTime);
+}
+// checkDrop là khi nhả chuột ra khỏi con vật
+// màn beside
+function checkDrop(){
+    expressDragObject = false;
+    dragObject.style.transition = "all 1s";
+    var griLeft = dragObject.offsetLeft + 52;
+    var griTop = dragObject.offsetTop + dragObject.offsetHeight;
+    var firstDottedLeft = dropObject[0].offsetLeft;
+    var secondDottedLeft = dropObject[1].offsetLeft;
+    var bothOfDottedTop = dropObject[0].offsetTop;
+    var micBottom = document.getElementById("micro_bottom");
+    var next_butt = document.getElementById("next");
+    if(griTop >= bothOfDottedTop - 5 && griTop <= bothOfDottedTop + 50){
+        if(griLeft >= secondDottedLeft && griLeft <= secondDottedLeft + 120){
+            isCorrect = true;
+            if(screen == 1){
+                dragObject.style.left = (secondDottedLeft - 5) + "px";
+            }
+            else dragObject.style.left = (secondDottedLeft + 15) + "px";
+            dragObject.style.top = (bothOfDottedTop - dragObject.offsetHeight + 25) + "px";
+            var turnOnLetter = document.getElementById("coverletter");
+            turnOnLetter.style.opacity = 1;
+            setTimeout(function(){
+                turnOnLetter.style.left = "calc(50% + 40px)";
+                turnOnLetter.style.top = "473px";
+                turnOnLetter.style.fontSize = "42pt";
+                turnOnLetter.style.transition = "all 2s";
+            }, 1000);
+            setTimeout(function(){
+                micBottom.style.left = "480px";
+                micBottom.style.display = "block";
+            },3000);
+            setTimeout(function(){
+                next_butt.style.display = "block";
+                if(screen == 3){
+                    document.getElementById("momScreen3").style.marginTop = "-440px";
+                }
+            },4000);
+            return;
+        }
+        else if(griLeft >= firstDottedLeft && griLeft <= firstDottedLeft + 120){
+            isCorrect = true;
+            dragObject.style.top = (bothOfDottedTop - dragObject.offsetHeight + 25) + "px";
+            if(screen == 1){
+                dragObject.style.left = (firstDottedLeft - 5) + "px";
+            }
+            else dragObject.style.left = (firstDottedLeft + 15) + "px";
+            var turnOnLetter = document.getElementById("coverletter");
+            turnOnLetter.style.opacity = 1;
+            setTimeout(function(){
+                turnOnLetter.style.left = "250px";
+                turnOnLetter.style.top = "473px";
+                turnOnLetter.style.fontSize = "42pt";
+                turnOnLetter.style.transition = "all 2s";
+            }, 1000);
+            setTimeout(function(){
+                micBottom.style.left = "200px";
+                micBottom.style.display = "block";
+            },3000);
+            setTimeout(function(){
+                next_butt.style.display = "block";
+                if(screen == 3){
+                    document.getElementById("momScreen3").style.marginTop = "-440px";
+                }
+            },4000);
+            return;
+        }
+    }
+    checkTime = setTimeout(function(){
+        canRun = true;
+    },3000);
+    dragObject.style.top = "350px";
+    dragObject.style.left = "calc(50% + 300px)";
+}
+//màn between
+function checkDrop1(){
+    expressDragObject = false;
+    dragObject.style.transition = "all 1s";
+    var griLeft = dragObject.offsetLeft + 52;
+    var griTop = dragObject.offsetTop + dragObject.offsetHeight;
+    var dottedLeft = dropObject.offsetLeft;
+    var dottedTop = dropObject.offsetTop;
+    var micBottom = document.getElementById("micro_bottom");
+    var next_butt = document.getElementById("next");
+    if(griTop >= dottedTop -5 && griTop <= dottedTop + 50){
+        if(griLeft >= dottedLeft && griLeft <= dottedLeft + 120){
+            isCorrect = true;
+            dragObject.style.top = (dottedTop - dragObject.offsetHeight + 25) + "px";
+            if(screen == 2){
+                dragObject.style.left = (dottedLeft - 5) + "px";
+            }
+            else dragObject.style.left = (dottedLeft + 15) + "px";
+            var turnOnLetter = document.getElementById("coverletter");
+            turnOnLetter.style.opacity = 1;
+            setTimeout(function(){
+                turnOnLetter.style.left = "calc(50% - 130px)";
+                turnOnLetter.style.top = "473px";
+                turnOnLetter.style.fontSize = "42pt";
+                turnOnLetter.style.transition = "all 2s";
+            }, 1000);
+            setTimeout(function(){
+                micBottom.style.left = "300px";
+                micBottom.style.top = "490px";
+                micBottom.style.display = "block";
+            },3000);
+            setTimeout(function(){
+                next_butt.style.marginTop = "250px";
+                next_butt.style.display = "block";
+                if(screen == 2){
+                    dropObject.style.marginTop = "-180px";
+                }
+                else document.getElementById("papaScreen4").style.marginTop = "-445px";
+            },4000);
+            return;
+        }
+    }
+    dragObject.style.top = "350px";
+    dragObject.style.left = "calc(50% + 280px)";
+}
+
+//kẻ đường thẳng từ vật tới vòng elip
+var Xins = 4.94;
+var Yins = 0.95;
+var XinsB = 1.04;
+var YinsB = 0.91;
+var checkLine = document.getElementById("lineA");
+var secondCheckLine = document.getElementById("lineB");
+var canRun = true;
+var canIncre = false;
+var checkTime;
+function runLine(){
+    if(!canRun){
+        setTimeout(runLine, 8);
+        return; 
+    }
+    if(!canIncre){
+        checkLine.y1.baseVal.value = 225;
+        checkLine.x1.baseVal.value = 774;
+        secondCheckLine.y1.baseVal.value = 216;
+        secondCheckLine.x1.baseVal.value = 784;
+        canIncre = true;
+    }
+    var a = checkLine.y1.baseVal.value;
+    var b = checkLine.x1.baseVal.value;
+    var aB = secondCheckLine.y1.baseVal.value;
+    var bB = secondCheckLine.x1.baseVal.value;
+    if(b < 300){
+        setTimeout(runLine, 1000);
+        canIncre = false;
+        return;
+    }
+    checkLine.style.opacity = 1;
+    checkLine.y1.baseVal.value = a-Yins;
+    checkLine.x1.baseVal.value = b-Xins;
+    secondCheckLine.style.opacity = 1;
+    secondCheckLine.y1.baseVal.value = aB - YinsB;
+    secondCheckLine.x1.baseVal.value = bB - XinsB;
+    setTimeout(runLine, 8);
+};
+
+//bật tắt loa dưới
 var y = document.getElementById("audioBottom");
 var y_play = false;
 function turnMicroBottom() {
@@ -338,7 +361,7 @@ function turnMicroBottom() {
     y_play = false;
 }
 
-
+//chuyển màn 2
 function nextScreen2(){
     var next = document.getElementById("next");
     var bodyMain = document.getElementById("bodyMain");
@@ -356,8 +379,8 @@ function nextScreen2(){
     document.getElementById("audioBottom").setAttribute("src","../mp3/Introduction/between.mp3");
     var giraffeScreen2 = document.createElement("div");
     giraffeScreen2.setAttribute("id","giraffeScreen2");
-    giraffeScreen2.setAttribute("onmousedown","checkTrue()");
-    giraffeScreen2.setAttribute("onmouseup","checkFalse1()");
+    giraffeScreen2.setAttribute("onmousedown","checkDrag()");
+    giraffeScreen2.setAttribute("onmouseup","checkDrop1()");
     var dottedScreen2 = document.createElement("div");
     dottedScreen2.setAttribute("id","dottedScreen2");
     var tree1 = document.createElement("div");
@@ -380,7 +403,7 @@ function nextScreen2(){
     expressDragObject = false;
 }
 
-
+//chuyển màn 3
 function nextScreen3(){
     var next = document.getElementById("next");
     var bodyMain = document.getElementById("bodyMain");
@@ -414,8 +437,8 @@ function nextScreen3(){
     bodyMain.appendChild(dotted2);
     var childScreen3 = document.createElement("div");
     childScreen3.setAttribute("id","childScreen3");
-    childScreen3.setAttribute("onmousedown","checkTrue()");
-    childScreen3.setAttribute("onmouseup","checkFalse()");
+    childScreen3.setAttribute("onmousedown","checkDrag()");
+    childScreen3.setAttribute("onmouseup","checkDrop()");
     bodyMain.appendChild(childScreen3);
     setTimeout(function(){
         bodyMain.style.display = "block";
@@ -432,6 +455,7 @@ function nextScreen3(){
     },10000);
 }
 
+//chuyển màn 4
 function nextScreen4(){
     var next = document.getElementById("next");
     var bodyMain = document.getElementById("bodyMain");
@@ -463,8 +487,8 @@ function nextScreen4(){
     bodyMain.appendChild(momScreen4);
     var childScreen4 = document.createElement("div");
     childScreen4.setAttribute("id","childScreen4");
-    childScreen4.setAttribute("onmousedown","checkTrue()");
-    childScreen4.setAttribute("onmouseup","checkFalse1()");
+    childScreen4.setAttribute("onmousedown","checkDrag()");
+    childScreen4.setAttribute("onmouseup","checkDrop1()");
     bodyMain.appendChild(childScreen4);
     setTimeout(function(){
         bodyMain.style.display = "block";
@@ -475,6 +499,8 @@ function nextScreen4(){
     isCorrect = false;
     expressDragObject = false;
 }
+
+//kết thúc màn 4
 function goCongrat() {
     var button_green = document.getElementsByClassName("button_green");
     button_green[0].style.marginLeft = "420px";
@@ -484,6 +510,7 @@ function goCongrat() {
     },3000);
 }
 
+//chúc mừng sau khi hoàn thành bài
 function onclickNext() {
     var body = document.getElementsByTagName("body")[0];
     var divBackground = document.getElementById("divBackground");
@@ -537,7 +564,6 @@ function onclickNext() {
     mainBig1.appendChild(header1);
 
     body.appendChild(mainBig1);
-
 
     var bodyMain1 = document.createElement("div");
     bodyMain1.setAttribute("class", "bodyMain1");

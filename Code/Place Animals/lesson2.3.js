@@ -1,17 +1,17 @@
-function checkTrue2(){
+function checkDrag2(){
     expressRaccoon = true;
     animalMove[indAn].style.transition = "none";
     // khi nào mình kéo thả mới bắt đầu kiểm tra vị trí hiện vòng cho đỡ lag
     runMakeAppearDot = setInterval(makeDotAppear2, 3);
 }
-// checkFalse là khi nhả chuột ra khỏi con vật
+// checkDrop là khi nhả chuột ra khỏi con vật
 var firstDottedLeft = thirdDotted[0].offsetLeft;
 var secondDottedLeft = thirdDotted[1].offsetLeft;
 var thirdDottedLeft = thirdDotted[2].offsetLeft;
 var bothOfDottedTop = thirdDotted[0].offsetTop;
 var racLeft = animalMove[indAn].offsetLeft + 52;
 var racTop = animalMove[indAn].offsetTop + animalMove[indAn].offsetHeight;
-function checkFalse2(){
+function checkDrop2(){
     clearInterval(runMakeAppearDot);
     var firstDottedLeft = thirdDotted[0].offsetLeft;
     var secondDottedLeft = thirdDotted[1].offsetLeft;
@@ -23,13 +23,9 @@ function checkFalse2(){
     animalMove[indAn].style.transition = "all 1s";
     var timeDelay = 0;
     var wrongChoice2 = false;
-    // nếu vị trí top của con vật phù hợp với 1 trong 3 vòng thực hiện set đến
-    // left
     if(racTop >= bothOfDottedTop + 10 && racTop <= bothOfDottedTop + 50){
         if(racLeft >= firstDottedLeft && racLeft <= firstDottedLeft + 100){
             if(indAn != 0) return;
-            // indAn = 0 là con gấu mèo thì mình đã lấy vị trí này r , nên khi kp
-            // gấu mèo sẽ ko cần kiểm tra
             animalMove[indAn].style.top = (bothOfDottedTop - animalMove[indAn].offsetHeight + 40) + "px";
             animalMove[indAn].style.left = (firstDottedLeft) + "px";
             thirdDotted[0].style.opacity = "0";
@@ -45,14 +41,11 @@ function checkFalse2(){
         }
         else if(racLeft >= secondDottedLeft && racLeft <= secondDottedLeft + 100){
             if(indAn == 0){
-                // trường hợp xử lý cho gấu mèo
                 wrongChoice2 = true;
                 thirdDotted[1].style.backgroundColor = "red";
                 timeDelay = 1000;
             }
             else if(indAn == 1){
-                // trường hợp xử lý cho sói, ko cần xử lý cho cú, viết tiếp hàm
-                // xử lý cho sói
                 animalMove[indAn].style.top = (bothOfDottedTop - animalMove[indAn].offsetHeight + 40) + "px";
                 animalMove[indAn].style.left = (secondDottedLeft - 10) + "px";
                 thirdDotted[1].style.opacity = "0";
@@ -69,15 +62,13 @@ function checkFalse2(){
         }
         else if(racLeft >= thirdDottedLeft && racLeft <= thirdDottedLeft + 120){
             if(indAn == 2){
-                //xử lý cho con cú;
                 animalMove[indAn].style.top = (bothOfDottedTop - animalMove[indAn].offsetHeight + 40) + "px";
                 animalMove[indAn].style.left = (thirdDottedLeft - 10) +"px";
                 thirdDotted[2].style.opacity = "0";
                 indAn += 1;
                 photo();
                 return;
-            }
-            // nếu kp cú thì cả hai kia đều sẽ xử lý    
+            }   
             wrongChoice2 = true;
             thirdDotted[2].style.backgroundColor = "red";
             timeDelay = 1000;
@@ -133,19 +124,15 @@ function makeDotAppear2(){
     if(racTop >= bothOfDottedTop + 10 && racTop <= bothOfDottedTop + 50){
         if(racLeft >= firstDottedLeft && racLeft <= firstDottedLeft + 100){
             if(indAn != 0) return;
-            // indAn = 0 là con gấu mèo thì mình đã lấy vị trí này r , nên khi kp
-            // gấu mèo sẽ ko cần kiểm tra
             thirdDotted[0].style.opacity = 1;
             return;
         }
         else if(racLeft >= secondDottedLeft && racLeft <= secondDottedLeft + 100){
             if(indAn != 2){
-                // xử lý cho gấu mèo và sói
                 thirdDotted[1].style.opacity = 1;
             }
         }
         else if(racLeft >= thirdDottedLeft && racLeft <= thirdDottedLeft + 120){
-            // xử lý cho cả 3
             thirdDotted[2].style.opacity = 1;
         }
     }

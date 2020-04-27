@@ -99,29 +99,29 @@ function nextScreen() {
         orange.classList.add("moveAnimal");
         body.appendChild(orange);
         indAn = 0;
-        orange.setAttribute("onmousedown","checkTrue1()");
-        orange.setAttribute("onmouseup","checkFalse1()");
+        orange.setAttribute("onmousedown","checkDrag1()");
+        orange.setAttribute("onmouseup","checkDrop1()");
 
         var grapes = document.createElement("div");
         grapes.setAttribute("id","grapes");
         grapes.classList.add("moveAnimal");
         body.appendChild(grapes);
-        grapes.setAttribute("onmousedown","checkTrue1()");
-        grapes.setAttribute("onmouseup","checkFalse1()");
+        grapes.setAttribute("onmousedown","checkDrag1()");
+        grapes.setAttribute("onmouseup","checkDrop1()");
         
         var pear = document.createElement("div");
         pear.setAttribute("id","pear");
         pear.classList.add("moveAnimal");
         body.appendChild(pear);
-        pear.setAttribute("onmousedown","checkTrue1()");
-        pear.setAttribute("onmouseup","checkFalse1()");
+        pear.setAttribute("onmousedown","checkDrag1()");
+        pear.setAttribute("onmouseup","checkDrop1()");
 
         var watermelon = document.createElement("div");
         watermelon.setAttribute("id","watermelon");
         watermelon.classList.add("moveAnimal");
         body.appendChild(watermelon);
-        watermelon.setAttribute("onmousedown","checkTrue1()");
-        watermelon.setAttribute("onmouseup","checkFalse1()");
+        watermelon.setAttribute("onmousedown","checkDrag1()");
+        watermelon.setAttribute("onmouseup","checkDrop1()");
         
         isCorrect = false;
         expressRaccoon = false;
@@ -159,22 +159,22 @@ function nextScreen() {
         cup.classList.add("moveAnimal");
         body.appendChild(cup);
         indAn = 0;
-        cup.setAttribute("onmousedown","checkTrue2()");
-        cup.setAttribute("onmouseup","checkFalse2()");
+        cup.setAttribute("onmousedown","checkDrag2()");
+        cup.setAttribute("onmouseup","checkDrop2()");
 
         var iceCream = document.createElement("div");
         iceCream.setAttribute("id","iceCream");
         iceCream.classList.add("moveAnimal");
         body.appendChild(iceCream);
-        iceCream.setAttribute("onmousedown","checkTrue2()");
-        iceCream.setAttribute("onmouseup","checkFalse2()");
+        iceCream.setAttribute("onmousedown","checkDrag2()");
+        iceCream.setAttribute("onmouseup","checkDrop2()");
         
         var juice = document.createElement("div");
         juice.setAttribute("id","juice");
         juice.classList.add("moveAnimal");
         body.appendChild(juice);
-        juice.setAttribute("onmousedown","checkTrue2()");
-        juice.setAttribute("onmouseup","checkFalse2()");
+        juice.setAttribute("onmousedown","checkDrag2()");
+        juice.setAttribute("onmouseup","checkDrop2()");
 
         isCorrect = false;
         expressRaccoon = false;
@@ -210,29 +210,29 @@ function nextScreen() {
         bear4.classList.add("moveAnimal");
         body.appendChild(bear4);
         indAn = 0;
-        bear4.setAttribute("onmousedown","checkTrue3()");
-        bear4.setAttribute("onmouseup","checkFalse3()");
+        bear4.setAttribute("onmousedown","checkDrag3()");
+        bear4.setAttribute("onmouseup","checkDrop3()");
 
         var raccoon4 = document.createElement("div");
         raccoon4.setAttribute("id","raccoon4");
         raccoon4.classList.add("moveAnimal");
         body.appendChild(raccoon4);
-        raccoon4.setAttribute("onmousedown","checkTrue3()");
-        raccoon4.setAttribute("onmouseup","checkFalse3()");
+        raccoon4.setAttribute("onmousedown","checkDrag3()");
+        raccoon4.setAttribute("onmouseup","checkDrop3()");
         
         var fox4 = document.createElement("div");
         fox4.setAttribute("id","fox4");
         fox4.classList.add("moveAnimal");
         body.appendChild(fox4);
-        fox4.setAttribute("onmousedown","checkTrue3()");
-        fox4.setAttribute("onmouseup","checkFalse3()");
+        fox4.setAttribute("onmousedown","checkDrag3()");
+        fox4.setAttribute("onmouseup","checkDrop3()");
 
         var  rabbit4 = document.createElement("div");
         rabbit4.setAttribute("id","rabbit4");
         rabbit4.classList.add("moveAnimal");
         body.appendChild(rabbit4);
-        rabbit4.setAttribute("onmousedown","checkTrue3()");
-        rabbit4.setAttribute("onmouseup","checkFalse3()");
+        rabbit4.setAttribute("onmousedown","checkDrag3()");
+        rabbit4.setAttribute("onmouseup","checkDrop3()");
         
         isCorrect = false;
         expressRaccoon = false;
@@ -247,7 +247,7 @@ function nextScreen() {
 
 
 
-function checkTrue1(){
+function checkDrag1(){
     expressRaccoon = true;
     animalMove[indAn].style.transition = "none";
     // khi nào mình kéo thả mới bắt đầu kiểm tra vị trí hiện vòng cho đỡ lag
@@ -257,7 +257,7 @@ var one = false;
 var two = false;
 var three = false;
 var four = false;
-function checkFalse1(){
+function checkDrop1(){
     clearInterval(runMakeAppearDot);
     var racLeft = animalMove[indAn].offsetLeft + 52;
     var racTop = animalMove[indAn].offsetTop + animalMove[indAn].offsetHeight;
@@ -270,8 +270,6 @@ function checkFalse1(){
     animalMove[indAn].style.transition = "all 1s";
     var timeDelay = 0;
     var wrongChoice1 = false;
-    // nếu vị trí top của con vật phù hợp với 1 trong 3 vòng thực hiện set đến
-    // left
     if(racTop >= bothOfDottedTop + 10 && racTop <= bothOfDottedTop + 50){
         if((racLeft >= thirdDottedLeft && racLeft <= thirdDottedLeft + 100)){
             if (three) return;
@@ -280,8 +278,6 @@ function checkFalse1(){
                 thirdDotted[2].style.backgroundColor = "red";
                 timeDelay = 1000;
             }
-            // indAn = 0 là con gấu mèo thì mình đã lấy vị trí này r , nên khi kp
-            // gấu mèo sẽ ko cần kiểm tra
             else{
                 animalMove[indAn].style.top = (bothOfDottedTop - animalMove[indAn].offsetHeight + 40) + "px";
                 animalMove[indAn].style.left = (thirdDottedLeft - 10) + "px";
@@ -307,8 +303,6 @@ function checkFalse1(){
                 thirdDotted[3].style.backgroundColor = "red";
                 timeDelay = 1000;
             }
-            // indAn = 0 là con gấu mèo thì mình đã lấy vị trí này r , nên khi kp
-            // gấu mèo sẽ ko cần kiểm tra
             else {
                 animalMove[indAn].style.top = (bothOfDottedTop - animalMove[indAn].offsetHeight + 40) + "px";
                 animalMove[indAn].style.left = (forthDottedLeft - 10) + "px";
@@ -335,8 +329,6 @@ function checkFalse1(){
                 timeDelay = 1000;
             }
             else if(indAn == 1 || indAn == 2){
-                // trường hợp xử lý cho sói, ko cần xử lý cho cú, viết tiếp hàm
-                // xử lý cho sói
                 animalMove[indAn].style.top = (bothOfDottedTop - animalMove[indAn].offsetHeight + 40) + "px";
                 animalMove[indAn].style.left = (secondDottedLeft - 10) + "px";
                 thirdDotted[1].style.opacity = "0";
@@ -362,13 +354,11 @@ function checkFalse1(){
         else if(racLeft >= firstDottedLeft && racLeft <= firstDottedLeft + 120){
             if (one) return;
             if(indAn == 0){
-                // trường hợp xử lý cho gấu mèo
                 wrongChoice1 = true;
                 thirdDotted[0].style.backgroundColor = "red";
                 timeDelay = 1000;
             }
             if(indAn == 2 || indAn == 1){
-                //xử lý cho con cú;
                 animalMove[indAn].style.top = (bothOfDottedTop - animalMove[indAn].offsetHeight + 40) + "px";
                 animalMove[indAn].style.left = (firstDottedLeft - 10) +"px";
                 thirdDotted[0].style.opacity = "0";

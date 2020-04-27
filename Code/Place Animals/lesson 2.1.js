@@ -6,8 +6,12 @@ var fox = document.getElementById("fox");
 var raccoon = document.getElementById("raccoon");
 var body = document.getElementById("bodyMain");
 var land = document.getElementById("land_green");
+var big = document.getElementById("cylinderBig");
+var small = document.getElementById("cylinderSmall");
+var start_bt = document.getElementById("button_start");
 var screen = 1;
 
+//click start để bắt đầu chơi
 function start() {
     var start = document.getElementById("start");
     body.style.pointerEvents = "fill";
@@ -21,9 +25,7 @@ function start() {
     raccoon.style.filter = "none";
 }
 
-var big = document.getElementById("cylinderBig");
-var small = document.getElementById("cylinderSmall");
-var start_bt = document.getElementById("button_start");
+//di chuột lên trên start
 function onmouseoverStart() {
     big.style.width = "340px";
     big.style.height = "340px";
@@ -37,6 +39,7 @@ function onmouseoverStart() {
     small.style.left = "calc(50% - 130px)";
     start_bt.style.backgroundPosition = "0px 113px";
 }
+//di chuột ra ngoài start
 function onmouseoutStart() {
     big.style.width = "330px";
     big.style.height = "330px";
@@ -51,21 +54,7 @@ function onmouseoutStart() {
     start_bt.style.backgroundPosition = "0px 0px";
 }
 
-var audio = document.getElementsByClassName("Audio");
-var indAn = 0; // indAn sẽ tương ứng với mảng animalMove, 0 là gấu mèo, 1 là sói 2 là cú
-var audio_play = false;
-function turnMicroTop() {
-    if (audio_play == false) {
-        audio[indAn].play();
-        audio_play = true; 
-    }
-    else {
-        audio[indAn].pause();
-        audio_play = false;
-    }
-    audio_play = false;
-}
-
+//đổi màu khi di chuột vào English
 var language = document.getElementById("chooseLanguage");
 var triangle = document.getElementById("triangle");
 function onmouseoverLanguage() {
@@ -77,6 +66,21 @@ function onmouseoutLanguage() {
     triangle.style.borderTopColor = "rgb(42, 90, 134)";
 }
 
+//hiện bảng chọn ngôn ngữ khi click mũi tên
+var dialogLanguageAppear = false;
+function appearDialog() {
+   var languageDialog = document.getElementById("languageDialog");
+   if(!dialogLanguageAppear){
+        languageDialog.style.display = "block";
+       dialogLanguageAppear = true;
+   }
+   else{
+        languageDialog.style.display = "none";
+       dialogLanguageAppear = false;
+   }
+}
+
+//sửa ngôn ngữ khi chọn
 var languageBorder = document.getElementById("languageDialog");
 function english() {
     document.getElementById("letter").innerHTML = "Put the raccoon between the rabbit and the fox";
@@ -92,43 +96,56 @@ function hindi() {
     document.getElementById("mainLanguage").innerHTML = "Hindi";
     languageBorder.style.display = "none";  
 }
-var dialogLanguageAppear = false;
-function appearDialog() {
-   var languageDialog = document.getElementById("languageDialog");
-   if(!dialogLanguageAppear){
-        languageDialog.style.display = "block";
-       dialogLanguageAppear = true;
-   }
-   else{
-        languageDialog.style.display = "none";
-       dialogLanguageAppear = false;
-   }
+
+
+//bật tắt loa
+var audio = document.getElementsByClassName("Audio");
+var indAn = 0; // indAn sẽ tương ứng với mảng animalMove, 0 là gấu mèo, 1 là sói 2 là cú
+var audio_play = false;
+function turnMicroTop() {
+    if (audio_play == false) {
+        audio[indAn].play();
+        audio_play = true; 
+    }
+    else {
+        audio[indAn].pause();
+        audio_play = false;
+    }
+    audio_play = false;
 }
 
 
-var photoImage = document.getElementById("photo");
-var photoImage1 = document.getElementById("photo1");
-var flash = document.getElementById("flash");
-function photo() {
-    setTimeout( function() {
-        photoImage.style.top = "calc(100% - 210px)";
-        setTimeout(function() {
-            photoImage.style.display = "none";
-            photoImage1.style.display = "block";
-        },1000)
-        setTimeout(function() {
-            flash.style.display = "block";
-            flash.style.width = "120px";
-            flash.style.height = "120px";
-            flash.style.top = "calc(100% - 170px)";
-            flash.style.left = "225px";
-            screen += 1;
-            setTimeout(function(){ 
-                whiteScreen();
-            }, 3000)
-        },1500)
-    },3000)
+//di chuyển nhân vật
+var mainBig = document.getElementById("mainBig");
+var animalMove = document.getElementsByClassName("moveAnimal");
+var runMakeAppearDot;
+var thirdDotted = document.getElementsByClassName("dotted");
+var expressRaccoon = false; // nếu có đang giữ chuột hay không
+var isCorrect = false;
+var checkCorrect;
+mainBig.addEventListener("mousemove", moveshape);
+animalMove[indAn].addEventListener("mousemove", moveshape);
+function moveshape(e){
+    e.preventDefault();
+    if(isCorrect || !expressRaccoon) return;
+    var leftOfMainbig = mainBig.offsetLeft;
+    var topOfMainbig = mainBig.offsetTop;
+    var limitLeft = leftOfMainbig + animalMove[indAn].offsetWidth/2;
+    var limitRight = leftOfMainbig + mainBig.offsetWidth - animalMove[indAn].offsetWidth/2;
+    var limitTop = topOfMainbig + 45 +  animalMove[indAn].offsetHeight/2;
+    var limitBottom = topOfMainbig + mainBig.offsetHeight - animalMove[indAn].offsetHeight/2;
+    if(e.pageX >= limitLeft && e.pageX <= limitRight && e.pageY >= limitTop && e.pageY <= limitBottom){
+        animalMove[indAn].style.top = ((e.pageY - topOfMainbig) - (animalMove[indAn].offsetHeight / 2)) + "px";
+        animalMove[indAn].style.left = ((e.pageX - leftOfMainbig) - (animalMove[indAn].offsetWidth / 2)) + "px";
+    }
+    else{
+        checkDrop();   
+    }
 }
+
+//màn 1
+//
+//đổi yêu cầu khi hoàn thành 1 chức năng của màn 1
 var letterWolf = document.getElementById("letter-wolf");
 function changeWolf() {
     letter.style.opacity = "0";
@@ -171,52 +188,22 @@ function changeOwl() {
     }, 50);
 }
 
-var mainBig = document.getElementById("mainBig");
-var animalMove = document.getElementsByClassName("moveAnimal");
-var runMakeAppearDot;
-var thirdDotted = document.getElementsByClassName("dotted");
-var expressRaccoon = false; // nếu có đang giữ chuột hay không
-var isCorrect = false;
-var checkCorrect;
-mainBig.addEventListener("mousemove", moveshape);
-animalMove[indAn].addEventListener("mousemove", moveshape);
-// moveshape là hàm đê di chuyển con vật
-function moveshape(e){
-    e.preventDefault();
-    // lấy vị trí của con trỏ trên màn hình rộng, e.pageX là vị trí con trỏ so với
-    // lề  trái , pageY là lề trên
-    if(isCorrect || !expressRaccoon) return;
-    var leftOfMainbig = mainBig.offsetLeft;
-    var topOfMainbig = mainBig.offsetTop;
-    var limitLeft = leftOfMainbig + animalMove[indAn].offsetWidth/2;
-    var limitRight = leftOfMainbig + mainBig.offsetWidth - animalMove[indAn].offsetWidth/2;
-    var limitTop = topOfMainbig + 45 +  animalMove[indAn].offsetHeight/2;
-    var limitBottom = topOfMainbig + mainBig.offsetHeight - animalMove[indAn].offsetHeight/2;
-    // if bên dưới là để ngăn ko cho bay ra khỏi lề, nếu nằm trong thì sẽ thực hiện gán vị trí
-    // con vật tương ứng với vị trí của con trỏ thông qua tính toán
-    if(e.pageX >= limitLeft && e.pageX <= limitRight && e.pageY >= limitTop && e.pageY <= limitBottom){
-        animalMove[indAn].style.top = ((e.pageY - topOfMainbig) - (animalMove[indAn].offsetHeight / 2)) + "px";
-        animalMove[indAn].style.left = ((e.pageX - leftOfMainbig) - (animalMove[indAn].offsetWidth / 2)) + "px";
-    }
-    else{
-        checkFalse();   
-    }
-}
-// checkTrue là khi đã ấn giữ chuột vào con vật hay chưa
-function checkTrue(){
+
+// checkDrag là khi đã ấn giữ chuột vào con vật hay chưa
+function checkDrag(){
     expressRaccoon = true;
     animalMove[indAn].style.transition = "none";
     // khi nào mình kéo thả mới bắt đầu kiểm tra vị trí hiện vòng cho đỡ lag
     runMakeAppearDot = setInterval(makeDotAppear, 3);
 }
-// checkFalse là khi nhả chuột ra khỏi con vật
+// checkDrop là khi nhả chuột ra khỏi con vật
 var firstDottedLeft = thirdDotted[0].offsetLeft;
 var secondDottedLeft = thirdDotted[1].offsetLeft;
 var thirdDottedLeft = thirdDotted[2].offsetLeft;
 var bothOfDottedTop = thirdDotted[0].offsetTop;
 var racLeft = animalMove[indAn].offsetLeft + 52;
 var racTop = animalMove[indAn].offsetTop + animalMove[indAn].offsetHeight;
-function checkFalse(){
+function checkDrop(){
     clearInterval(runMakeAppearDot);
     var firstDottedLeft = thirdDotted[0].offsetLeft;
     var secondDottedLeft = thirdDotted[1].offsetLeft;
@@ -228,8 +215,7 @@ function checkFalse(){
     animalMove[indAn].style.transition = "all 1s";
     var timeDelay = 0;
     var wrongChoice = false;
-    // nếu vị trí top của con vật phù hợp với 1 trong 3 vòng thực hiện set đến
-    // left
+    // nếu vị trí top của con vật phù hợp với 1 trong 3 vòng thực hiện set đến left
     if(racTop >= bothOfDottedTop + 10 && racTop <= bothOfDottedTop + 50){
         if(racLeft >= secondDottedLeft && racLeft <= secondDottedLeft + 100){
             if(indAn != 0) return;
@@ -323,6 +309,8 @@ function checkFalse(){
     },timeDelay)
    
 }
+
+//vòng elip xuất hiện khi di chuyển vào vùng có thể đặt vật
 function makeDotAppear(){
     var firstDottedLeft = thirdDotted[0].offsetLeft;
     var secondDottedLeft = thirdDotted[1].offsetLeft;
@@ -352,6 +340,31 @@ function makeDotAppear(){
             thirdDotted[2].style.opacity = 1;
         }
     }
+}
+
+//hình con khủng long xuất hiện chụp ảnh khi hoàn thành 1 bài
+var photoImage = document.getElementById("photo");
+var photoImage1 = document.getElementById("photo1");
+var flash = document.getElementById("flash");
+function photo() {
+    setTimeout( function() {
+        photoImage.style.top = "calc(100% - 210px)";
+        setTimeout(function() {
+            photoImage.style.display = "none";
+            photoImage1.style.display = "block";
+        },1000)
+        setTimeout(function() {
+            flash.style.display = "block";
+            flash.style.width = "120px";
+            flash.style.height = "120px";
+            flash.style.top = "calc(100% - 170px)";
+            flash.style.left = "225px";
+            screen += 1;
+            setTimeout(function(){ 
+                whiteScreen();
+            }, 3000)
+        },1500)
+    },3000)
 }
 
 
