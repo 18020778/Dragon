@@ -1,0 +1,124 @@
+#letter {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    top: 64px;
+    left: 90px;
+    font-size: 38px;
+    filter: blur(5px);
+}
+#letter-wolf {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    top: 80px;
+    left: 300px;
+    font-size: 20px;
+    opacity:0;
+    transition: all 1s;
+}
+#letter-owl {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    top: 80px;
+    left: 300px;
+    font-size: 20px;
+    opacity:0;
+    transition: all 1s;
+}
+#letter-orange {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    top: 60px;
+    left: 230px;
+    font-size: 38px;
+    opacity:0; 
+    transition: all 1s;
+}
+#letter-grapes {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    top: 80px;
+    left: 300px;
+    font-size: 20px;
+    opacity:0;
+    transition: all 1s;
+}
+#letter-pear {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    top: 80px;
+    left: 300px;
+    font-size: 20px;
+    opacity:0;
+    transition: all 1s;
+}
+#letter-watermelon {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    top: 64px;
+    left: 250px;
+    font-size:  20px;
+    opacity: 0;
+}
+#letter-cup {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    top: 80px;
+    left: 230px;
+    font-size: 38px;
+    opacity: 0;
+}
+#letter-iceCream {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    top: 80px;
+    left: 300px;
+    font-size: 20px;
+    opacity:0;
+    transition: all 1s;
+    display: inline;
+}
+#letter-juice {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    top: 80px;
+    left: 75px;
+    font-size: 20px;
+    opacity: 0;
+    transition: all 1s;
+    display: inline;
+}
+#letter-bear {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    top: 60px;
+    left: 230px;
+    font-size: 38px;
+    opacity: 0;
+}
+#letter-raccoon-4 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    top: 80px;
+    left: 300px;
+    font-size: 20px;
+    opacity: 0;
+    transition: all 1s;
+}
+#letter-fox {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    top: 80px;
+    left: 300px;
+    font-size: 20px;
+    opacity: 0;
+    transition: all 1s;
+}
+#letter-rabbit {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    top: 80px;
+    left: 250px;
+    font-size: 20px;
+    opacity: 0;
+    transition: all 1s;
+}

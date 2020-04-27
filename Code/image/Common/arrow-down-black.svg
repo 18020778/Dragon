@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>
+    arrow-down-black
+  </title>
+  <use xlink:href="#arrow-down-black" transform="rotate(-90 3.51 3.49)"/>
+  <defs>
+    <path id="arrow-down-black" fill-rule="evenodd" d="M2.48936 4.984l3.2-3.2c.408-.408.408-1.07 0-1.478-.408-.408-1.069-.408-1.477 0L.301356 4.217c-.2119997.211-.3079997.49-.3009997.767-.007.277.089.556.3009997.767L4.21236 9.662c.408.408 1.069.408 1.477 0 .408-.408.408-1.07 0-1.478l-3.2-3.2z"/>
+  </defs>
+</svg>

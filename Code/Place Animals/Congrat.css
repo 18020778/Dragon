@@ -5,7 +5,7 @@
 
 .banner {
     height: 97px;
-    background-image: url("https://dragonlearn.in/assets/banners/quarantine-f8bba46b976fb25b4dc308238831e151.svg");
+    background-image: url("../image/Common/banner.svg");
     width: 100%;
     background-position: -100px center;
 }
@@ -49,7 +49,7 @@
     margin-bottom: 20px;
     background-repeat: no-repeat;
     background-position: top center;
-    background-image: url("https://dragonlearn.in/assets/students/complete-card-21a84b96681981b0362780d2af61cf19.png");
+    background-image: url("../image/Common/complete.png");
 }
 .complete-button {
     text-align: center;

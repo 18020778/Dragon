@@ -7,7 +7,7 @@
 }
 .banner{
     height: 97px;
-    background-image: url("https://dragonlearn.in/assets/banners/quarantine-f8bba46b976fb25b4dc308238831e151.svg");
+    background-image: url("../image/Common/banner.svg");
     width: 100%;
     background-position: -100px center;
  }
@@ -42,7 +42,7 @@
     margin-left:245px;
 }
 .back_image {
-    background-image: url("https://dragonlearn.in/assets/icons/back-left-2e5af9506641aa303262fbfbbd87b22f.svg");
+    background-image: url("../image/Common/back-image.svg");
     background-repeat:no-repeat;
     background-position:center center;
     height: 24px;
@@ -92,7 +92,7 @@
     font-size: 17px;
 }
 .arrow {
-    background-image: url("https://dragonlearn.in/assets/icons/arrow-down-black-076df8add48e7c364f183378310c70d2.svg");
+    background-image: url("../image/Common/arrow-down-black.svg");
     background-repeat: no-repeat;
     background-position:center center ;
     background-size: contain;
@@ -140,7 +140,7 @@ a.non_decor:hover{
     color: #ff6170;
 }
 .introduction .image {
-    background-image: url("https://dragonlearn.in/assets/card_previews/1440-401d50d0ea56c7332d3dc5ee73d3597c.png");
+    background-image: url("../image/Common/introductionCard.png");
     background-position: 0px 0px;
     width: 165px;
     height: 165px;
@@ -160,7 +160,7 @@ a.non_decor:hover{
     border-radius: 17.5px;
     position: relative;
     background-color: #b0d2a8;
-    background-image: url("https://dragonlearn.in/assets/lessons/card_play_btn-d5f8db63df6534cf9735dfb33051f7bb.svg");
+    background-image: url("../image/Common/tick.svg");
     background-repeat:no-repeat;
     background-position:center;
 }
@@ -173,7 +173,7 @@ a.non_decor:hover{
     color: black;
 }
 .placeAnimal .image {
-    background-image: url("https://dragonlearn.in/assets/card_previews/1441-b3a76ff57c05750ec52ba22ad6a68c60.png");
+    background-image: url("../image/Common/placeAnimalsCard.png");
     background-position: 0px 0px;
     width: 165px;
     height: 165px;
