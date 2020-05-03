@@ -1,0 +1,11 @@
+<svg width="23" height="18" viewBox="0 0 23 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>icon card play btn</title>
+<g id="Canvas" transform="translate(-2407 -13476)">
+<g id="Combined Shape">
+<use xlink:href="#path0_fill" transform="translate(2407 13476)" fill="#FFFFFF"/>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 21.8096 5.08937C 22.9495 3.86769 22.8826 1.95265 21.6604 0.813005C 20.4382 -0.326643 18.5234 -0.260237 17.3838 0.962419L 8.64257 10.3355L 5.34399 6.4048C 4.26977 5.12453 2.36108 4.95754 1.08105 6.03175C -0.199227 7.10597 -0.366219 9.01418 0.708 10.2945L 5.89452 16.4751C 6.08544 16.7027 6.30273 16.895 6.53808 17.0513C 7.76073 18.1802 9.66747 18.1099 10.8037 16.8921L 21.8096 5.08937Z"/>
+</defs>
+</svg>

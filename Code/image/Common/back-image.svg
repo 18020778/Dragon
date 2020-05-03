@@ -1,0 +1,12 @@
+<svg width="7" height="10" viewBox="0 0 7 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>Fill 4</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(1644 -468)" figma:type="canvas">
+<g id="Fill 4" figma:type="vector">
+<use xlink:href="#path0_fill" transform="translate(-1643.98 468.016)" fill="#FFFFFF"/>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 2.48936 4.984L 5.68936 1.784C 6.09736 1.376 6.09736 0.714 5.68936 0.306C 5.28136 -0.102 4.62036 -0.102 4.21236 0.306L 0.301356 4.217C 0.0893563 4.428 -0.00664371 4.707 0.000356288 4.984C -0.00664371 5.261 0.0893563 5.54 0.301356 5.751L 4.21236 9.662C 4.62036 10.07 5.28136 10.07 5.68936 9.662C 6.09736 9.254 6.09736 8.592 5.68936 8.184L 2.48936 4.984Z"/>
+</defs>
+</svg>

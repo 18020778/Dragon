@@ -1,7 +1,7 @@
 body{
     margin: 0;
     background-image: 
-    url("https://content.dragonlearn.in/fp/97/fat_player/student/grad-f07e854ce64f9aee2db7bd67146ff0e4800feeed40c8f7116fcb3b6a048deb64.jpg");
+    url("../image/Common/background-image.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -21,7 +21,7 @@ body{
     }
 
 .button_next {
-    background-image: url("https://content.dragonlearn.in/135475/1440/45.svg");
+    background-image: url("../image/Common/button-next.svg");
     background-position: 0px 0px;
     width: 31px;
     height: 31px;
@@ -43,12 +43,12 @@ body{
     width: 100%;
     height: 120%;
     background-image: 
-    url("https://content.dragonlearn.in/fp/97/fat_player/student/stuff-124d4f39a55f743d41ae005514723d90ae7e61faaf258f2187335151d10556b3.png"),
-    url("https://content.dragonlearn.in/fp/97/fat_player/student/cell-9987ae00289f116cf6d1f23d1049820f01c1000c534cc1c39d9060882f80063d.png"),
-    url("https://content.dragonlearn.in/fp/97/fat_player/student/color-e875c1aeb80984feaea35e9206d56248ed77eb16feede64477bc68b08df59e29.png");
+    url("../image/Common/stuff.png"),
+    url("../image/Common/cell.png"),
+    url("../image/Common/color.png");
 }
 #button_start {
-    background-image: url("https://content.dragonlearn.in/135475/1440/37.png");
+    background-image: url("../image/Common/start.png");
     /* background-position: 0px 0px; */
     width: 95px;
     height: 112px;
@@ -192,14 +192,14 @@ body{
     box-shadow: 1px 1px #c8cacc inset;
 }
 .button_green {
-    background-image: url("https://content.dragonlearn.in/fp/97/fat_player/components/progress/beads/v1/img/bead-874cc643b18fbe33aacee82d8f4353eec013afca7486232ce8e36adbbae9eeb6.png") ;
+    background-image: url("../image/Common/bead.png") ;
     background-repeat: no-repeat;
     height: 22px;
     opacity: 1;
     transition: all 0.5s;
 }
 #micro_top {
-    background-image: url("https://content.dragonlearn.in/fp/97/fat_player/players/player-1/src/speaker/assets/speaker-5ea19d9cdf5f069d106aec8a03b3faca0929b20a13b8b588a58efe79c8f11ae6.png");
+    background-image: url("../image/Common/speaker.png");
     background-position: 0px 0px;
     width: 36px;
     height: 36px;
@@ -221,133 +221,8 @@ body{
     transition-property: none;
 }
 
-#letter {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    position: absolute;
-    top: 64px;
-    left: 90px;
-    font-size: 38px;
-    filter: blur(5px);
-}
-
-#letter-wolf {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    position: absolute;
-    top: 80px;
-    left: 300px;
-    font-size: 20px;
-    opacity:0;
-    transition: all 1s;
-}
-#letter-owl {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    position: absolute;
-    top: 80px;
-    left: 300px;
-    font-size: 20px;
-    opacity:0;
-    transition: all 1s;
-}
-#letter-orange {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    position: absolute;
-    top: 60px;
-    left: 230px;
-    font-size: 38px;
-    opacity:0; 
-    transition: all 1s;
-}
-#letter-grapes {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    position: absolute;
-    top: 80px;
-    left: 300px;
-    font-size: 20px;
-    opacity:0;
-    transition: all 1s;
-}
-#letter-pear {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    position: absolute;
-    top: 80px;
-    left: 300px;
-    font-size: 20px;
-    opacity:0;
-    transition: all 1s;
-}
-#letter-watermelon {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    position: absolute;
-    top: 64px;
-    left: 250px;
-    font-size:  20px;
-    opacity: 0;
-}
-#letter-cup {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    position: absolute;
-    top: 80px;
-    left: 230px;
-    font-size: 38px;
-    opacity: 0;
-}
-#letter-iceCream {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    position: absolute;
-    top: 80px;
-    left: 300px;
-    font-size: 20px;
-    opacity:0;
-    transition: all 1s;
-    display: inline;
-}
-#letter-juice {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    position: absolute;
-    top: 80px;
-    left: 75px;
-    font-size: 20px;
-    opacity: 0;
-    transition: all 1s;
-    display: inline;
-}
-#letter-bear {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    position: absolute;
-    top: 60px;
-    left: 230px;
-    font-size: 38px;
-    opacity: 0;
-}
-#letter-raccoon-4 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    position: absolute;
-    top: 80px;
-    left: 300px;
-    font-size: 20px;
-    opacity: 0;
-    transition: all 1s;
-}
-#letter-fox {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    position: absolute;
-    top: 80px;
-    left: 300px;
-    font-size: 20px;
-    opacity: 0;
-    transition: all 1s;
-}
-#letter-rabbit {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    position: absolute;
-    top: 80px;
-    left: 250px;
-    font-size: 20px;
-    opacity: 0;
-    transition: all 1s;
-}
 .dotted {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1218.png");
+    background-image: url("../image/PlaceAnimals/dotted.png");
     width: 140px;
     height: 60px;
     background-size: cover;
@@ -357,7 +232,7 @@ body{
     opacity: 0;
 }
 #land_green {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1133.png") ;
+    background-image: url("../image/PlaceAnimals/land1133.png") ;
     position: absolute;
     top: 265px;
     left: 30px;
@@ -366,315 +241,10 @@ body{
     background-size: cover;
     filter: blur(5px);
 }
-#photo {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1207.png");
-    background-size: cover;
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    left: calc(25% - 100px);
-    top: calc(100% + 10px);
-    transition: all 1s;
-    display: block;
-}
-#photo1{
-    background-image: url("https://content.dragonlearn.in/131454/1441/1209.png");
-    background-size: cover;
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    left: calc(25% - 100px);
-    top: calc(100% - 210px);
-    transition: all 0.4s;
-    display: none;
-}
-#flash {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1213.png");
-    background-size: cover;
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    left: calc(25% + 10px);
-    top: calc(100% - 130px);
-    transition: all 0.2s;
-    display: none;
-}
+
 #checkBetween {
     padding: 5px;
     border-radius: 5px;
-}
-#bear {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1135.png");
-    background-size: cover;
-    width: 140px;
-    height: 180px;
-    position: absolute;
-    left: 50px;
-    top: 140px;
-    transition: all 1s;
-    filter: blur(5px);
-}
-#fox {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1143.png");
-    background-size: cover;
-    width: 140px;
-    height: 180px;
-    position: absolute;
-    left: 330px;
-    top: 140px;
-    z-index: 2;
-    filter: blur(5px);
-}
-#rabbit {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1147.png");
-    background-size: cover;
-    width: 140px;
-    height: 180px;
-    position: absolute;
-    left: calc(50% + 130px);
-    top: 140px;
-    filter: blur(5px);
-}
-#raccoon {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1139.png");
-    background-size: cover;
-    width: 140px;
-    height: 180px;
-    position: absolute;
-    left: calc(50% - 70px);
-    top:  400px;
-    z-index: 2;
-    filter: blur(5px);
-    cursor: url("https://content.dragonlearn.in/fp/97/fat_player/cursors/openhand-080627fa359156339e79f118fa66a6937f09ff679fe87e8afa473b95c8168d35.cur"), auto;
-}
-#wolf {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1151.png");
-    background-size: cover;
-    width: 140px;
-    height: 180px;
-    position: absolute;
-    left: calc(50% - 70px);
-    top:  400px;
-    display: none;
-    z-index: 2;
-    cursor: url("https://content.dragonlearn.in/fp/97/fat_player/cursors/openhand-080627fa359156339e79f118fa66a6937f09ff679fe87e8afa473b95c8168d35.cur"), auto;
-}
-
-#owl {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1155.png");
-    background-size: cover;
-    width: 140px;
-    height: 180px;
-    position: absolute;
-    left: calc(50% - 70px);
-    top:  400px;
-    display: none;
-    z-index: 2;
-    cursor: url("https://content.dragonlearn.in/fp/97/fat_player/cursors/openhand-080627fa359156339e79f118fa66a6937f09ff679fe87e8afa473b95c8168d35.cur"), auto;
-}
-
-/* screen_2 */
-#banana {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1163.png");
-    background-size: cover;
-    width: 140px;
-    height: 180px;
-    position: absolute;
-    left: 185px;
-    top: 140px;
-}
-#apple {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1167.png");
-    background-size: cover;
-    width: 140px;
-    height: 180px;
-    position: absolute;
-    left: calc(50% + 135px);
-    top: 140px;
-}
-#orange {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1159.png");
-    background-size: cover;
-    width: 140px;
-    height: 140px;
-    position: absolute;
-    left: calc(50% - 70px);
-    top:  450px;
-    z-index: 2;
-    cursor: url("https://content.dragonlearn.in/fp/97/fat_player/cursors/openhand-080627fa359156339e79f118fa66a6937f09ff679fe87e8afa473b95c8168d35.cur"), auto;
-}
-#grapes {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1171.png");
-    background-size: cover;
-    width: 140px;
-    height: 180px;
-    position: absolute;
-    left: calc(50% - 70px);
-    top:  400px;
-    display: none;
-    z-index: 2;
-    cursor: url("https://content.dragonlearn.in/fp/97/fat_player/cursors/openhand-080627fa359156339e79f118fa66a6937f09ff679fe87e8afa473b95c8168d35.cur"), auto;
-}
-#pear {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1175.png");
-    background-size: cover;
-    width: 140px;
-    height: 180px;
-    position: absolute;
-    left: calc(50% - 70px);
-    top:  400px;
-    display: none;
-    z-index: 2;
-    cursor: url("https://content.dragonlearn.in/fp/97/fat_player/cursors/openhand-080627fa359156339e79f118fa66a6937f09ff679fe87e8afa473b95c8168d35.cur"), auto;
-}
-#watermelon {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1179.png");
-    background-size: cover;
-    width: 140px;
-    height: 180px;
-    position: absolute;
-    left: calc(50% - 70px);
-    top:  400px;
-    display: none;
-    z-index: 2;
-    cursor: url("https://content.dragonlearn.in/fp/97/fat_player/cursors/openhand-080627fa359156339e79f118fa66a6937f09ff679fe87e8afa473b95c8168d35.cur"), auto;
-}
-
-/* screen3 */
-#cupcake {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1183.png");
-    background-size: cover;
-    width: 140px;
-    height: 180px;
-    position: absolute;
-    left: 50px;
-    top: 140px;
-}
-#teapot {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1191.png");
-    background-size: cover;
-    width: 140px;
-    height: 180px;
-    position: absolute;
-    left: 460px;
-    top: 140px;
-    z-index: 2;
-}
-#dessert {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1203.png");
-    background-size: cover;
-    width: 140px;
-    height: 180px;
-    position: absolute;
-    left: 750px;
-    top: 140px;
-    z-index: 2;
-}
-#cup {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1187.png");
-    background-size: cover;
-    width: 140px;
-    height: 180px;
-    position: absolute;
-    left: calc(50% - 70px);
-    top:  400px;
-    z-index: 2;
-    cursor: url("https://content.dragonlearn.in/fp/97/fat_player/cursors/openhand-080627fa359156339e79f118fa66a6937f09ff679fe87e8afa473b95c8168d35.cur"), auto;
-}
-#iceCream {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1195.png");
-    background-size: cover;
-    width: 140px;
-    height: 180px;
-    position: absolute;
-    left: calc(50% - 70px);
-    top:  400px;
-    display: none;
-    z-index: 2;
-    cursor: url("https://content.dragonlearn.in/fp/97/fat_player/cursors/openhand-080627fa359156339e79f118fa66a6937f09ff679fe87e8afa473b95c8168d35.cur"), auto;
-}
-#juice {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1199.png");
-    background-size: cover;
-    width: 140px;
-    height: 180px;
-    position: absolute;
-    left: calc(50% - 70px);
-    top:  400px;
-    display: none;
-    z-index: 2;
-    cursor: url("https://content.dragonlearn.in/fp/97/fat_player/cursors/openhand-080627fa359156339e79f118fa66a6937f09ff679fe87e8afa473b95c8168d35.cur"), auto;
-}
-
-/* screen4 */
-#bear4 {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1135.png");
-    background-size: cover;
-    width: 140px;
-    height: 180px;
-    position: absolute;
-    left: calc(50% - 70px);
-    top: 400px;
-    z-index: 2;
-    transition: all 1s;
-    cursor: url("https://content.dragonlearn.in/fp/97/fat_player/cursors/openhand-080627fa359156339e79f118fa66a6937f09ff679fe87e8afa473b95c8168d35.cur"), auto;
-}
-#fox4 {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1143.png");
-    background-size: cover;
-    width: 140px;
-    height: 180px;
-    position: absolute;
-    left: calc(50% - 70px);
-    top: 400px;
-    z-index: 2;
-    display: none;
-    transition: all 1s;
-    cursor: url("https://content.dragonlearn.in/fp/97/fat_player/cursors/openhand-080627fa359156339e79f118fa66a6937f09ff679fe87e8afa473b95c8168d35.cur"), auto;
-}
-#rabbit4 {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1147.png");
-    background-size: cover;
-    width: 140px;
-    height: 180px;
-    position: absolute;
-    left: calc(50% - 70px);
-    top: 400px;
-    display: none;
-    z-index: 2;
-    transition: all 1s;
-    cursor: url("https://content.dragonlearn.in/fp/97/fat_player/cursors/openhand-080627fa359156339e79f118fa66a6937f09ff679fe87e8afa473b95c8168d35.cur"), auto;
-}
-#raccoon4 {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1139.png");
-    background-size: cover;
-    width: 140px;
-    height: 180px;
-    position: absolute;
-    left: calc(50% - 70px);
-    top:  400px;
-    z-index: 2;
-    display: none;
-    cursor: url("https://content.dragonlearn.in/fp/97/fat_player/cursors/openhand-080627fa359156339e79f118fa66a6937f09ff679fe87e8afa473b95c8168d35.cur"), auto;
-}
-#wolf4 {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1151.png");
-    background-size: cover;
-    width: 140px;
-    height: 180px;
-    position: absolute;
-    left: 50px;
-    top:  140px;
-}
-
-#owl4 {
-    background-image: url("https://content.dragonlearn.in/131454/1441/1155.png");
-    background-size: cover;
-    width: 140px;
-    height: 180px;
-    position: absolute;
-    left: 750px;
-    top:  140px;
 }
 
 

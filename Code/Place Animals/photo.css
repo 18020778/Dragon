@@ -1,0 +1,33 @@
+#photo {
+    background-image: url("../image/PlaceAnimals/photo.png");
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: calc(25% - 100px);
+    top: calc(100% + 10px);
+    transition: all 1s;
+    display: block;
+}
+#photo1{
+    background-image: url("../image/PlaceAnimals/photo1.png");
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: calc(25% - 100px);
+    top: calc(100% - 210px);
+    transition: all 0.4s;
+    display: none;
+}
+#flash {
+    background-image: url("../image/PlaceAnimals/flash.png");
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: calc(25% + 10px);
+    top: calc(100% - 130px);
+    transition: all 0.2s;
+    display: none;
+}
