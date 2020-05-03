@@ -99,7 +99,7 @@ function english() {
         }
     }
     document.getElementById("next").innerHTML = "Next";
-    document.getElementById("chooseLanguage").innerHTML = "English";
+    document.getElementById("mainLanguage").innerHTML = "English";
     languageBoder.style.display = "none";
 }
 function hindi() {
@@ -126,7 +126,7 @@ function hindi() {
         }
     }
     document.getElementById("next").innerHTML = "आगे";
-    document.getElementById("chooseLanguage").innerHTML = "Hindi";
+    document.getElementById("mainLanguage").innerHTML = "Hindi";
     languageBoder.style.display = "none";
 }
 
