@@ -101,6 +101,7 @@ function english() {
     document.getElementById("next").innerHTML = "Next";
     document.getElementById("mainLanguage").innerHTML = "English";
     languageBoder.style.display = "none";
+    dialogLanguageAppear = false;
 }
 function hindi() {
     switch(screen) {
@@ -128,6 +129,7 @@ function hindi() {
     document.getElementById("next").innerHTML = "आगे";
     document.getElementById("mainLanguage").innerHTML = "Hindi";
     languageBoder.style.display = "none";
+    dialogLanguageAppear = false;
 }
 
 //bật tắt loa trên
