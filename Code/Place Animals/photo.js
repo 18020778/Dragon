@@ -3,7 +3,7 @@ var photoImage = document.getElementById("photo");
 var photoImage1 = document.getElementById("photo1");
 var flash = document.getElementById("flash");
 function photo() {
-    //photoImage.style.display = "block";  /*delete*/
+    photoImage.style.display = "block";  /*delete*/
     setTimeout( function() {
         photoImage.style.top = "calc(100% - 210px)";
         setTimeout(function() {
