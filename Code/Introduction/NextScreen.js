@@ -1,12 +1,16 @@
+//chuyển màn 2
 function nextScreen2(){
-    var next = document.getElementById("next");
+    var nextButton = document.getElementById("button_next");
+    var nextLetter = document.getElementById("next-lt");
     var bodyMain = document.getElementById("bodyMain");
     bodyMain.style.display = "none";
     bodyMain.removeChild(document.getElementById("base"));
     bodyMain.removeChild(document.getElementById("giraffeScreen1"));
     screen = 2;
-    next.style.display = "none";
-    next.setAttribute("onclick","nextScreen3()");
+    nextButton.style.display = "none";
+    nextLetter.style.display = "none";
+    nextButton.setAttribute("onclick","nextScreen3()");
+    nextLetter.setAttribute("onclick","nextScreen3()");
     document.getElementById("coverletter").setAttribute("style","font-size: 39px;top: 62px;left: calc(50% - 11px); opacity: 0;");
     document.getElementById("coverletter").innerHTML = "between";
     document.getElementById("letter").innerHTML = "Put the giraffe between the palms";
@@ -21,10 +25,10 @@ function nextScreen2(){
     dottedScreen2.setAttribute("id","dottedScreen2");
     var tree1 = document.createElement("div");
     tree1.setAttribute("class", "treeScreen2");
-    tree1.setAttribute("style","left: 180px;");
+    tree1.setAttribute("style","margin-left: 180px;");
     var tree2 = document.createElement("div");
     tree2.setAttribute("class", "treeScreen2");
-    tree2.setAttribute("style","left: 580px;");
+    tree2.setAttribute("style","margin-left: 580px;");
     bodyMain.appendChild(dottedScreen2);
     bodyMain.appendChild(tree1);
     bodyMain.appendChild(tree2);
@@ -41,12 +45,15 @@ function nextScreen2(){
 
 //chuyển màn 3
 function nextScreen3(){
-    var next = document.getElementById("next");
+    var nextButton = document.getElementById("button_next");
+    var nextLetter = document.getElementById("next-lt");
     var bodyMain = document.getElementById("bodyMain");
     bodyMain.style.display = "none";
     screen = 3;
-    next.style.display = "none";
-    next.setAttribute("onclick","nextScreen4()");
+    nextButton.style.display = "none";
+    nextLetter.style.display = "none";
+    nextLetter.setAttribute("onclick","nextScreen4()");
+    nextButton.setAttribute("onclick","nextScreen4()");
     document.getElementById("svg").style.left = "0px";
     document.getElementsByClassName("button_green")[1].setAttribute("style","margin-left: 440px; margin-top: -22px; transition: all 2s;");
     document.getElementById("coverletter").setAttribute("style","font-size: 39px;top: 62px;left: calc(50% - 0px); opacity: 0;");
@@ -93,12 +100,15 @@ function nextScreen3(){
 
 //chuyển màn 4
 function nextScreen4(){
-    var next = document.getElementById("next");
+    var nextButton = document.getElementById("button_next");
+    var nextLetter = document.getElementById("next-lt");
     var bodyMain = document.getElementById("bodyMain");
     bodyMain.style.display = "none";
     screen = 4;
-    next.style.display = "none";
-    next.setAttribute("onclick","goCongrat()");
+    nextButton.style.display = "none";
+    nextLetter.style.display = "none";
+    nextButton.setAttribute("onclick","goCongrat()");
+    nextLetter.setAttribute("onclick","goCongrat()");
     document.getElementById("coverletter").setAttribute("style","font-size: 39px;top: 62px;left: calc(50% - 41px); opacity: 0;");
     document.getElementById("coverletter").innerHTML = "between";
     document.getElementById("letter").innerHTML = "Put the child between her parents";
@@ -142,7 +152,6 @@ function goCongrat() {
     button_green[0].style.marginLeft = "420px";
     button_green[0].style.transition = "1s";
     setTimeout(function(){
-        window.location ="../Outline/Congrat.html";
-    },3000);
+        onclickNext();
+    },1000);
 }
-

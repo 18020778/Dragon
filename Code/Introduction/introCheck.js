@@ -5,6 +5,8 @@ var expressDragObject = false;
 var isCorrect = false;
 mainBig.addEventListener("mousemove", moveshape);
 dragObject.addEventListener("mousemove", moveshape);
+var nextButton = document.getElementById("button_next");
+var nextLetter = document.getElementById("next-lt");
 //di chuyển nhân vật
 function moveshape(e){
     e.preventDefault();
@@ -48,7 +50,6 @@ function checkDrop(){
     var secondDottedLeft = dropObject[1].offsetLeft;
     var bothOfDottedTop = dropObject[0].offsetTop;
     var micBottom = document.getElementById("micro_bottom");
-    var next_butt = document.getElementById("next");
     if(griTop >= bothOfDottedTop - 5 && griTop <= bothOfDottedTop + 50){
         if(griLeft >= secondDottedLeft && griLeft <= secondDottedLeft + 120){
             isCorrect = true;
@@ -70,9 +71,10 @@ function checkDrop(){
                 micBottom.style.display = "block";
             },3000);
             setTimeout(function(){
-                next_butt.style.display = "block";
+                nextButton.style.display = "block";
+                nextLetter.style.display = "block";
                 if(screen == 3){
-                    document.getElementById("momScreen3").style.marginTop = "-440px";
+                    document.getElementById("momScreen3").style.top = "160px";
                 }
             },4000);
             return;
@@ -97,9 +99,10 @@ function checkDrop(){
                 micBottom.style.display = "block";
             },3000);
             setTimeout(function(){
-                next_butt.style.display = "block";
+                nextButton.style.display = "block";
+                nextLetter.style.display = "block";
                 if(screen == 3){
-                    document.getElementById("momScreen3").style.marginTop = "-440px";
+                    document.getElementById("momScreen3").style.top = "160px";
                 }
             },4000);
             return;
@@ -120,7 +123,6 @@ function checkDrop1(){
     var dottedLeft = dropObject.offsetLeft;
     var dottedTop = dropObject.offsetTop;
     var micBottom = document.getElementById("micro_bottom");
-    var next_butt = document.getElementById("next");
     if(griTop >= dottedTop -5 && griTop <= dottedTop + 50){
         if(griLeft >= dottedLeft && griLeft <= dottedLeft + 120){
             isCorrect = true;
@@ -143,12 +145,12 @@ function checkDrop1(){
                 micBottom.style.display = "block";
             },3000);
             setTimeout(function(){
-                next_butt.style.marginTop = "250px";
-                next_butt.style.display = "block";
+                nextButton.style.display = "block";
+                nextLetter.style.display = "block";
                 if(screen == 2){
-                    dropObject.style.marginTop = "-180px";
+                    dropObject.style.top = "420px";
                 }
-                else document.getElementById("papaScreen4").style.marginTop = "-445px";
+                else document.getElementById("papaScreen4").style.top = "160px";
             },4000);
             return;
         }
@@ -156,3 +158,43 @@ function checkDrop1(){
     dragObject.style.top = "350px";
     dragObject.style.left = "calc(50% + 280px)";
 }
+
+//kẻ đường thẳng từ vật tới vòng elip
+var Xins = 4.94;
+var Yins = 0.95;
+var XinsB = 1.04;
+var YinsB = 0.91;
+var checkLine = document.getElementById("lineA");
+var secondCheckLine = document.getElementById("lineB");
+var canRun = true;
+var canIncre = false;
+var checkTime;
+function runLine(){
+    if(!canRun){
+        setTimeout(runLine, 8);
+        return; 
+    }
+    if(!canIncre){
+        checkLine.y1.baseVal.value = 225;
+        checkLine.x1.baseVal.value = 774;
+        secondCheckLine.y1.baseVal.value = 216;
+        secondCheckLine.x1.baseVal.value = 784;
+        canIncre = true;
+    }
+    var a = checkLine.y1.baseVal.value;
+    var b = checkLine.x1.baseVal.value;
+    var aB = secondCheckLine.y1.baseVal.value;
+    var bB = secondCheckLine.x1.baseVal.value;
+    if(b < 300){
+        setTimeout(runLine, 1000);
+        canIncre = false;
+        return;
+    }
+    checkLine.style.opacity = 1;
+    checkLine.y1.baseVal.value = a-Yins;
+    checkLine.x1.baseVal.value = b-Xins;
+    secondCheckLine.style.opacity = 1;
+    secondCheckLine.y1.baseVal.value = aB - YinsB;
+    secondCheckLine.x1.baseVal.value = bB - XinsB;
+    setTimeout(runLine, 8);
+};
