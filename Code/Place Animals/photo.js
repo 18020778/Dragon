@@ -22,5 +22,4 @@ function photo() {
             }, 3000)
         },1500)
     },3000)
-    photoImage1.style.display = "none"; //delete
 }

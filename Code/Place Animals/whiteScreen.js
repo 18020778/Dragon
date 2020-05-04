@@ -7,7 +7,7 @@ function whiteScreen() {
     micro.style.opacity = "0";
     flash.style.display = "none";
     photoImage1.style.display = "none";
-    photoImage.style.display = "block";
+    //photoImage.style.display = "block";  //add
     photoImage.style.top = "calc(100% + 10px)";
 
     if(screen == 2) {
