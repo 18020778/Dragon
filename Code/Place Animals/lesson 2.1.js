@@ -82,21 +82,68 @@ function appearDialog() {
 
 //sửa ngôn ngữ khi chọn
 var languageBorder = document.getElementById("languageDialog");
+var chooseLanguage = document.getElementById("chooseLanguage");
 function english() {
-    document.getElementById("letter").innerHTML = "Put the raccoon between the rabbit and the fox";
-    document.getElementById("letter-wolf").innerHTML = "Put the wolf between the bear and the fox";
-    document.getElementById("letter-owl").innerHTML = "Put the owl beside the rabbit";
+    document.getElementById("letter").innerHTML = "Put the raccoon between the rabbit and the fox.";
+    document.getElementById("letter-wolf").innerHTML = "Put the wolf between the bear and the fox.";
+    document.getElementById("letter-owl").innerHTML = "Put the owl beside the rabbit.";
+    document.getElementById("letter-orange").innerHTML = "Put the orange beside the apple.";
+    document.getElementById("letter-grapes").innerHTML = "Put the grapes beside the banana.";
+    document.getElementById("letter-pear").innerHTML = "Put the pear beside the banana.";
+    document.getElementById("letter-watermelon").innerHTML = "Put the watermelon beside the apple.";
+    document.getElementById("letter-cup").innerHTML = "Put the cup beside the cupcake.";
+    document.getElementById("letter-iceCream").innerHTML = "Put the ice-cream between the cup and the teapot.";
+    document.getElementById("letter-juice").innerHTML = "Put the juice between the teapot and the dessert.";
+    document.getElementById("letter-bear").innerHTML = "Put the bear beside the owl.";
+    document.getElementById("letter-raccoon-4").innerHTML = "Put the raccoon beside the wolf.";
+    document.getElementById("letter-fox").innerHTML = "Put the fox beside the raccoon.";
+    document.getElementById("letter-rabbit").innerHTML = "Put the rabbit between the fox and the bear.";
     document.getElementById("mainLanguage").innerHTML = "English";
     languageBorder.style.display = "none"; 
-}
-function hindi() {
-    document.getElementById("letter").innerHTML = "खरगोश और लोमड़ी के बीच एक प्रकार का जानवर रखो";
-    document.getElementById("letter-wolf").innerHTML = "भालू और लोमड़ी के बीच भेड़िया रखो";
-    document.getElementById("letter-owl").innerHTML = "खरगोश के बगल में उल्लू रखो";
-    document.getElementById("mainLanguage").innerHTML = "Hindi";
-    languageBorder.style.display = "none";  
+    chooseLanguage.style.left = "850px";
+    chooseLanguage.style.width = "100px";
 }
 
+function vietnamese() {
+    document.getElementById("letter").innerHTML = "Đặt con gấu trúc giữa con thỏ và con cáo.";
+    document.getElementById("letter-wolf").innerHTML = "Đặt con sói giữa con gấu và con cáo.";
+    document.getElementById("letter-owl").innerHTML = "Đặt con cú bên cạnh con thỏ.";
+    document.getElementById("letter-orange").innerHTML = "Đặt quả cam bên cạnh quả táo.";
+    document.getElementById("letter-grapes").innerHTML = "Đặt nho bên cạnh chuối.";
+    document.getElementById("letter-pear").innerHTML = "Đặt quả lê bên cạnh quả chuối.";
+    document.getElementById("letter-watermelon").innerHTML = "Đặt dưa hấu bên cạnh quả táo.";
+    document.getElementById("letter-cup").innerHTML = "Đặt cốc bên cạnh món tráng miệng.";
+    document.getElementById("letter-iceCream").innerHTML = "Đặt kem giữa cốc và ấm trà.";
+    document.getElementById("letter-juice").innerHTML = "Đặt nước trái cây giữa ấm trà và món tráng miệng.";
+    document.getElementById("letter-bear").innerHTML = "Đặt con gấu bên cạnh con cú.";
+    document.getElementById("letter-raccoon-4").innerHTML = "Đặt con gấu trúc bên cạnh con sói.";
+    document.getElementById("letter-fox").innerHTML = "Đặt con cáo bên cạnh con gấu trúc.";
+    document.getElementById("letter-rabbit").innerHTML = "Đặt con thỏ giữa con cáo và con gấu.";
+    document.getElementById("mainLanguage").innerHTML = "Vietnamese";
+    chooseLanguage.style.left = "810px";
+    chooseLanguage.style.width = "140px";
+    languageBorder.style.display = "none";  
+}
+function hindi() {
+    document.getElementById("letter").innerHTML = "खरगोश और लोमड़ी के बीच एक प्रकार का जानवर रखो।";
+    document.getElementById("letter-wolf").innerHTML = "भालू और लोमड़ी के बीच भेड़िया रखो।";
+    document.getElementById("letter-owl").innerHTML = "खरगोश के बगल में उल्लू रखो।";
+    document.getElementById("letter-orange").innerHTML = "सेब के बगल में नारंगी रखें।";
+    document.getElementById("letter-grapes").innerHTML = "केले के पास अंगूर रखें।";
+    document.getElementById("letter-pear").innerHTML = "केले के बगल में नाशपाती डालें।";
+    document.getElementById("letter-watermelon").innerHTML = "तरबूज को सेब के पास रख दें।";
+    document.getElementById("letter-cup").innerHTML = "कप केक के बगल में रख दें।";
+    document.getElementById("letter-iceCream").innerHTML = "कप और चायदानी के बीच आइसक्रीम डालें।";
+    document.getElementById("letter-juice").innerHTML = "रस को चायदानी और मिठाई के बीच डालें।";
+    document.getElementById("letter-bear").innerHTML = "भालू को उल्लू के पास रख दिया।";
+    document.getElementById("letter-raccoon-4").innerHTML = "भेड़िया के बगल में एक प्रकार का जानवर रखो।";
+    document.getElementById("letter-fox").innerHTML = "लोमड़ी के बगल में लोमड़ी रखो।";
+    document.getElementById("letter-rabbit").innerHTML = "खरगोश को लोमड़ी और भालू के बीच रखो।";
+    document.getElementById("mainLanguage").innerHTML = "Hindi";
+    languageBorder.style.display = "none";  
+    chooseLanguage.style.left = "870px";
+    chooseLanguage.style.width = "80px";
+}
 
 //bật tắt loa
 var audio = document.getElementsByClassName("Audio");

@@ -137,8 +137,7 @@ body{
     color:rgb(42, 90, 134);
     position: absolute;
     top: 10px;
-    float: right;
-    right: 10px;
+    left: 850px;
     cursor: pointer;
     width: 100px;
 }
@@ -149,15 +148,16 @@ body{
     border-right: 4px solid transparent;
     border-top: 4px solid rgb(42, 90, 134);
     position: absolute;
-    left: calc(100% - 25px);
     top: 10px;
+    float: right;
+    right: 15px;
  }
 #languageDialog {
     border: 1px solid #cfcccc;
     box-shadow: 0 0 5px #cfcccc;
     border-radius: 6px;
     width: 150px;
-    height: 70px;
+    height: 95px;
     position: absolute;
     left: calc(50% + 305px);
     top: 30px;

@@ -75,25 +75,26 @@ function appearDialog() {
 
 //sửa ngôn ngữ khi chọn
 var languageBoder = document.getElementById("languageDialog");
+var chooseLanguage = document.getElementById("chooseLanguage");
 function english() {
     switch(screen) {
         case 1: {
-            document.getElementById("letter").innerHTML = "Put the giraffe beside the palm tree";
+            document.getElementById("letter").innerHTML = "Put the giraffe beside the palm tree.";
             document.getElementById("coverletter").innerHTML = "beside";
             break;
         }
         case 2: {
-            document.getElementById("letter").innerHTML = "Put the giraffe between the palms";
+            document.getElementById("letter").innerHTML = "Put the giraffe between the palms.";
             document.getElementById("coverletter").innerHTML = "between";
             break;
         }
         case 3: {
-            document.getElementById("letter").innerHTML = "Put the child beside her mom";
+            document.getElementById("letter").innerHTML = "Put the child beside her mom.";
             document.getElementById("coverletter").innerHTML = "beside";
             break;
         }
         case 4: {
-            document.getElementById("letter").innerHTML = "put the child between her parents";
+            document.getElementById("letter").innerHTML = "Put the child between her parents.";
             document.getElementById("coverletter").innerHTML = "between";
             break;
         }
@@ -101,7 +102,39 @@ function english() {
     document.getElementById("next-lt").innerHTML = "Next";
     document.getElementById("mainLanguage").innerHTML = "English";
     languageBoder.style.display = "none";
+    chooseLanguage.style.left = "850px";
+    chooseLanguage.style.width = "100px";
     dialogLanguageAppear = false;
+}
+function vietnamese() {
+    switch(screen) {
+        case 1: {
+            document.getElementById("letter").innerHTML = "Đặt con hươu cao cổ bên cạnh cây cọ.";
+            document.getElementById("coverletter").innerHTML = "bên cạnh";
+            break;
+        }
+        case 2: {
+            document.getElementById("letter").innerHTML = "Đặt con hươu cao cổ giữa hai cây kè.";
+            document.getElementById("coverletter").innerHTML = "ở giữa";
+            break;
+        }
+        case 3: {
+            document.getElementById("letter").innerHTML = "Đặt em bé bên cạnh mẹ.";
+            document.getElementById("coverletter").innerHTML = "bên cạnh";
+            break;
+        }
+        case 4: {
+            document.getElementById("letter").innerHTML = "Đặt em bé ở giữa bố mẹ.";
+            document.getElementById("coverletter").innerHTML = "ở giữa";
+            break;
+        }
+    }
+    document.getElementById("next-lt").innerHTML = "tiếp";
+    document.getElementById("mainLanguage").innerHTML = "Vietnamese";
+    languageBoder.style.display = "none";
+    dialogLanguageAppear = false;
+    chooseLanguage.style.left = "810px";
+    chooseLanguage.style.width = "140px";
 }
 function hindi() {
     switch(screen) {
@@ -130,7 +163,10 @@ function hindi() {
     document.getElementById("mainLanguage").innerHTML = "Hindi";
     languageBoder.style.display = "none";
     dialogLanguageAppear = false;
+    chooseLanguage.style.left = "870px";
+    chooseLanguage.style.width = "80px";
 }
+
 
 //bật tắt loa trên
 var x = document.getElementById("audioTop");
