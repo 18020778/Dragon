@@ -387,10 +387,10 @@ function nextScreen2(){
     dottedScreen2.setAttribute("id","dottedScreen2");
     var tree1 = document.createElement("div");
     tree1.setAttribute("class", "treeScreen2");
-    tree1.setAttribute("style","margin-left: 180px;");
+    tree1.setAttribute("style","left: 180px;");
     var tree2 = document.createElement("div");
     tree2.setAttribute("class", "treeScreen2");
-    tree2.setAttribute("style","margin-left: 580px;");
+    tree2.setAttribute("style","left: 580px;");
     bodyMain.appendChild(dottedScreen2);
     bodyMain.appendChild(tree1);
     bodyMain.appendChild(tree2);

@@ -30,8 +30,9 @@
 }
 #dottedScreen2 {
     background-image: url("../image/Introduction/dotted.png");
-    margin-left: calc(100% /2 - 100px);
-    margin-top: 100px;
+    position: absolute;
+    left: calc(100% /2 - 100px);
+    top: 420px;
     width: 160px;
     height: 40px;
     background-size: cover;
@@ -39,7 +40,8 @@
 }
 .treeScreen2 {
     background-image: url("../image/Introduction/palmTree.png");
-    margin-top: -320px;
+    position: absolute;
+    top: 140px;
     width: 160px;
     height: 320px;
     background-size: cover;
