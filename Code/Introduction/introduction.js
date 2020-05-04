@@ -98,7 +98,7 @@ function english() {
             break;
         }
     }
-    document.getElementById("next").innerHTML = "Next";
+    document.getElementById("next-lt").innerHTML = "Next";
     document.getElementById("mainLanguage").innerHTML = "English";
     languageBoder.style.display = "none";
     dialogLanguageAppear = false;
@@ -126,7 +126,7 @@ function hindi() {
             break;
         }
     }
-    document.getElementById("next").innerHTML = "आगे";
+    document.getElementById("next-lt").innerHTML = "आगे";
     document.getElementById("mainLanguage").innerHTML = "Hindi";
     languageBoder.style.display = "none";
     dialogLanguageAppear = false;
@@ -199,7 +199,7 @@ function checkDrop(){
     var secondDottedLeft = dropObject[1].offsetLeft;
     var bothOfDottedTop = dropObject[0].offsetTop;
     var micBottom = document.getElementById("micro_bottom");
-    var next_butt = document.getElementById("next");
+    var next_butt = document.getElementsByClassName("next");
     if(griTop >= bothOfDottedTop - 5 && griTop <= bothOfDottedTop + 50){
         if(griLeft >= secondDottedLeft && griLeft <= secondDottedLeft + 120){
             isCorrect = true;
@@ -221,9 +221,10 @@ function checkDrop(){
                 micBottom.style.display = "block";
             },3000);
             setTimeout(function(){
-                next_butt.style.display = "block";
+                next_butt[0].style.display = "block";
+                next_butt[1].style.display = "block";
                 if(screen == 3){
-                    document.getElementById("momScreen3").style.marginTop = "-440px";
+                    document.getElementById("momScreen3").style.top = "160px";
                 }
             },4000);
             return;
@@ -248,9 +249,10 @@ function checkDrop(){
                 micBottom.style.display = "block";
             },3000);
             setTimeout(function(){
-                next_butt.style.display = "block";
+                next_butt[0].style.display = "block";
+                next_butt[1].style.display = "block";
                 if(screen == 3){
-                    document.getElementById("momScreen3").style.marginTop = "-440px";
+                    document.getElementById("momScreen3").style.top = "160px";
                 }
             },4000);
             return;
@@ -271,7 +273,7 @@ function checkDrop1(){
     var dottedLeft = dropObject.offsetLeft;
     var dottedTop = dropObject.offsetTop;
     var micBottom = document.getElementById("micro_bottom");
-    var next_butt = document.getElementById("next");
+    var next_butt = document.getElementsByClassName("next");
     if(griTop >= dottedTop -5 && griTop <= dottedTop + 50){
         if(griLeft >= dottedLeft && griLeft <= dottedLeft + 120){
             isCorrect = true;
@@ -294,12 +296,12 @@ function checkDrop1(){
                 micBottom.style.display = "block";
             },3000);
             setTimeout(function(){
-                next_butt.style.marginTop = "250px";
-                next_butt.style.display = "block";
+                next_butt[0].style.display = "block";
+                next_butt[1].style.display = "block";
                 if(screen == 2){
-                    dropObject.style.marginTop = "-180px";
+                    dropObject.style.top = "420px";
                 }
-                else document.getElementById("papaScreen4").style.marginTop = "-445px";
+                else document.getElementById("papaScreen4").style.top = "160px";
             },4000);
             return;
         }
@@ -365,14 +367,16 @@ function turnMicroBottom() {
 
 //chuyển màn 2
 function nextScreen2(){
-    var next = document.getElementById("next");
+    var next = document.getElementsByClassName("next");
     var bodyMain = document.getElementById("bodyMain");
     bodyMain.style.display = "none";
     bodyMain.removeChild(document.getElementById("base"));
     bodyMain.removeChild(document.getElementById("giraffeScreen1"));
     screen = 2;
-    next.style.display = "none";
-    next.setAttribute("onclick","nextScreen3()");
+    next[0].style.display = "none";
+    next[1].style.display = "none";
+    next[0].setAttribute("onclick","nextScreen3()");
+    next[1].setAttribute("onclick","nextScreen3()");
     document.getElementById("coverletter").setAttribute("style","font-size: 39px;top: 62px;left: calc(50% - 11px); opacity: 0;");
     document.getElementById("coverletter").innerHTML = "between";
     document.getElementById("letter").innerHTML = "Put the giraffe between the palms";
@@ -387,10 +391,10 @@ function nextScreen2(){
     dottedScreen2.setAttribute("id","dottedScreen2");
     var tree1 = document.createElement("div");
     tree1.setAttribute("class", "treeScreen2");
-    tree1.setAttribute("style","left: 180px;");
+    tree1.setAttribute("style","margin-left: 180px;");
     var tree2 = document.createElement("div");
     tree2.setAttribute("class", "treeScreen2");
-    tree2.setAttribute("style","left: 580px;");
+    tree2.setAttribute("style","margin-left: 580px;");
     bodyMain.appendChild(dottedScreen2);
     bodyMain.appendChild(tree1);
     bodyMain.appendChild(tree2);
@@ -407,12 +411,14 @@ function nextScreen2(){
 
 //chuyển màn 3
 function nextScreen3(){
-    var next = document.getElementById("next");
+    var next = document.getElementsByClassName("next");
     var bodyMain = document.getElementById("bodyMain");
     bodyMain.style.display = "none";
     screen = 3;
-    next.style.display = "none";
-    next.setAttribute("onclick","nextScreen4()");
+    next[0].style.display = "none";
+    next[1].style.display = "none";
+    next[0].setAttribute("onclick","nextScreen4()");
+    next[1].setAttribute("onclick","nextScreen4()");
     document.getElementById("svg").style.left = "0px";
     document.getElementsByClassName("button_green")[1].setAttribute("style","margin-left: 440px; margin-top: -22px; transition: all 2s;");
     document.getElementById("coverletter").setAttribute("style","font-size: 39px;top: 62px;left: calc(50% - 0px); opacity: 0;");
@@ -459,12 +465,14 @@ function nextScreen3(){
 
 //chuyển màn 4
 function nextScreen4(){
-    var next = document.getElementById("next");
+    var next = document.getElementsByClassName("next");
     var bodyMain = document.getElementById("bodyMain");
     bodyMain.style.display = "none";
     screen = 4;
-    next.style.display = "none";
-    next.setAttribute("onclick","goCongrat()");
+    next[0].style.display = "none";
+    next[1].style.display = "none";
+    next[0].setAttribute("onclick","goCongrat()");
+    next[1].setAttribute("onclick","goCongrat()");
     document.getElementById("coverletter").setAttribute("style","font-size: 39px;top: 62px;left: calc(50% - 41px); opacity: 0;");
     document.getElementById("coverletter").innerHTML = "between";
     document.getElementById("letter").innerHTML = "Put the child between her parents";
