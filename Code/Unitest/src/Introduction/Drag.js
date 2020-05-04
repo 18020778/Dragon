@@ -1,4 +1,4 @@
-class dragObject{
+class DragObject{
     constructor(left, top, height){
         this.left = left;
         this.top = top;
