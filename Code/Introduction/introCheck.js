@@ -1,0 +1,158 @@
+var mainBig = document.getElementById("mainBig");
+var dragObject = document.getElementById("giraffeScreen1");
+var dropObject = document.getElementsByClassName("dottedScreen1");
+var expressDragObject = false;
+var isCorrect = false;
+mainBig.addEventListener("mousemove", moveshape);
+dragObject.addEventListener("mousemove", moveshape);
+//di chuyển nhân vật
+function moveshape(e){
+    e.preventDefault();
+    if(isCorrect || !expressDragObject) return;
+    var leftOfMainbig = mainBig.offsetLeft;
+    var topOfMainbig = mainBig.offsetTop;
+    var limitLeft = leftOfMainbig + dragObject.offsetWidth/2;
+    var limitRight = leftOfMainbig + mainBig.offsetWidth - dragObject.offsetWidth/2;
+    var limitTop = topOfMainbig + 45 +  dragObject.offsetTop/2;
+    var limitBottom = topOfMainbig + mainBig.offsetHeight - dragObject.offsetHeight/2;
+    if(e.pageX >= limitLeft && e.pageX <= limitRight && e.pageY >= limitTop && e.pageY <= limitBottom){
+        dragObject.style.top = ((e.pageY - topOfMainbig) - (dragObject.offsetHeight / 2)) + "px";
+        dragObject.style.left = ((e.pageX - leftOfMainbig) - (dragObject.offsetWidth / 2)) + "px";
+    }
+    else{
+        if(screen == 1 || screen == 3){
+            checkDrop();
+        }
+        else checkDrop1();
+    }
+}
+
+// checkDrag là khi đã ấn giữ chuột vào nhân vật hay chưa
+function checkDrag(){
+    expressDragObject = true;
+    dragObject.style.transition = "none";
+    checkLine.style.opacity = 0;
+    secondCheckLine.style.opacity = 0;
+    canIncre = false;
+    canRun = false;
+    clearTimeout(checkTime);
+}
+// checkDrop là khi nhả chuột ra khỏi con vật
+// màn beside
+function checkDrop(){
+    expressDragObject = false;
+    dragObject.style.transition = "all 1s";
+    var griLeft = dragObject.offsetLeft + 52;
+    var griTop = dragObject.offsetTop + dragObject.offsetHeight;
+    var firstDottedLeft = dropObject[0].offsetLeft;
+    var secondDottedLeft = dropObject[1].offsetLeft;
+    var bothOfDottedTop = dropObject[0].offsetTop;
+    var micBottom = document.getElementById("micro_bottom");
+    var next_butt = document.getElementById("next");
+    if(griTop >= bothOfDottedTop - 5 && griTop <= bothOfDottedTop + 50){
+        if(griLeft >= secondDottedLeft && griLeft <= secondDottedLeft + 120){
+            isCorrect = true;
+            if(screen == 1){
+                dragObject.style.left = (secondDottedLeft - 5) + "px";
+            }
+            else dragObject.style.left = (secondDottedLeft + 15) + "px";
+            dragObject.style.top = (bothOfDottedTop - dragObject.offsetHeight + 25) + "px";
+            var turnOnLetter = document.getElementById("coverletter");
+            turnOnLetter.style.opacity = 1;
+            setTimeout(function(){
+                turnOnLetter.style.left = "calc(50% + 40px)";
+                turnOnLetter.style.top = "473px";
+                turnOnLetter.style.fontSize = "42pt";
+                turnOnLetter.style.transition = "all 2s";
+            }, 1000);
+            setTimeout(function(){
+                micBottom.style.left = "480px";
+                micBottom.style.display = "block";
+            },3000);
+            setTimeout(function(){
+                next_butt.style.display = "block";
+                if(screen == 3){
+                    document.getElementById("momScreen3").style.marginTop = "-440px";
+                }
+            },4000);
+            return;
+        }
+        else if(griLeft >= firstDottedLeft && griLeft <= firstDottedLeft + 120){
+            isCorrect = true;
+            dragObject.style.top = (bothOfDottedTop - dragObject.offsetHeight + 25) + "px";
+            if(screen == 1){
+                dragObject.style.left = (firstDottedLeft - 5) + "px";
+            }
+            else dragObject.style.left = (firstDottedLeft + 15) + "px";
+            var turnOnLetter = document.getElementById("coverletter");
+            turnOnLetter.style.opacity = 1;
+            setTimeout(function(){
+                turnOnLetter.style.left = "250px";
+                turnOnLetter.style.top = "473px";
+                turnOnLetter.style.fontSize = "42pt";
+                turnOnLetter.style.transition = "all 2s";
+            }, 1000);
+            setTimeout(function(){
+                micBottom.style.left = "200px";
+                micBottom.style.display = "block";
+            },3000);
+            setTimeout(function(){
+                next_butt.style.display = "block";
+                if(screen == 3){
+                    document.getElementById("momScreen3").style.marginTop = "-440px";
+                }
+            },4000);
+            return;
+        }
+    }
+    checkTime = setTimeout(function(){
+        canRun = true;
+    },3000);
+    dragObject.style.top = "350px";
+    dragObject.style.left = "calc(50% + 300px)";
+}
+//màn between
+function checkDrop1(){
+    expressDragObject = false;
+    dragObject.style.transition = "all 1s";
+    var griLeft = dragObject.offsetLeft + 52;
+    var griTop = dragObject.offsetTop + dragObject.offsetHeight;
+    var dottedLeft = dropObject.offsetLeft;
+    var dottedTop = dropObject.offsetTop;
+    var micBottom = document.getElementById("micro_bottom");
+    var next_butt = document.getElementById("next");
+    if(griTop >= dottedTop -5 && griTop <= dottedTop + 50){
+        if(griLeft >= dottedLeft && griLeft <= dottedLeft + 120){
+            isCorrect = true;
+            dragObject.style.top = (dottedTop - dragObject.offsetHeight + 25) + "px";
+            if(screen == 2){
+                dragObject.style.left = (dottedLeft - 5) + "px";
+            }
+            else dragObject.style.left = (dottedLeft + 15) + "px";
+            var turnOnLetter = document.getElementById("coverletter");
+            turnOnLetter.style.opacity = 1;
+            setTimeout(function(){
+                turnOnLetter.style.left = "calc(50% - 130px)";
+                turnOnLetter.style.top = "473px";
+                turnOnLetter.style.fontSize = "42pt";
+                turnOnLetter.style.transition = "all 2s";
+            }, 1000);
+            setTimeout(function(){
+                micBottom.style.left = "300px";
+                micBottom.style.top = "490px";
+                micBottom.style.display = "block";
+            },3000);
+            setTimeout(function(){
+                next_butt.style.marginTop = "250px";
+                next_butt.style.display = "block";
+                if(screen == 2){
+                    dropObject.style.marginTop = "-180px";
+                }
+                else document.getElementById("papaScreen4").style.marginTop = "-445px";
+            },4000);
+            return;
+        }
+    }
+    dragObject.style.top = "350px";
+    dragObject.style.left = "calc(50% + 280px)";
+}
