@@ -7,7 +7,7 @@
     left: calc(25% - 100px);
     top: calc(100% + 10px);
     transition: all 1s;
-    display: block;
+    display: none;
 }
 #photo1{
     background-image: url("../image/PlaceAnimals/photo1.png");
