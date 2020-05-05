@@ -1,9 +1,11 @@
+describe('outline', function() {
+    it('Outline', function() {
+        cy.visit('https://18020778.github.io/Dragon/Code/Outline/Outline.html');
+        cy.wait(3000);
+        cy.get('div.introduction').click();
+    });
+ })
  describe('bai1', function() {
-     it('Outline', function() {
-         cy.visit('https://18020778.github.io/Dragon/Code/Outline/Outline.html');
-         cy.wait(3000);
-         cy.get('div.introduction').click();
-     });
      it('start', function() {
          cy.visit('https://18020778.github.io/Dragon/Code/Introduction/introduction.html');
          cy.wait(1000);
@@ -17,13 +19,6 @@
          cy.wait(1000);
          cy.get('.Language').contains('English').click();
          cy.wait(1000);
-         // cy.get('.button_back').click();
-         // cy.visit('https://18020778.github.io/Dragon/Code/Outline/Outline.html');
-         // cy.wait(1000);
-         // cy.get('div.introduction').click();
-         // cy.wait(1000);
-         // cy.get('#start').click();
-         // cy.wait(1000);
      })
      it('run 1.1', function() {
          cy.get('#micro_top').click();
@@ -72,19 +67,21 @@
          cy.wait(3000);
          cy.get('#button_next').click({force: true});
     })
+})
+describe('congrat', function(){
     it('runCongrat', function() {
         cy.visit('https://18020778.github.io/Dragon/Code/Outline/Congrat.html');
         cy.wait(3000);
         cy.get('.complete-button').click();
     })
-//})
-
-describe('bai 2', function() {
     it('outline2', function(){
         cy.wait(3000);
         cy.get('div.placeAnimal').click();
     })
-    it('start2',function() {
+})
+
+describe('bai 2', function() {
+   it('start2',function() {
         cy.wait(2000);
         cy.get('#start').click({force: true});
         cy.wait(2000);
@@ -230,6 +227,8 @@ describe('bai 2', function() {
         cy.get('#rabbit4').trigger('mouseup', {pageX: 480, pageY: 280});
         cy.wait(4000);
     })
+})
+describe('congrat2', function(){
     it('runCongrat', function() {
         cy.visit('https://18020778.github.io/Dragon/Code/Outline/Congrat.html');
         cy.wait(3000);
