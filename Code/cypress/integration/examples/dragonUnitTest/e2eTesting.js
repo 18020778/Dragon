@@ -13,7 +13,7 @@ describe('outline', function() {
          cy.wait(1000);
          cy.get('#chooseLanguage').click();
          cy.wait(1000);
-         cy.get('#hi').click();
+         cy.get('#hindi').click();
          cy.wait(1000);
          cy.get('#chooseLanguage').click();
          cy.wait(1000);
