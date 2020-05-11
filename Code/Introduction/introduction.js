@@ -10,6 +10,7 @@ function start() {
     dragObject.style.pointerEvents = "fill";
     dropObject[0].style.filter = "none";
     dropObject[1].style.filter = "none";
+    turnOffAudioTheme();
     setTimeout(runLine, 3000);
 }
 //di chuột lên trên start
@@ -169,32 +170,67 @@ function hindi() {
 
 
 //bật tắt loa trên
-var x = document.getElementById("audioTop");
-var x_play = false;
+var Top = document.getElementById("audioTop");
+var Top_play = false;
 function turnMicroTop() {
-    if (x_play == false) {
-        x.play();
-        x_play = true; 
+    if (Top_play == false) {
+        Top.play();
+        Top_play = true; 
     }
     else {
-        x.pause();
-        x_play = false;
+        Top.pause();
+        Top_play = false;
     }
-    x_play = false;
+    Top_play = false;
 }
 
 //bật tắt loa dưới
-var y = document.getElementById("audioBottom");
-var y_play = false;
+var bottom = document.getElementById("audioBottom");
+var bottom_play = false;
 function turnMicroBottom() {
-    if (y_play == false) {
-        y.play();
-        y_play = true;    
+    if (bottom_play == false) {
+        bottom.play();
+        bottom_play = true;    
     }
     else {
-        y.pause();
-        y_play = false;
+        bottom.pause();
+        bottom_play = false;
     }
-    y_play = false;
+    ybottom_play = false;
 }
 
+//bật tắt nhạc nền
+var theme = document.getElementById("audioTheme");
+function turnOnAudioTheme() {
+    theme.play();   
+}
+function turnOffAudioTheme(){
+    theme.pause();
+}
+
+//bật tắt trả lời đúng
+var correct = document.getElementById("audioCorrect");
+function turnOnAudioCorrect() {
+    correct.play();   
+}
+function turnOffAudioCorrect(){
+    correct.pause();
+}
+
+//bật tắt trả lời sai
+var wrong = document.getElementById("audioWrong");
+function turnOnAudioWrong() {
+    wrong.play();   
+}
+function turnOffAudioWrong(){
+    wrong.pause();
+}
+
+//bật tắt nhạc chúc mừng
+var completed = document.getElementById("audioCompleted");
+function turnOnAudioCompleted() {
+    completed.play();   
+}
+function turnOffAudioCompleted(){
+    completed.pause();
+}
