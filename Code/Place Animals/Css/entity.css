@@ -1,0 +1,273 @@
+#bear {
+    background-image: url("../image/bear.png");
+    background-size: cover;
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    left: 50px;
+    top: 140px;
+    transition: all 1s;
+    filter: blur(5px);
+}
+#fox {
+    background-image: url("../image/fox.png");
+    background-size: cover;
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    left: 330px;
+    top: 140px;
+    z-index: 2;
+    filter: blur(5px);
+}
+#rabbit {
+    background-image: url("../image/rabbit.png");
+    background-size: cover;
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    left: calc(50% + 130px);
+    top: 140px;
+    filter: blur(5px);
+}
+#raccoon {
+    background-image: url("../image/raccoon.png");
+    background-size: cover;
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    left: calc(50% - 70px);
+    top:  400px;
+    z-index: 2;
+    filter: blur(5px);
+    cursor: url("../image/cursors.cur"), auto;
+}
+#wolf {
+    background-image: url("../image/wolf.png");
+    background-size: cover;
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    left: calc(50% - 70px);
+    top:  400px;
+    display: none;
+    z-index: 2;
+    cursor: url("../image/cursors.cur"), auto;
+}
+
+#owl {
+    background-image: url("../image/owl.png");
+    background-size: cover;
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    left: calc(50% - 70px);
+    top:  400px;
+    display: none;
+    z-index: 2;
+    cursor: url("../image/cursors.cur"), auto;
+}
+
+/* screen_2 */
+#banana {
+    background-image: url("../image/banana.png");
+    background-size: cover;
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    left: 185px;
+    top: 140px;
+}
+#apple {
+    background-image: url("../image/apple.png");
+    background-size: cover;
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    left: calc(50% + 135px);
+    top: 140px;
+}
+#orange {
+    background-image: url("../image/orange.png");
+    background-size: cover;
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    left: calc(50% - 70px);
+    top:  450px;
+    z-index: 2;
+    cursor: url("../image/cursors.cur"), auto;
+}
+#grapes {
+    background-image: url("../image/grapes.png");
+    background-size: cover;
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    left: calc(50% - 70px);
+    top:  400px;
+    display: none;
+    z-index: 2;
+    cursor: url("../image/cursors.cur"), auto;
+}
+#pear {
+    background-image: url("../image/pear.png");
+    background-size: cover;
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    left: calc(50% - 70px);
+    top:  400px;
+    display: none;
+    z-index: 2;
+    cursor: url("../image/cursors.cur"), auto;
+}
+#watermelon {
+    background-image: url("../image/watermelon.png");
+    background-size: cover;
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    left: calc(50% - 70px);
+    top:  400px;
+    display: none;
+    z-index: 2;
+    cursor: url("../image/cursors.cur"), auto;
+}
+
+/* screen3 */
+#cupcake {
+    background-image: url("../image/cupcake.png");
+    background-size: cover;
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    left: 50px;
+    top: 140px;
+}
+#teapot {
+    background-image: url("../image/teapot.png");
+    background-size: cover;
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    left: 460px;
+    top: 140px;
+    z-index: 2;
+}
+#dessert {
+    background-image: url("../image/dessert.png");
+    background-size: cover;
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    left: 750px;
+    top: 140px;
+    z-index: 2;
+}
+#cup {
+    background-image: url("../image/cup.png");
+    background-size: cover;
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    left: calc(50% - 70px);
+    top:  400px;
+    z-index: 2;
+    cursor: url("../image/cursors.cur"), auto;
+}
+#iceCream {
+    background-image: url("../image/icecream.png");
+    background-size: cover;
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    left: calc(50% - 70px);
+    top:  400px;
+    display: none;
+    z-index: 2;
+    cursor: url("../image/cursors.cur"), auto;
+}
+#juice {
+    background-image: url("../image/juice.png");
+    background-size: cover;
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    left: calc(50% - 70px);
+    top:  400px;
+    display: none;
+    z-index: 2;
+    cursor: url("../image/cursors.cur"), auto;
+}
+
+/* screen4 */
+#bear4 {
+    background-image: url("../image/bear.png");
+    background-size: cover;
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    left: calc(50% - 70px);
+    top: 400px;
+    z-index: 2;
+    transition: all 1s;
+    cursor: url("../image/cursors.cur"), auto;
+}
+#fox4 {
+    background-image: url("../image/fox.png");
+    background-size: cover;
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    left: calc(50% - 70px);
+    top: 400px;
+    z-index: 2;
+    display: none;
+    transition: all 1s;
+    cursor: url("../image/cursors.cur"), auto;
+}
+#rabbit4 {
+    background-image: url("../image/rabbit.png");
+    background-size: cover;
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    left: calc(50% - 70px);
+    top: 400px;
+    display: none;
+    z-index: 2;
+    transition: all 1s;
+    cursor: url("../image/cursors.cur"), auto;
+}
+#raccoon4 {
+    background-image: url("../image/raccoon.png");
+    background-size: cover;
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    left: calc(50% - 70px);
+    top:  400px;
+    z-index: 2;
+    display: none;
+    cursor: url("../image/cursors.cur"), auto;
+}
+#wolf4 {
+    background-image: url("../image/wolf.png");
+    background-size: cover;
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    left: 50px;
+    top:  140px;
+}
+
+#owl4 {
+    background-image: url("../image/owl.png");
+    background-size: cover;
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    left: 750px;
+    top:  140px;
+}
