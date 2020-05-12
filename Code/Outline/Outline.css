@@ -7,7 +7,7 @@
 }
 .banner{
     height: 97px;
-    background-image: url("../image/Common/banner.svg");
+    background-image: url("image/banner.svg");
     width: 100%;
     background-position: -100px center;
  }
@@ -42,7 +42,7 @@
     margin-left:245px;
 }
 .back_image {
-    background-image: url("../image/Common/back-image.svg");
+    background-image: url("image/back-image.svg");
     background-repeat:no-repeat;
     background-position:center center;
     height: 24px;
@@ -92,7 +92,7 @@
     font-size: 17px;
 }
 .arrow {
-    background-image: url("../image/Common/arrow-down-black.svg");
+    background-image: url("image/arrow-down-black.svg");
     background-repeat: no-repeat;
     background-position:center center ;
     background-size: contain;
@@ -140,7 +140,7 @@ a.non_decor:hover{
     color: #ff6170;
 }
 .introduction .image {
-    background-image: url("../image/Common/introductionCard.png");
+    background-image: url("image/introductionCard.png");
     background-position: 0px 0px;
     width: 165px;
     height: 165px;
@@ -160,7 +160,7 @@ a.non_decor:hover{
     border-radius: 17.5px;
     position: relative;
     background-color: #b0d2a8;
-    background-image: url("../image/Common/tick.svg");
+    background-image: url("image/tick.svg");
     background-repeat:no-repeat;
     background-position:center;
 }
@@ -173,7 +173,7 @@ a.non_decor:hover{
     color: black;
 }
 .placeAnimal .image {
-    background-image: url("../image/Common/placeAnimalsCard.png");
+    background-image: url("image/placeAnimalsCard.png");
     background-position: 0px 0px;
     width: 165px;
     height: 165px;

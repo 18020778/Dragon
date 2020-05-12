@@ -1,0 +1,137 @@
+#treeScreen1 {
+    background-image: url("../image/palmTree.png");
+    position: absolute;
+    left: calc(100% /2 - 100px);
+    top: 140px;
+    width: 160px;
+    height: 320px;
+    background-size: cover;
+    filter: blur(5px);
+}
+.dottedScreen1 {
+    background-image: url("../image/dotted.png");
+    position: absolute;
+    width: 160px;
+    height: 40px;
+    top: 416px;
+    background-size: cover;
+    filter: blur(5px);
+}
+#giraffeScreen1{
+    background-image: url("../image/giraffe.png");
+    width: 160px;
+    height: 240px;
+    position: absolute;
+    top : 350px;
+    left: calc(50% + 300px);
+    z-index: 2;
+    background-size: cover;
+    pointer-events: none;
+    filter: blur(5px);
+    cursor: url("../image/cursors.cur"), auto;
+}
+#dottedScreen2 {
+    background-image: url("../image/dotted.png");
+    position: absolute;
+    left: calc(100% /2 - 100px);
+    top: 420px;
+    width: 160px;
+    height: 40px;
+    background-size: cover;
+    filter: none;
+}
+.treeScreen2 {
+    background-image: url("../image/palmTree.png");
+    position: absolute;
+    top: 140px;
+    width: 160px;
+    height: 320px;
+    background-size: cover;
+    filter: none;
+}
+#giraffeScreen2 {
+    background-image: url("../image/giraffe.png");
+    width: 160px;
+    height: 240px;
+    position: absolute;
+    top : 350px;
+    left: calc(50% + 280px);
+    z-index: 2;
+    background-size: cover;
+    pointer-events: fill;
+    filter: none;
+    cursor: url("../image/cursors.cur"), auto;
+}
+#momScreen3 {
+    background-image: url("../image/mom.svg");
+    position: absolute;
+    left: calc(100% /2 - 100px);
+    top: 160px;
+    width: 160px;
+    height: 320px;
+    background-size: cover;
+    filter: none;
+}
+.dottedScreen3 {
+    background-image: url("../image/dotted.png");
+    position: absolute;
+    width: 160px;
+    height: 40px;
+    top: 430px;
+    background-size: cover;
+    filter: none;
+}
+#childScreen3 {
+    background-image: url("../image/child.svg");
+    width: 120px;
+    height: 200px;
+    position: absolute;
+    top : 350px;
+    left: calc(50% + 300px);
+    z-index: 2;
+    background-size: cover;
+    pointer-events: fill;
+    filter: none;
+    cursor: url("../image/cursors.cur"), auto;
+}
+#dottedScreen4 {
+    background-image: url("../image/dotted.png");
+    position: absolute;
+    left: calc(100% /2 - 100px);
+    top: 440px;
+    width: 160px;
+    height: 40px;
+    background-size: cover;
+    filter: none;
+}
+#momScreen4 {
+    background-image: url("../image/mom.svg");
+    position: absolute;
+    top: 160px;
+    width: 160px;
+    height: 320px;
+    background-size: cover;
+    filter: none;
+}
+#papaScreen4 {
+    background-image: url("../image/dad.svg");
+    position: absolute;
+    top: 160px;
+    width: 160px;
+    height: 320px;
+    background-size: cover;
+    filter: none;
+}
+#childScreen4 {
+    background-image: url("../image/child.svg");
+    width: 120px;
+    height: 200px;
+    position: absolute;
+    top : 350px;
+    left: calc(50% + 280px);
+    z-index: 2;
+    background-size: cover;
+    pointer-events: fill;
+    filter: none;
+    cursor: url("../image/cursors.cur"), auto;
+}

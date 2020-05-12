@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../Css/lesson 2.1.css">
+    <link rel="stylesheet" type="text/css" href="../Css/Congrat.css">
+    <link rel="stylesheet" type="text/css" href="../Css/entity.css">
+    <link rel="stylesheet" type="text/css" href="../Css/letter.css">
+    <link rel="stylesheet" type="text/css" href="../Css/photo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body >
+    <div id = "divBackground"></div>
+    <div id="mainBig">
+        <div class="header">
+            <a href="../../Outline/Outline.html">
+                <button class="button_back" style="margin-left: 10px;">< Back</button></Back>
+            </a>
+            <div class="border_head">
+                <div class="button_green" style="margin-left: 4px; margin-top: 2px;"></div>
+                <div class="button_green" style="margin-left: 27px; margin-top: -22px;"></div>
+                <div class="button_green" style="margin-left: 51px; margin-top: -23px;"></div>
+                <div class="button_green" style="margin-left: 75px; margin-top: -22px;"></div>
+            </div>
+            <div id="chooseLanguage" onclick="appearDialog()" onmouseover="onmouseoverLanguage()" onmouseout="onmouseoutLanguage()">
+                <div id="mainLanguage">English</div>
+                <div id="triangle"></div>
+            </div>
+            <div id="languageDialog" click>
+                <div class="Language" style="margin-top: 5px;" onclick="english()">English</div>
+                <div class="Language" onclick="vietnamese()">Vietnamese</div>
+                <div class="Language" onclick="hindi()">Hindi</div>
+            </div>
+        </div>
+        <img src="../image/loading.gif" id="gif" style="margin-left: calc(100% /2 - 30px); margin-top: 200px;"/>
+            <script>
+                setTimeout(function(){
+                    document.getElementById("gif").style.display = "none";
+                    document.getElementById("bodyMain").style.display = "block";
+                    document.getElementById("start").style.display = "block";
+                },500);
+            </script>
+        <div id="bodyMain">
+            <button id="micro_top" onclick="turnMicroTop()"></button>
+            <div id="letter">Put the raccoon <span class ="checkBetween">between</span> the rabbit and the fox. </div>
+            <div id="letter-wolf">Put the wolf <span class ="checkBetween">between</span> the bear and the fox. </div>
+            <div id="letter-owl">Put the owl <span class ="checkBetween">beside</span> the rabbit. </div>
+            <div id="letter-orange">Put the orange <span class ="checkBetween">beside</span> the apple. </div>
+            <div id="letter-grapes">Put the grapes <span class ="checkBetween">beside</span> the banana. </div>
+            <div id="letter-pear">Put the pear <span class ="checkBetween">beside</span> the banana. </div>
+            <div id="letter-watermelon">Put the watermelon <span class ="checkBetween">beside</span> the apple.</div>
+            <div id="letter-cup">Put the cup <span class ="checkBetween">beside</span> the cupcake.</div>
+            <div id="letter-iceCream">Put the ice-cream <span class ="checkBetween">between</span> the cup and the teapot. </div>
+            <div id="letter-juice">Put the juice <span class ="checkBetween">between</span> the teapot and the dessert. </div>
+            <div id="letter-bear">Put the bear <span class ="checkBetween">beside</span> the owl.</div>
+            <div id="letter-raccoon-4">Put the raccoon <span class ="checkBetween">beside</span> the wolf.</div>
+            <div id="letter-fox">Put the fox <span class ="checkBetween">beside</span> the raccoon. </div>
+            <div id="letter-rabbit">Put the rabbit <span class ="checkBetween">between</span> the fox and the bear. </div>
+            <div id="land_green"></div>
+            <div id="bear"></div>
+            <div id="fox"></div>
+            <div id="rabbit"></div>
+            <div id="raccoon" class="moveAnimal" onmousedown="checkDrag()" onmouseup="checkDrop()"></div>
+            <div id="wolf" class="moveAnimal" onmousedown="checkDrag()" onmouseup="checkDrop()"></div>
+            <div id="owl" class="moveAnimal"  onmousedown="checkDrag()" onmouseup="checkDrop()"></div>
+            <div class="dotted" style="left: 190px; "></div>
+            <div class="dotted" style="left: 480px; "></div>
+            <div class="dotted" style="left: 750px;"></div>
+            <div id="photo"></div>
+            <div id="photo1"></div>
+            <div id="flash"></div>
+        </div>
+        
+            <div id="next" onclick="goCongrat()">
+                Next
+            <div class="button_next"></div>
+            </div>
+        
+        <div id="start" onmouseover="onmouseoverStart()" onmouseout="onmouseoutStart()" onclick="start()">
+            <div id="button_start">start</div>
+            <div id="cylinderBig"></div>  
+            <div id="cylinderSmall"></div>    
+        </div>
+        <audio class="Audio" src="../mp3/Place Animals/Round 1/Raccoon_between_rabbit_n_fox.mp3" type="audio/mpeg">
+        </audio>    
+        <audio class="Audio" src="../mp3/Place Animals/Round 1/Wolf_between_bear_n_fox.mp3" type="audio/mpeg" >
+        </audio>
+        <audio class="Audio" src="../mp3/Place Animals/Round 1/Owl_beside_rabbit.mp3" type="audio/mpeg">       
+        </audio>
+        <audio class="Audio"></audio>
+        <audio id="audioCorrect">
+            <source src="../mp3/Background/Correct.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="audioWrong">
+            <source src="../mp3/Background/Wrong.mp3" type="audio/mpeg">
+        </audio>
+        <script src="../Javascript/lesson 2.1.js"></script>
+        <script src="../Javascript/whiteScreen.js"></script>
+        <script src="../Javascript/moveshape.js"></script>
+        <script src="../Javascript/nextScreen.js"></script>
+        <script src="../Javascript/lesson2.1Check.js"></script>
+        <script src="../Javascript/lesson2.2Change.js"></script>
+        <script src="../Javascript/photo.js"></script>
+        <script src="../Javascript/lesson2.2Check.js"></script>
+        <script src="../Javascript/lesson2.3Change.js"></script>
+        <script src="../Javascript/lesson2.3Check.js"></script>
+        <script src="../Javascript/lesson2.4Change.js"></script>
+        <script src="../Javascript/lesson2.4Check.js"></script>    
+    </div>
+</body>   
+</html>
