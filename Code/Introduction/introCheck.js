@@ -52,6 +52,7 @@ function checkDrop(){
     var micBottom = document.getElementById("micro_bottom");
     if(griTop >= bothOfDottedTop - 5 && griTop <= bothOfDottedTop + 50){
         if(griLeft >= secondDottedLeft && griLeft <= secondDottedLeft + 120){
+            turnOnAudioCorrect();
             isCorrect = true;
             if(screen == 1){
                 dragObject.style.left = (secondDottedLeft - 5) + "px";
@@ -80,6 +81,7 @@ function checkDrop(){
             return;
         }
         else if(griLeft >= firstDottedLeft && griLeft <= firstDottedLeft + 120){
+            turnOnAudioCorrect();
             isCorrect = true;
             dragObject.style.top = (bothOfDottedTop - dragObject.offsetHeight + 25) + "px";
             if(screen == 1){
@@ -108,6 +110,7 @@ function checkDrop(){
             return;
         }
     }
+    turnOnAudioWrong();
     checkTime = setTimeout(function(){
         canRun = true;
     },3000);
@@ -125,6 +128,7 @@ function checkDrop1(){
     var micBottom = document.getElementById("micro_bottom");
     if(griTop >= dottedTop -5 && griTop <= dottedTop + 50){
         if(griLeft >= dottedLeft && griLeft <= dottedLeft + 120){
+            turnOnAudioCorrect();
             isCorrect = true;
             dragObject.style.top = (dottedTop - dragObject.offsetHeight + 25) + "px";
             if(screen == 2){
@@ -155,6 +159,7 @@ function checkDrop1(){
             return;
         }
     }
+    turnOnAudioWrong();
     dragObject.style.top = "350px";
     dragObject.style.left = "calc(50% + 280px)";
 }
