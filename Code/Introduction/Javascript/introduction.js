@@ -1,5 +1,4 @@
 var screen = 1;
-
 //click start để bắt đầu chơi
 function start() {
     var start = document.getElementById("start");
@@ -10,7 +9,6 @@ function start() {
     dragObject.style.pointerEvents = "fill";
     dropObject[0].style.filter = "none";
     dropObject[1].style.filter = "none";
-    turnOffAudioTheme();
     setTimeout(runLine, 3000);
 }
 //di chuột lên trên start

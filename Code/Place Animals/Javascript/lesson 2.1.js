@@ -22,7 +22,7 @@ function start() {
     micro.style.filter = "none";
     letter.style.filter = "none";
     fox.style.filter = "none";
-    raccoon.style.filter = "none";
+    raccoon.style.filter = "none";  
 }
 
 //di chuột lên trên start
