@@ -3,7 +3,7 @@ body{
     background-image: 
     url("../image/background-image.jpg");
     background-repeat: no-repeat;
-    background-size: 1500px 3000px;
+    background-size: 1500px 2500px;
 }
 #divBackground{
     position: absolute;
@@ -48,7 +48,6 @@ body{
 
 #button_start {
     background-image: url("../image/start.png");
-    /* background-position: 0px 0px; */
     width: 95px;
     height: 112px;
     background-size: cover;
@@ -61,7 +60,6 @@ body{
     line-height: 6;
     padding-left: 17px;
     z-index: 3;
-    /* position: relative; */
 }
 #cylinderBig {
     width: 330px;
@@ -87,7 +85,6 @@ body{
     left: calc(50% - 125px);
     filter: opacity(10%);
     z-index: 2;
-    /* position: relative; */
     transition: all 0.3s;
 }
 #start {
@@ -113,24 +110,7 @@ body{
     pointer-events: none;
     display: none;
 }
-.button_back {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 20px;
-    position: absolute;
-    color:rgb(42, 90, 134);
-    line-height: normal;
-    font-weight: normal;
-    text-transform: none;
-    border: 0;
-    padding: 0;
-    top: 10px;
-    background-color: transparent;
-    cursor: pointer;
-    
-}
-.button_back:hover {
-    color: #4ed0f5;
-}
+
 #chooseLanguage {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
@@ -248,6 +228,49 @@ body{
 #checkBetween {
     padding: 5px;
     border-radius: 5px;
+}
+.btn-back span {
+    font-size: 20px;
+    color: rgb(12, 73, 114);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+    top: -10px;
+    left: 25;
+    left: 18px;
+    transition: 0.3s;
+}
+.btn-back {
+    text-decoration: none;
+    position: relative;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid rgb(12, 73, 114);
+    border-radius: 50%;
+    top: 7px;
+    left: 22px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    transition: 0.3s;
+}
+.btn-back::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: -18px;
+    top: -15px;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid white;
+}
+.btn-back:hover span{
+    transition: 0.3s;
+    color: #50acdb;
+}
+.btn-back:hover{
+    transition: 0.3s;
+    border-right:15px solid #50acdb;
 }
 
 
