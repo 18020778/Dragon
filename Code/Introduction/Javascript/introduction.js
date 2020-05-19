@@ -1,4 +1,5 @@
 var screen = 1;
+
 //click start để bắt đầu chơi
 function start() {
     var start = document.getElementById("start");

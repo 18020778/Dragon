@@ -152,7 +152,6 @@ function goCongrat() {
     button_green[0].style.marginLeft = "420px";
     button_green[0].style.transition = "1s";
     setTimeout(function(){
-        turnOnAudioCompleted();
         window.location = "../../Outline/Congrat.html";
     },1000);
 }
