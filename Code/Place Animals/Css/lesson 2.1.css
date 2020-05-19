@@ -3,7 +3,7 @@ body{
     background-image: 
     url("../image/background-image.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 1500px 3000px;
 }
 #divBackground{
     position: absolute;
