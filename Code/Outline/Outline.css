@@ -12,7 +12,7 @@
     background-position: -100px center;
  }
 .headBar{
-    height:45px;
+    height: 45px;
     width: 100%;
     background-color: #eeeeee;
 }
@@ -37,14 +37,14 @@
     height: 550px;
 }
 .button_back{
-    height:55px;
-    width:200px;
-    margin-left:245px;
+    height: 55px;
+    width: 200px;
+    margin-left: 245px;
 }
 .back_image {
     background-image: url("image/back-image.svg");
-    background-repeat:no-repeat;
-    background-position:center center;
+    background-repeat: no-repeat;
+    background-position: center center;
     height: 24px;
     width: 24px;
     border-radius: 12px;
@@ -53,11 +53,11 @@
 }
 .back_text{
     color: #727a78;
-    margin-left:35px;
+    margin-left: 35px;
     margin-top: -20px;
     font-size: 15px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight:bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
 
 
 }
@@ -68,12 +68,12 @@
     border-width: initial;
     border-radius: 5px;
     padding-left: -1px;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 20px #000000;
 }
 .menu_choose {
     height: 41px;
     width: 186px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     color: #000000;
     padding-left: 15px;
@@ -83,27 +83,27 @@
 }
 #chooseGame{
     margin-left: 475px;
-    margin-top:-550px;
+    margin-top: -550px;
     height: 550px;
 }
 .game_pos{
     height: 20px;
-    text-align:left;
+    text-align: left;
     font-size: 17px;
 }
 .arrow {
     background-image: url("image/arrow-down-black.svg");
     background-repeat: no-repeat;
-    background-position:center center ;
+    background-position: center center ;
     background-size: contain;
     transform: rotate(-90deg);
-    display:inline-block;
+    display: inline-block;
     height: 7px;
     width: 7px;
    
 }
 .light_pos{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #000000;
     display: inline-block;
 
@@ -149,8 +149,8 @@ a.non_decor:hover{
     margin-top: -25px;
     }
 .introduction .text{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display:block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
     margin-top: 10px;
 }
 .tick {
@@ -161,8 +161,8 @@ a.non_decor:hover{
     position: relative;
     background-color: #b0d2a8;
     background-image: url("image/tick.svg");
-    background-repeat:no-repeat;
-    background-position:center;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .placeAnimal {

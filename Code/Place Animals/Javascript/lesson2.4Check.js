@@ -6,7 +6,7 @@ function checkDrag3(){
 }
 function checkDrop3(){
     clearInterval(runMakeAppearDot);
-    var racLeft = animalMove[indAn].offsetLeft + 52;
+    var racLeft = animalMove[indAn].offsetLeft + 52;     //52: thêm độ rộng cho vị trí kiểm tra vật
     var racTop = animalMove[indAn].offsetTop + animalMove[indAn].offsetHeight;
     var firstDottedLeft = thirdDotted[0].offsetLeft;
     var secondDottedLeft = thirdDotted[1].offsetLeft;
@@ -17,7 +17,7 @@ function checkDrop3(){
     animalMove[indAn].style.transition = "all 1s";
     var timeDelay = 0;
     var wrongChoice3 = false;
-    if(racTop >= bothOfDottedTop + 10 && racTop <= bothOfDottedTop + 50){
+    if(racTop >= bothOfDottedTop + 10 && racTop <= bothOfDottedTop + 50){    //10,40,50,100: thêm độ rộng cho vị trí kiểm tra vật
         if((racLeft >= forthDottedLeft && racLeft <= forthDottedLeft + 100)){
             if (indAn != 0) return;
             turnOnAudioCorrect();
@@ -54,7 +54,7 @@ function checkDrop3(){
                 return;
             }
         }
-        else if(racLeft >= secondDottedLeft && racLeft <= secondDottedLeft + 100){
+        else if(racLeft >= secondDottedLeft && racLeft <= secondDottedLeft + 100){  
             if(indAn == 0 || indAn == 1){
                 wrongChoice3 = true;
                 thirdDotted[1].style.backgroundColor = "red";

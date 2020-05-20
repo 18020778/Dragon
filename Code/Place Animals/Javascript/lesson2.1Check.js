@@ -6,26 +6,20 @@ function checkDrag(){
     runMakeAppearDot = setInterval(makeDotAppear, 3);
 }
 // checkDrop là khi nhả chuột ra khỏi con vật
-var firstDottedLeft = thirdDotted[0].offsetLeft;
-var secondDottedLeft = thirdDotted[1].offsetLeft;
-var thirdDottedLeft = thirdDotted[2].offsetLeft;
-var bothOfDottedTop = thirdDotted[0].offsetTop;
-var racLeft = animalMove[indAn].offsetLeft + 52;
-var racTop = animalMove[indAn].offsetTop + animalMove[indAn].offsetHeight;
 function checkDrop(){
     clearInterval(runMakeAppearDot);
     var firstDottedLeft = thirdDotted[0].offsetLeft;
     var secondDottedLeft = thirdDotted[1].offsetLeft;
     var thirdDottedLeft = thirdDotted[2].offsetLeft;
     var bothOfDottedTop = thirdDotted[0].offsetTop;
-    var racLeft = animalMove[indAn].offsetLeft + 52;
+    var racLeft = animalMove[indAn].offsetLeft + 52; //52: tăng độ rộng cho vị trí đặt vật
     var racTop = animalMove[indAn].offsetTop + animalMove[indAn].offsetHeight;
     expressRaccoon = false;
     animalMove[indAn].style.transition = "all 1s";
     var timeDelay = 0;
     var wrongChoice = false;
     // nếu vị trí top của con vật phù hợp với 1 trong 3 vòng thực hiện set đến left
-    if(racTop >= bothOfDottedTop + 10 && racTop <= bothOfDottedTop + 50){
+    if(racTop >= bothOfDottedTop + 10 && racTop <= bothOfDottedTop + 50){   //10,40,50,100: thêm độ rộng cho vị trí kiểm tra vật
         if(racLeft >= secondDottedLeft && racLeft <= secondDottedLeft + 100){
             if(indAn != 0) return;
             // indAn = 0 là con gấu mèo thì mình đã lấy vị trí này r , nên khi kp

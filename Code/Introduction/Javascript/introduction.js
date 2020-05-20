@@ -55,8 +55,8 @@ function onmouseoverLanguage() {
     triangle.style.borderTopColor = "#4ed0f5";
 }
 function onmouseoutLanguage() {
-    language.style.color = "rgb(42, 90, 134)";
-    triangle.style.borderTopColor = "rgb(42, 90, 134)";
+    language.style.color = "#2a5a86";
+    triangle.style.borderTopColor = "#2a5a86";
 }
 
 //hiện bảng chọn ngôn ngữ khi click mũi tên

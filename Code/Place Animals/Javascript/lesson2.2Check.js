@@ -10,7 +10,7 @@ var three = false;
 var four = false;
 function checkDrop1(){
     clearInterval(runMakeAppearDot);
-    var racLeft = animalMove[indAn].offsetLeft + 52;
+    var racLeft = animalMove[indAn].offsetLeft + 52;    //52: tăng diện tích kiểm tra vị trí
     var racTop = animalMove[indAn].offsetTop + animalMove[indAn].offsetHeight;
     var firstDottedLeft = thirdDotted[0].offsetLeft;
     var secondDottedLeft = thirdDotted[1].offsetLeft;
@@ -21,7 +21,7 @@ function checkDrop1(){
     animalMove[indAn].style.transition = "all 1s";
     var timeDelay = 0;
     var wrongChoice1 = false;
-    if(racTop >= bothOfDottedTop + 10 && racTop <= bothOfDottedTop + 50){
+    if(racTop >= bothOfDottedTop + 10 && racTop <= bothOfDottedTop + 50){    //10,40,50,100: thêm độ rộng cho vị trí kiểm tra vật
         if((racLeft >= thirdDottedLeft && racLeft <= thirdDottedLeft + 100)){
             if (three) return;
             if(indAn != 0 && indAn != 3) {

@@ -114,7 +114,7 @@ body{
 #chooseLanguage {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
-    color:rgb(42, 90, 134);
+    color:#2a5a86;
     position: absolute;
     top: 10px;
     left: 850px;
@@ -126,7 +126,7 @@ body{
     height: 0px;
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
-    border-top: 4px solid rgb(42, 90, 134);
+    border-top: 4px solid #2a5a86;
     position: absolute;
     top: 10px;
     float: right;
@@ -231,7 +231,7 @@ body{
 }
 .btn-back span {
     font-size: 20px;
-    color: rgb(12, 73, 114);
+    color: #2a5a86;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     position: absolute;
     top: -10px;
@@ -244,7 +244,7 @@ body{
     position: relative;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-right: 15px solid rgb(12, 73, 114);
+    border-right: 15px solid #2a5a86;
     border-radius: 50%;
     top: 7px;
     left: 22px;

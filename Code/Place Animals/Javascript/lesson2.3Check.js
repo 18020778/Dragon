@@ -17,13 +17,13 @@ function checkDrop2(){
     var secondDottedLeft = thirdDotted[1].offsetLeft;
     var thirdDottedLeft = thirdDotted[2].offsetLeft;
     var bothOfDottedTop = thirdDotted[0].offsetTop;
-    var racLeft = animalMove[indAn].offsetLeft + 52;
+    var racLeft = animalMove[indAn].offsetLeft + 52;     //52: thêm độ rộng cho vị trí kiểm tra vật
     var racTop = animalMove[indAn].offsetTop + animalMove[indAn].offsetHeight;
     expressRaccoon = false;
     animalMove[indAn].style.transition = "all 1s";
     var timeDelay = 0;
     var wrongChoice2 = false;
-    if(racTop >= bothOfDottedTop + 10 && racTop <= bothOfDottedTop + 50){
+    if(racTop >= bothOfDottedTop + 10 && racTop <= bothOfDottedTop + 50){    //10,40,50,100: thêm độ rộng cho vị trí kiểm tra vật
         if(racLeft >= firstDottedLeft && racLeft <= firstDottedLeft + 100){
             if(indAn != 0) return;
             turnOnAudioCorrect();
