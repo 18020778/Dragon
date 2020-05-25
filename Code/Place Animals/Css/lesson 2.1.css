@@ -3,7 +3,7 @@ body{
     background-image: 
     url("../image/background-image.jpg");
     background-repeat: no-repeat;
-    background-size: 1500px 2500px;
+    background-size: 100% 2500px;
 }
 #divBackground{
     position: absolute;
@@ -140,7 +140,7 @@ body{
     height: 95px;
     position: absolute;
     left: calc(50% + 305px);
-    top: 30px;
+    top: 60px;
     background-color: white;
     display: none;
     position: absolute;

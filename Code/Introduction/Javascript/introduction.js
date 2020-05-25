@@ -60,17 +60,8 @@ function onmouseoutLanguage() {
 }
 
 //hiện bảng chọn ngôn ngữ khi click mũi tên
-var dialogLanguageAppear = false;
 function appearDialog() {
-   var languageDialog = document.getElementById("languageDialog");
-   if(!dialogLanguageAppear){
-        languageDialog.style.display = "block";
-       dialogLanguageAppear = true;
-   }
-   else{
-        languageDialog.style.display = "none";
-       dialogLanguageAppear = false;
-   }
+    $("#languageDialog").slideToggle();
 }
 
 //sửa ngôn ngữ khi chọn

@@ -5,6 +5,7 @@
     <meta name="viewport" id="viewport-meta" content="width=1024, user-scalable=0, viewport-fit=cover">
     <link rel="stylesheet" type="text/css" href="../Css/introduction.css">
     <link rel="stylesheet" type="text/css" href="../Css/entity.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body> 
     <div id = "divBackground"></div>
@@ -49,6 +50,8 @@
                 <line  id = "lineA" x1="774" y1="225" x2="800" y2="230" style="stroke:black;stroke-width:3; opacity: 0;" />
                 <line  id = "lineB" x1="784" y1="216" x2="800" y2="230" style="stroke:black;stroke-width:3; opacity: 0;"/>
             </svg>
+            <div class="arrow" style="transform: rotate(103deg);left: 760px; top: 530px;"></div>
+            <div class="arrow" style="transform: rotate(134deg);left: 777px; top: 530px;"></div>
             <canvas class="straight" width="400" height="200"></canvas>
             <div id="micro_bottom" onclick="turnMicroBottom()"></div>
             <div id="next-lt" onclick="nextScreen2()">Next</div>
@@ -72,6 +75,7 @@
     <audio id="audioWrong">
         <source src="../mp3/Background/Wrong.mp3" type="audio/mpeg">
     </audio>
+    
     <script src="../Javascript/introduction.js"></script>
     <script src="../Javascript/introCheck.js"></script>
     <script src="../Javascript/NextScreen.js"></script>

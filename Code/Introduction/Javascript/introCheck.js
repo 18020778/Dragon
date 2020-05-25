@@ -164,18 +164,24 @@ function checkDrop1(){
     dragObject.style.left = "calc(50% + 280px)";
 }
 
-//kẻ đường thẳng từ vật tới vòng elip
 var Xins = 4.94;
-var Yins = 0.95;
-var XinsB = 1.04;
-var YinsB = 0.91;
+var Yins = 1.04;
+var XinsB = 0.9;
+var YinsB = 0.9;
+var leftArrowLeft = 4.3;
+var topArrowLeft=  1;
+var leftArrowRight = 1;
+var topArrowRight = 1;
 var checkLine = document.getElementById("lineA");
 var secondCheckLine = document.getElementById("lineB");
+var arrow = $(".arrow");
 var canRun = true;
 var canIncre = false;
 var checkTime;
 function runLine(){
+    $(arrow).css({"display" : "block"});
     if(!canRun){
+        $(arrow).css({"display" : "none"});
         setTimeout(runLine, 8);
         return; 
     }
@@ -184,15 +190,27 @@ function runLine(){
         checkLine.x1.baseVal.value = 774;
         secondCheckLine.y1.baseVal.value = 216;
         secondCheckLine.x1.baseVal.value = 784;
+        $(arrow[0]).css({
+            "left" : "760px",
+            "top" : "530px"
+        });
+        $(arrow[1]).css({
+            "left" : "777px",
+            "top" : "530px"
+        }); 
         canIncre = true;
     }
     var a = checkLine.y1.baseVal.value;
     var b = checkLine.x1.baseVal.value;
     var aB = secondCheckLine.y1.baseVal.value;
     var bB = secondCheckLine.x1.baseVal.value;
+    var arlFirst = arrow[0].offsetLeft;
+    var artFirst = arrow[0].offsetTop;
+    var arlSecond = arrow[1].offsetLeft;
+    var artSecond = arrow[1].offsetTop;
     if(b < 300){
-        setTimeout(runLine, 1000);
         canIncre = false;
+        setTimeout(runLine, 1000);
         return;
     }
     checkLine.style.opacity = 1;
@@ -201,5 +219,10 @@ function runLine(){
     secondCheckLine.style.opacity = 1;
     secondCheckLine.y1.baseVal.value = aB - YinsB;
     secondCheckLine.x1.baseVal.value = bB - XinsB;
+    arrow[0].style.left = (arlFirst - leftArrowLeft) + 'px'; 
+    arrow[0].style.top = (artFirst - topArrowLeft) + 'px';
+    arrow[1].style.left = (arlSecond - leftArrowRight) + 'px'; 
+    arrow[1].style.top = (artSecond - topArrowRight) + 'px';
     setTimeout(runLine, 8);
-};
+}
+

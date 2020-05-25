@@ -3,7 +3,7 @@ body{
     background-image: 
     url("../image/background-image.jpg");
     background-repeat: no-repeat;
-    background-size: 1500px 2500px;
+    background-size: 100% 2500px;
 }
 #divBackground{
     position: absolute;
@@ -124,8 +124,9 @@ body{
     border-radius: 6px;
     width: 150px;
     height: 95px;
-    margin-left: calc(50% + 305px);
-    margin-top: 10px;
+    position: absolute;
+    left: calc(50% + 305px);
+    top: 60px;
     background-color: white;
     display: none;
     position: absolute;
@@ -273,4 +274,13 @@ body{
 .btn-back:hover{
     transition: 0.3s;
     border-right:15px solid #50acdb;
+}
+.arrow {
+    width: 0px;
+    height: 0px;
+    border-left: 11px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid black;
+    position: absolute;
+    display: none;
 }
