@@ -1,4 +1,4 @@
-// function checkDrag1(){
+function checkDrag1(){
     expressRaccoon = true;
     animalMove[indAn].style.transition = "none";
     // khi nào mình kéo thả mới bắt đầu kiểm tra vị trí hiện vòng cho đỡ lag
@@ -10,7 +10,7 @@ var three = false;
 var four = false;
 function checkDrop1(){
     clearInterval(runMakeAppearDot);
-    var racLeft = animalMove[indAn].offsetLeft + 52;
+    var racLeft = animalMove[indAn].offsetLeft + 52;    //52: tăng diện tích kiểm tra vị trí
     var racTop = animalMove[indAn].offsetTop + animalMove[indAn].offsetHeight;
     var firstDottedLeft = thirdDotted[0].offsetLeft;
     var secondDottedLeft = thirdDotted[1].offsetLeft;
@@ -21,7 +21,7 @@ function checkDrop1(){
     animalMove[indAn].style.transition = "all 1s";
     var timeDelay = 0;
     var wrongChoice1 = false;
-    if(racTop >= bothOfDottedTop + 10 && racTop <= bothOfDottedTop + 50){
+    if(racTop >= bothOfDottedTop + 10 && racTop <= bothOfDottedTop + 50){    //10,40,50,100: thêm độ rộng cho vị trí kiểm tra vật
         if((racLeft >= thirdDottedLeft && racLeft <= thirdDottedLeft + 100)){
             if (three) return;
             if(indAn != 0 && indAn != 3) {
@@ -39,7 +39,7 @@ function checkDrop1(){
                 banana.style.opacity = 1;
                 if (indAn == 1) {
                     setTimeout(function() {
-                        change("grapes");
+                        changeGrapes();
                     }, 3000);
                 }
                 else if (indAn == 4) {
@@ -65,7 +65,7 @@ function checkDrop1(){
                 banana.style.opacity = 1;
                 if (indAn == 1) {
                     setTimeout(function() {
-                        change("grapes");
+                        changeGrapes();
                     }, 3000);
                 }
                 else if (indAn == 4) {
@@ -92,14 +92,14 @@ function checkDrop1(){
                 if (indAn == 2) {
                     orange.style.opacity = "1";
                     setTimeout(function() {
-                        change("pear");
+                        changePear();
                     }, 3000);
                 }
                 else {
                     grapes.style.opacity = "1";
                     orange.style.opacity = "1";
                     setTimeout(function() {
-                        change("watermelon");
+                        changeWatermelon();
                     }, 3000);
                 }
                 return;
@@ -123,14 +123,14 @@ function checkDrop1(){
                 if (indAn == 2) {
                     orange.style.opacity = 1;
                     setTimeout(function() {
-                        change("pear");
+                        changePear();
                     }, 3000);
                 }
                 else {
                     grapes.style.opacity = "1";
                     orange.style.opacity = "1";
                     setTimeout(function() {
-                        change("watermelon");
+                        changeWatermelon();
                     }, 3000);
                 }
                 return;
