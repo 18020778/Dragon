@@ -1,0 +1,31 @@
+.bigOnMouseOverStart {
+	width: 340px;
+	height: 340px;
+	border-radius: 170px;
+	margin-top: -225px;
+	margin-left: calc(50% - 155px);
+}
+
+.smallOnMouseOverStart {
+	width: 260px;
+	height: 260px;
+	border-radius: 130px;
+	margin-top: -297px;
+	margin-left: calc(50% - 114px);
+}
+
+.bigOnMouseOutStart {
+	width: 330px;
+	height: 330px;
+	border-radius: 165px;
+	margin-top: -220px;
+	margin-left: calc(50% - 150px);
+}
+
+.smallOnMouseOutStart {
+	width: 250px;
+	height: 250px;
+	border-radius: 125px;
+	margin-top: -292px;
+	margin-left: calc(50% - 109px);
+}

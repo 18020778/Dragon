@@ -1,0 +1,111 @@
+.bigStyleOnMouseOverStart {
+	width: 340px;
+	height: 340px;
+	border-radius: 170px;
+	top: calc(50% - 165px);
+	left: 310px;
+}
+
+.smallStyleOnMouseOverStart {
+	width: 260px;
+	height: 260px;
+	border-radius: 130px;
+	top: calc(50% - 122px);
+	left: calc(50% - 130px);
+}
+
+.bigStyleOnMouseOutStart {
+	width: 330px;
+	height: 330px;
+	border-radius: 165px;
+	top: calc(50% - 160px);
+	left: 315px;
+}
+
+.smallStyleOnMouseOutStart {
+	width: 250px;
+	height: 250px;
+	border-radius: 125px;
+	top: calc(50% - 117px);
+	left: calc(50% - 125px);
+}
+
+.letterWolfChangeStyle {
+	opacity: 1;
+	fontSize: 40px;
+	top: 60px;
+	left: 90px;
+	transition: all 0.4s;
+}
+
+.letterOwlStyleChange {
+	opacity: 1;
+	fontSize: 42px;
+	top: 60px;
+	left: 200px;
+	transition: all 0.4s;
+}
+
+.letterGrapesChangeStyle {
+	opacity: 1;
+	fontSize: 42px;
+	top: 60px;
+	left: 200px;
+	transition: all 0.4s;
+}
+
+.letterPearChangeStyle {
+	opacity: 1;
+	fontSize: 42px;
+	top: 60px;
+	left: 200px;
+	transition: all 0.4s;
+}
+
+.letterWatermelonChangeStyle {
+	opacity: 1;
+	font-size: 42px;
+	top: 60px;
+	left: 200px;
+	transition: all 0.4s;
+}
+
+.letterIceCreamChangeStyle {
+	opacity: 1;
+	font-size: 38px;
+	top: 60px;
+	left: 75px;
+	transition: all 0.4s;
+}
+
+.letterJuiceChangeStyle {
+	opacity: 1;
+	font-size: 38px;
+	top: 60px;
+	left: 75px;
+	transition: all 0.4s;
+}
+
+.letterRaccoonChangeStyle {
+	opacity: 1;
+	font-size: 42px;
+	top: 60px;
+	left: 200px;
+	transition: all 0.4s;
+}
+
+.letterFoxChangeStyle {
+	opacity: "1";
+	font-size: "42px";
+	top: 60px;
+	left: 200px;
+	transition: all 0.4s;
+}
+
+.letterRabbitChangeChage {
+	opacity: 1;
+	fontSize: 42px;
+	top: 60px;
+	left: 50px;
+	transition: all 0.4s;
+}

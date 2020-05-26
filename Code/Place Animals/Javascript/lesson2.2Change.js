@@ -6,11 +6,16 @@ function changeGrapes() {
     animalMove[indAn].style.display = "block";
     micro.style.display = "none"; 
     setTimeout(function(){
-        letterGrapes.style.opacity = "1";
-        letterGrapes.style.fontSize = "42px";
-        letterGrapes.style.top = "60px";
-        letterGrapes.style.left = "200px";
-        letterGrapes.style.transition = "all 0.4s";
+        letterGrapes.setAttribute(
+			'class',
+			(letterGrapes.getAttribute('class') !== null ? letterGrapes.getAttribute('class') : '') +
+				' letterGrapesChangeStyle'
+		);
+        // letterGrapes.style.opacity = "1";
+        // letterGrapes.style.fontSize = "42px";
+        // letterGrapes.style.top = "60px";
+        // letterGrapes.style.left = "200px";
+        // letterGrapes.style.transition = "all 0.4s";
         setTimeout(function() {
             micro.style.display = "block";
             micro.style.left = "180px";
@@ -44,11 +49,16 @@ function changeWatermelon() {
     animalMove[indAn].style.display = "block"; 
     micro.style.display = "none"; 
     setTimeout(function(){
-        letterWatermelon.style.opacity = "1";
-        letterWatermelon.style.fontSize = "42px";
-        letterWatermelon.style.top = "60px";
-        letterWatermelon.style.left = "200px";
-        letterWatermelon.style.transition = "all 0.4s";
+        letterWatermelon.setAttribute(
+			'class',
+			(letterWatermelon.getAttribute('class') ? letterWatermelon.getAttribute('class') : '') +
+				' letterGrapesChangeStyle'
+		);
+        // letterWatermelon.style.opacity = "1";
+        // letterWatermelon.style.fontSize = "42px";
+        // letterWatermelon.style.top = "60px";
+        // letterWatermelon.style.left = "200px";
+        // letterWatermelon.style.transition = "all 0.4s";
         setTimeout(function() {
             micro.style.display = "block";
             micro.style.left = "180px";

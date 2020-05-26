@@ -62,6 +62,11 @@ function checkDrop(){
             var turnOnLetter = document.getElementById("coverletter");
             turnOnLetter.style.opacity = 1;
             setTimeout(function(){
+                turnOnLetter.setAttribute(
+                    'class',
+                    (turnOnLetter.getAttribute('class') !== null ? turnOnLetter.getAttribute('class') : '') +
+                        ' turnOnLetterCheckDrop'
+                );
                 turnOnLetter.style.left = "calc(50% + 40px)";
                 turnOnLetter.style.top = "473px";
                 turnOnLetter.style.fontSize = "42pt";
