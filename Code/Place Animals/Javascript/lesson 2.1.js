@@ -9,8 +9,11 @@ var land = document.getElementById("land_green");
 var big = document.getElementById("cylinderBig");
 var small = document.getElementById("cylinderSmall");
 var start_bt = document.getElementById("button_start");
+var button_green = document.getElementsByClassName("button_green");
+var countScreen = 1;
 var screen = 1;
-
+var score = 0;
+var checkScore = true;
 //click start để bắt đầu chơi
 function start() {
     var start = document.getElementById("start");
@@ -214,7 +217,18 @@ function changeOwl() {
         }, 500); 
     }, 50);
 }
-
+function updateScore() {
+    var marginLeftButtonGreen = ['27px', '51px', '75px'];
+    var idButtonGreen = 4 - score;
+    var idMarginLeft = 3 -score;
+    if(score > 0) {
+        setTimeout(function() {
+            button_green[idButtonGreen].style.marginLeft = marginLeftButtonGreen[idMarginLeft];
+            button_green[idButtonGreen].style.transition = "1s";
+        },1000);
+        score -= 1;
+    }
+}
 
 
 

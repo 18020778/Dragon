@@ -90,28 +90,7 @@ function checkDrop3(){
                 thirdDotted[2].style.opacity = "0";
                 indAn += 1;
                 if (indAn == 4) {
-                    setTimeout( function() {
-                        photoImage.style.top = "calc(100% - 210px)";
-                        setTimeout(function() {
-                            photoImage.style.display = "none";
-                            photoImage1.style.display = "block";
-                        },1000)
-                        setTimeout(function() {
-                            flash.style.display = "block";
-                            flash.style.width = "120px";
-                            flash.style.height = "120px";
-                            flash.style.top = "calc(100% - 170px)";
-                            flash.style.left = "225px";
-                            screen += 1;
-
-                            setTimeout(function(){
-                                var next = document.getElementById("next");
-                                next.style.display = "block";
-                            },3000);    
-                            
-                        },1500)
-                    },3000)
-                   
+                    photo();
                 }
                 return;
             }
@@ -119,6 +98,10 @@ function checkDrop3(){
     }
     if(wrongChoice3){
         turnOnAudioWrong();
+        if(checkScore) {
+            updateScore();
+            checkScore = false;
+        }
         var check = document.getElementsByClassName("checkBetween");
         if (indAn == 0) {
             setTimeout(function(){

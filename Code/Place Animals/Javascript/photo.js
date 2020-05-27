@@ -15,10 +15,21 @@ function photo() {
             flash.style.height = "120px";
             flash.style.top = "calc(100% - 170px)";
             flash.style.left = "225px";
-            screen += 1;
-            setTimeout(function(){ 
-                whiteScreen();
-            }, 3000)
+            if(checkScore) {
+                score += 1;
+            }
+            if(score == 4){
+                nextScore();
+                setTimeout(function(){
+                    window.location = "../../Outline/Congrat.html";
+                },3000);
+            }
+            else {
+                setTimeout(function(){ 
+                    countScreen += 1;
+                    whiteScreen();
+                }, 3000)
+            }
         },1500)
     },3000)
 }

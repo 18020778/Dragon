@@ -79,6 +79,10 @@ function checkDrop2(){
     }
     if(wrongChoice2){
         turnOnAudioWrong();
+        if(checkScore) {
+            updateScore();
+            checkScore = false;
+        }
         var sp = document.getElementsByClassName("checkBetween");
         if (indAn == 0) {
             setTimeout(function(){

@@ -17,35 +17,6 @@ body{
     url("../image/cell.png"),
     url("../image/color.png");
 }
-#next {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 25px;
-    margin-top: 510px;
-    width: 100px;
-    margin-left: calc(50% - 47px);
-    display: none;
-    color: #64cee3;
-}
-     #next:hover {
-        color: #2fb8d4;
-    }
-
-.button_next {
-    background-image: url("../image/button-next.svg");
-    background-position: 0px 0px;
-    width: 31px;
-    height: 31px;
-    position: absolute;
-    margin-top: -28px;
-    margin-left: 60px;
-    background-size: cover;
-}
-
-    .button_next:hover {
-        background-position: 0px 63px;
-        cursor: pointer;
-    }
-
 #button_start {
     background-image: url("../image/start.png");
     width: 95px;

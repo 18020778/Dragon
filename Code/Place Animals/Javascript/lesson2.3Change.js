@@ -1,7 +1,7 @@
 var letterIceCream = document.getElementById("letter-iceCream");
 var letterJuice = document.getElementById("letter-juice");
 function changeIceCream() {
-    letterCup.style.display = "none";
+    letterCup.style.opacity = "0";
     animalMove[indAn].style.display = "block"; 
     micro.style.display = "none"; 
     setTimeout(function(){
@@ -21,7 +21,7 @@ function changeIceCream() {
 }
 
 function changeJuice() {
-    letterIceCream.style.display = "none";
+    letterIceCream.style.opacity = "0";
     animalMove[indAn].style.display = "block"; 
     micro.style.display = "none"; 
     setTimeout(function(){

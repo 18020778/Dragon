@@ -13,6 +13,7 @@ function nextScreen() {
         thirdDotted[0].style.left = "50px";
         thirdDotted[1].style.left = "330px";
         thirdDotted[2].style.left = "480px";
+        thirdDotted[3].style.left = "770px";
         land.style.backgroundImage = 'url("../image/land1131.png")';
         var banana = document.createElement("div");
         banana.setAttribute("id","banana");
@@ -20,12 +21,6 @@ function nextScreen() {
         var apple = document.createElement("div");
         apple.setAttribute("id","apple");
         body.appendChild(apple);
-
-        var dott = document.createElement("div");
-        dott.classList.add("dotted");
-        dott.setAttribute("class","dotted");
-        dott.setAttribute("style","left: 770px;");
-        body.appendChild(dott);
 
         var orange = document.createElement("div");
         orange.setAttribute("id","orange");
@@ -58,6 +53,11 @@ function nextScreen() {
         
         isCorrect = false;
         expressRaccoon = false;
+        checkScore = true;
+        one = false;
+        two = false;
+        three = false;
+        four = false;
         orange = document.getElementById("orange");
         pear = document.getElementById("pear");
         grapes = document.getElementById("grapes");
@@ -111,6 +111,7 @@ function nextScreen() {
 
         isCorrect = false;
         expressRaccoon = false;
+        checkScore = true;
         cup = document.getElementById("cup");
         iceCream = document.getElementById("iceCream");
         juice = document.getElementById("juice");
@@ -169,10 +170,13 @@ function nextScreen() {
         
         isCorrect = false;
         expressRaccoon = false;
+        checkScore = true;
         bear4 = document.getElementById("bear4");
         raccoon4 = document.getElementById("raccoon4");
         fox4 = document.getElementById("fox4");
         rabbit4 = document.getElementById("rabbit4");
+        wolf4 = document.getElementById("wolf4");
+        owl4 = document.getElementById("owl4");
     }
     
 }

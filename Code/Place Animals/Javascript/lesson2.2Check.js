@@ -1,4 +1,4 @@
-// function checkDrag1(){
+ function checkDrag1(){
     expressRaccoon = true;
     animalMove[indAn].style.transition = "none";
     // khi nào mình kéo thả mới bắt đầu kiểm tra vị trí hiện vòng cho đỡ lag
@@ -39,7 +39,7 @@ function checkDrop1(){
                 banana.style.opacity = 1;
                 if (indAn == 1) {
                     setTimeout(function() {
-                        change("grapes");
+                        changeGrapes();
                     }, 3000);
                 }
                 else if (indAn == 4) {
@@ -65,7 +65,7 @@ function checkDrop1(){
                 banana.style.opacity = 1;
                 if (indAn == 1) {
                     setTimeout(function() {
-                        change("grapes");
+                        changeGrapes();
                     }, 3000);
                 }
                 else if (indAn == 4) {
@@ -92,14 +92,14 @@ function checkDrop1(){
                 if (indAn == 2) {
                     orange.style.opacity = "1";
                     setTimeout(function() {
-                        change("pear");
+                        changePear();
                     }, 3000);
                 }
                 else {
                     grapes.style.opacity = "1";
                     orange.style.opacity = "1";
                     setTimeout(function() {
-                        change("watermelon");
+                        changeWatermelon();
                     }, 3000);
                 }
                 return;
@@ -123,14 +123,14 @@ function checkDrop1(){
                 if (indAn == 2) {
                     orange.style.opacity = 1;
                     setTimeout(function() {
-                        change("pear");
+                        changePear();
                     }, 3000);
                 }
                 else {
                     grapes.style.opacity = "1";
                     orange.style.opacity = "1";
                     setTimeout(function() {
-                        change("watermelon");
+                        changeWatermelon();
                     }, 3000);
                 }
                 return;
@@ -139,6 +139,10 @@ function checkDrop1(){
     }
     if(wrongChoice1){
         turnOnAudioWrong();
+        if(checkScore) {
+            updateScore();
+            checkScore = false;
+        }
         var check = document.getElementsByClassName("checkBetween");
         if (indAn == 0) {
             setTimeout(function(){

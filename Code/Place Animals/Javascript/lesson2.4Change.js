@@ -2,7 +2,7 @@ var letterRaccoon = document.getElementById("letter-raccoon-4");
 var letterFox = document.getElementById("letter-fox");
 var letterRabbit = document.getElementById("letter-rabbit");
 function changeRaccoon() {
-    letterBear.style.display = "none";
+    letterBear.style.opacity = "0";
     animalMove[indAn].style.display = "block";
     micro.style.display = "none"; 
     setTimeout(function(){
@@ -21,7 +21,7 @@ function changeRaccoon() {
     }, 50);
 }
 function changeFox() {
-    letterRaccoon.style.display = "none";
+    letterRaccoon.style.opacity = "0";
     animalMove[indAn].style.display = "block"; 
     micro.style.display = "none"; 
     setTimeout(function(){
@@ -40,7 +40,7 @@ function changeFox() {
     }, 50);
 }
 function changeRabbit() {
-    letterFox.style.display = "none";
+    letterFox.style.opacity = "0";
     animalMove[indAn].style.display = "block"; 
     micro.style.display = "none"; 
     setTimeout(function(){
@@ -65,12 +65,4 @@ function loadStart() {
     var button_green = document.getElementsByClassName("button_green");
     button_green[0].style.marginLeft = "375px";
     button_green[0].style.transition = "1s";
-}
-function goCongrat() {
-    var button_green = document.getElementsByClassName("button_green");
-    button_green[0].style.marginLeft = "375px";
-    button_green[0].style.transition = "1s";
-    setTimeout(function(){
-        window.location = "../../Outline/Congrat.html";
-    },3000);
 }

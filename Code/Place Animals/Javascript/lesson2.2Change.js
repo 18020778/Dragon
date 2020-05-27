@@ -2,7 +2,7 @@ var letterGrapes = document.getElementById("letter-grapes");
 var letterPear = document.getElementById("letter-pear");
 var letterWatermelon = document.getElementById("letter-watermelon");
 function changeGrapes() {
-    letterOrange.style.display = "none";
+    letterOrange.style.opacity = "0";
     animalMove[indAn].style.display = "block";
     micro.style.display = "none"; 
     setTimeout(function(){
@@ -21,7 +21,7 @@ function changeGrapes() {
     }, 50);
 }
 function changePear() {
-    letterGrapes.style.display = "none";
+    letterGrapes.style.opacity = "0";
     animalMove[indAn].style.display = "block"; 
     micro.style.display = "none"; 
     setTimeout(function(){
@@ -40,7 +40,7 @@ function changePear() {
     }, 50);
 }
 function changeWatermelon() {
-    letterPear.style.display = "none";
+    letterPear.style.opacity = "0";
     animalMove[indAn].style.display = "block"; 
     micro.style.display = "none"; 
     setTimeout(function(){
