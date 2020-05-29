@@ -6,11 +6,16 @@ function changeRaccoon() {
     animalMove[indAn].style.display = "block";
     micro.style.display = "none"; 
     setTimeout(function(){
-        letterRaccoon.style.opacity = "1";
-        letterRaccoon.style.fontSize = "42px";
-        letterRaccoon.style.top = "60px";
-        letterRaccoon.style.left = "200px";
-        letterRaccoon.style.transition = "all 0.4s";
+        letterRaccoon.setAttribute(
+			'class',
+			(letterRaccoon.getAttribute('class') !== null ? letterRaccoon.getAttribute('class') : '') +
+				' letterRaccoonChangeStyle'
+		);
+        // letterRaccoon.style.opacity = "1";
+        // letterRaccoon.style.fontSize = "42px";
+        // letterRaccoon.style.top = "60px";
+        // letterRaccoon.style.left = "200px";
+        // letterRaccoon.style.transition = "all 0.4s";
         setTimeout(function() {
             micro.style.display = "block";
             micro.style.left = "180px";
@@ -25,11 +30,16 @@ function changeFox() {
     animalMove[indAn].style.display = "block"; 
     micro.style.display = "none"; 
     setTimeout(function(){
-        letterFox.style.opacity = "1";
-        letterFox.style.fontSize = "42px";
-        letterFox.style.top = "60px";
-        letterFox.style.left = "200px";
-        letterFox.style.transition = "all 0.4s";
+        letterFox.setAttribute(
+			'class',
+			(letterFox.getAttribute('class') !== null ? letterFox.getAttribute('class') : '') +
+				' letterFoxChangeStyle'
+		);
+        // letterFox.style.opacity = "1";
+        // letterFox.style.fontSize = "42px";
+        // letterFox.style.top = "60px";
+        // letterFox.style.left = "200px";
+        // letterFox.style.transition = "all 0.4s";
         setTimeout(function() {
             micro.style.display = "block";
             micro.style.left = "180px";
@@ -44,11 +54,16 @@ function changeRabbit() {
     animalMove[indAn].style.display = "block"; 
     micro.style.display = "none"; 
     setTimeout(function(){
-        letterRabbit.style.opacity = "1";
-        letterRabbit.style.fontSize = "42px";
-        letterRabbit.style.top = "60px";
-        letterRabbit.style.left = "50px";
-        letterRabbit.style.transition = "all 0.4s";
+        letterRabbit.setAttribute(
+			'class',
+			(letterRabbit.getAttribute('class') !== null ? letterRabbit.getAttribute('class') : '') +
+				' letterRabbitChangeChage'
+		);
+        // letterRabbit.style.opacity = "1";
+        // letterRabbit.style.fontSize = "42px";
+        // letterRabbit.style.top = "60px";
+        // letterRabbit.style.left = "50px";
+        // letterRabbit.style.transition = "all 0.4s";
         setTimeout(function() {
             micro.style.display = "block";
             micro.style.left = "50px";
