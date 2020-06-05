@@ -220,7 +220,7 @@ function changeOwl() {
 function updateScore() {
     var marginLeftButtonGreen = ['27px', '51px', '75px'];
     var idButtonGreen = 4 - score;
-    var idMarginLeft = 3 -score;
+    var idMarginLeft = 3 - score;
     if(score > 0) {
         setTimeout(function() {
             button_green[idButtonGreen].style.marginLeft = marginLeftButtonGreen[idMarginLeft];

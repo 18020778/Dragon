@@ -1,7 +1,7 @@
 #treeScreen1 {
     background-image: url("../image/palmTree.png");
     position: absolute;
-    left: calc(100% /2 - 100px);
+    left: calc(50% - 100px);
     top: 140px;
     width: 160px;
     height: 320px;
@@ -33,7 +33,7 @@
 #dottedScreen2 {
     background-image: url("../image/dotted.png");
     position: absolute;
-    left: calc(100% /2 - 100px);
+    left: calc(50% - 100px);
     top: 420px;
     width: 160px;
     height: 40px;
@@ -65,7 +65,7 @@
 #momScreen3 {
     background-image: url("../image/mom.svg");
     position: absolute;
-    left: calc(100% /2 - 100px);
+    left: calc(50% - 100px);
     top: 160px;
     width: 160px;
     height: 320px;
@@ -97,7 +97,7 @@
 #dottedScreen4 {
     background-image: url("../image/dotted.png");
     position: absolute;
-    left: calc(100% /2 - 100px);
+    left: calc(50% - 100px);
     top: 440px;
     width: 160px;
     height: 40px;
