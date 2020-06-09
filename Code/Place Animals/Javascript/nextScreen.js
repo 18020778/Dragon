@@ -67,7 +67,7 @@ function nextScreen() {
         land.style.opacity = "1";
         micro.style.opacity = "1";
         letterCup.style.opacity = "1";
-        micro.style.left = "50px";
+        micro.style.left = "175px";
         audio[0].src = "../mp3/Place Animals/Round 3/cup_beside_cupcake.mp3"; 
         audio[1].src = "../mp3/Place Animals/Round 3/iceCream_between_cup_n_teapot.mp3";
         audio[2].src = "../mp3/Place Animals/Round 3/juice_between_teapot_n_dessert.mp3";
