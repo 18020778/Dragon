@@ -2,11 +2,11 @@ var letterRaccoon = document.getElementById("letter-raccoon-4");
 var letterFox = document.getElementById("letter-fox");
 var letterRabbit = document.getElementById("letter-rabbit");
 function changeRaccoon() {
-    letterBear.style.opacity = "0";
+    letterBear.style.display = "none"
     animalMove[indAn].style.display = "block";
     micro.style.display = "none"; 
     setTimeout(function(){
-        letterRaccoon.style.opacity = "1";
+        letterRaccoon.style.display = "block"
         letterRaccoon.style.fontSize = "42px";
         letterRaccoon.style.top = "60px";
         letterRaccoon.style.left = "200px";
@@ -21,11 +21,11 @@ function changeRaccoon() {
     }, 50);
 }
 function changeFox() {
-    letterRaccoon.style.opacity = "0";
+    letterRaccoon.style.display = "none"
     animalMove[indAn].style.display = "block"; 
     micro.style.display = "none"; 
     setTimeout(function(){
-        letterFox.style.opacity = "1";
+        letterFox.style.display = "block"
         letterFox.style.fontSize = "42px";
         letterFox.style.top = "60px";
         letterFox.style.left = "200px";
@@ -40,11 +40,11 @@ function changeFox() {
     }, 50);
 }
 function changeRabbit() {
-    letterFox.style.opacity = "0";
+    letterFox.style.display = "none"
     animalMove[indAn].style.display = "block"; 
     micro.style.display = "none"; 
     setTimeout(function(){
-        letterRabbit.style.opacity = "1";
+        letterRabbit.style.display = "block"
         letterRabbit.style.fontSize = "42px";
         letterRabbit.style.top = "60px";
         letterRabbit.style.left = "50px";

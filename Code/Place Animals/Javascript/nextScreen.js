@@ -3,8 +3,8 @@ var letterBear = document.getElementById("letter-bear");
 function nextScreen() {
     if (screen == 2) {
         land.style.opacity = "1";
-        micro.style.opacity = "1";
-        letterOrange.style.opacity = "1";
+        micro.style.display = "block";
+        letterOrange.style.display = "block"
         micro.style.left = "180px";
         audio[0].src = "../mp3/Place Animals/Round 2/Orange_beside_apple.mp3"; 
         audio[1].src = "../mp3/Place Animals/Round 2/Grapes_beside_banana.mp3";
@@ -65,8 +65,8 @@ function nextScreen() {
     }
     else if(screen == 3) {
         land.style.opacity = "1";
-        micro.style.opacity = "1";
-        letterCup.style.opacity = "1";
+        micro.style.display = "block";
+        letterCup.style.display = "block"
         micro.style.left = "175px";
         audio[0].src = "../mp3/Place Animals/Round 3/cup_beside_cupcake.mp3"; 
         audio[1].src = "../mp3/Place Animals/Round 3/iceCream_between_cup_n_teapot.mp3";
@@ -118,13 +118,13 @@ function nextScreen() {
     }
     else if (screen == 4) {
         land.style.opacity = "1";
-        micro.style.opacity = "1";
-        letterBear.style.opacity = "1";
+        micro.style.display = "block";
+        letterBear.style.display = "block"
         micro.style.left = "180px";
         audio[0].src = "../mp3/Place Animals/Round 4/bear_beside_owl.mp3"; 
-        audio[0].src = "../mp3/Place Animals/Round 4/raccoon_beside_wolf.mp3";   
-        audio[0].src = "../mp3/Place Animals/Round 4/fox_beside_raccoon.mp3";
-        audio[0].src = "../mp3/Place Animals/Round 4/rabbit_between_raccoon_bear.mp3";
+        audio[1].src = "../mp3/Place Animals/Round 4/raccoon_beside_wolf.mp3";   
+        audio[2].src = "../mp3/Place Animals/Round 4/fox_beside_raccoon.mp3";
+        audio[3].src = "../mp3/Place Animals/Round 4/rabbit_between_raccoon_bear.mp3";
         thirdDotted[0].style.left = "190px";
         thirdDotted[1].style.left = "330px";
         thirdDotted[2].style.left = "480px";

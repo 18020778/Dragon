@@ -178,11 +178,11 @@ function turnOffAudioWrong(){
 //đổi yêu cầu khi hoàn thành 1 chức năng của màn 1
 var letterWolf = document.getElementById("letter-wolf");
 function changeWolf() {
-    letter.style.opacity = "0";
+    letter.style.display = "none";
     animalMove[indAn].style.display = "block"; 
     micro.style.display = "none";
     setTimeout(function(){
-        letterWolf.style.opacity = "1";
+        letterWolf.style.display = "block";
         letterWolf.style.fontSize = "40px";
         letterWolf.style.top = "60px";
         letterWolf.style.left = "90px";
@@ -203,7 +203,7 @@ function changeOwl() {
     animalMove[indAn].style.display = "block"; 
     micro.style.display = "none"; 
     setTimeout(function(){
-        letterOwl.style.opacity = "1";
+        letterOwl.style.display = "block";
         letterOwl.style.fontSize = "42px";
         letterOwl.style.top = "60px";
         letterOwl.style.left = "200px";

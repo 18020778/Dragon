@@ -1,11 +1,11 @@
 var letterIceCream = document.getElementById("letter-iceCream");
 var letterJuice = document.getElementById("letter-juice");
 function changeIceCream() {
-    letterCup.style.opacity = "0";
+    letterCup.style.display = "none"
     animalMove[indAn].style.display = "block"; 
     micro.style.display = "none"; 
     setTimeout(function(){
-        letterIceCream.style.opacity = "1";
+        letterIceCream.style.display = "block"
         letterIceCream.style.fontSize = "38px";
         letterIceCream.style.top = "60px";
         letterIceCream.style.left = "75px";
@@ -21,11 +21,11 @@ function changeIceCream() {
 }
 
 function changeJuice() {
-    letterIceCream.style.opacity = "0";
+    letterIceCream.style.display = "none"
     animalMove[indAn].style.display = "block"; 
     micro.style.display = "none"; 
     setTimeout(function(){
-        letterJuice.style.opacity = "1";
+        letterJuice.style.display = "block"
         letterJuice.style.fontSize = "38px";
         letterJuice.style.top = "60px";
         letterJuice.style.left = "75px";
