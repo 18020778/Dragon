@@ -30,9 +30,11 @@ function moveshape(e){
 }
 
 // checkDrag là khi đã ấn giữ chuột vào nhân vật hay chưa
+var arrow = $(".arrow");
 function checkDrag(){
     expressDragObject = true;
     dragObject.style.transition = "none";
+    $(arrow).css({"display" : "none"});
     checkLine.style.opacity = 0;
     secondCheckLine.style.opacity = 0;
     canIncre = false;
@@ -174,7 +176,6 @@ var leftArrowRight = 1;
 var topArrowRight = 1;
 var checkLine = document.getElementById("lineA");
 var secondCheckLine = document.getElementById("lineB");
-var arrow = $(".arrow");
 var canRun = true;
 var canIncre = false;
 var checkTime;
