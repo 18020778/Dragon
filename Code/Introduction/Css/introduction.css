@@ -53,16 +53,18 @@ body{
     background-position: 130px 0px;
 }
 .border_head {
-    border-top : 1px solid #7d7c7c;
-    background-color: #e8e6e6 ;
+    border-top : 0.5px solid #7d7c7c;
+    border-bottom: 0.3px solid black;
+    background-color: #ebeced ;
     height: 25px;
     width: calc(100% / 2 - 10px );
-    margin-left: calc(100% / 4 + 5px);
-    margin-top: -24px;
+    position: absolute;
+    left: calc(100% / 4 + 5px);
+    top: 10px;
     border-radius: 20px;
     border-collapse: collapse;
     border-spacing: 0;
-    opacity: 0.6;
+    box-shadow: 1px 1px #c8cacc inset;
 }
 .button_green {
     background-image: url("../image/bead.png") ;
