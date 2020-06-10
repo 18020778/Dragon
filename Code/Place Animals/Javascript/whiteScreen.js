@@ -3,7 +3,7 @@ var owl = document.getElementById("owl");
 var letterOrange = document.getElementById("letter-orange");
 function whiteScreen() {
     land.style.opacity = "0";
-    micro.style.opacity = "0";
+    micro.style.display = "none";
     flash.style.display = "none";
     photoImage1.style.display = "none";
     photoImage.style.display = "block"; 
@@ -16,9 +16,9 @@ function whiteScreen() {
         body.removeChild(raccoon);
         body.removeChild(wolf);
         body.removeChild(owl);
-        letterOwl.style.opacity = "0";
-        letterWolf.style.opacity = "0";
-        letter.style.opacity = "0";
+        letterOwl.style.display = "none"
+        letterWolf.style.display = "none"
+        letter.style.display = "none"
         if(checkScore){
             nextScore();
         }
@@ -30,10 +30,10 @@ function whiteScreen() {
         body.removeChild(banana);
         body.removeChild(grapes);
         body.removeChild(pear);
-        letterGrapes.style.opacity = "0";
-        letterOrange.style.opacity = "0";
-        letterPear.style.opacity = "0";
-        letterWatermelon.style.opacity = "0";
+        letterGrapes.style.display = "none"
+        letterOrange.style.display = "none"
+        letterPear.style.display = "none"
+        letterWatermelon.style.display = "none"
         if(checkScore){
             nextScore();
         }  
@@ -45,9 +45,9 @@ function whiteScreen() {
         body.removeChild(cup);
         body.removeChild(iceCream);
         body.removeChild(juice);
-        letterCup.style.opacity = "0";
-        letterIceCream.style.opacity = "0";
-        letterJuice.style.opacity = "0";
+        letterCup.style.display = "none"
+        letterIceCream.style.display = "none"
+        letterJuice.style.display = "none"
         if(checkScore){
             nextScore();
         }
@@ -59,9 +59,9 @@ function whiteScreen() {
         body.removeChild(fox4);
         body.removeChild(rabbit4);
         body.removeChild(raccoon4);
-        letterRaccoon.style.opacity = "0";
-        letterFox.style.opacity = "0";
-        letterRabbit.style.opacity = "0";
+        letterRaccoon.style.display = "none"
+        letterFox.style.display = "none"
+        letterRabbit.style.display = "none"
         if(checkScore){
             nextScore();
         }

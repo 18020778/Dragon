@@ -2,11 +2,11 @@ var letterGrapes = document.getElementById("letter-grapes");
 var letterPear = document.getElementById("letter-pear");
 var letterWatermelon = document.getElementById("letter-watermelon");
 function changeGrapes() {
-    letterOrange.style.opacity = "0";
+    letterOrange.style.display = "none"
     animalMove[indAn].style.display = "block";
     micro.style.display = "none"; 
     setTimeout(function(){
-        letterGrapes.style.opacity = "1";
+        letterGrapes.style.display = "block"
         letterGrapes.style.fontSize = "42px";
         letterGrapes.style.top = "60px";
         letterGrapes.style.left = "200px";
@@ -21,11 +21,11 @@ function changeGrapes() {
     }, 50);
 }
 function changePear() {
-    letterGrapes.style.opacity = "0";
+    letterGrapes.style.display = "none"
     animalMove[indAn].style.display = "block"; 
     micro.style.display = "none"; 
     setTimeout(function(){
-        letterPear.style.opacity = "1";
+        letterPear.style.display = "block"
         letterPear.style.fontSize = "42px";
         letterPear.style.top = "60px";
         letterPear.style.left = "200px";
@@ -40,11 +40,11 @@ function changePear() {
     }, 50);
 }
 function changeWatermelon() {
-    letterPear.style.opacity = "0";
+    letterPear.style.display = "none"
     animalMove[indAn].style.display = "block"; 
     micro.style.display = "none"; 
     setTimeout(function(){
-        letterWatermelon.style.opacity = "1";
+        letterWatermelon.style.display = "block"
         letterWatermelon.style.fontSize = "42px";
         letterWatermelon.style.top = "60px";
         letterWatermelon.style.left = "200px";
